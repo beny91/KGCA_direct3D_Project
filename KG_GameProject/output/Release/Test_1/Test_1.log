@@ -1,0 +1,17 @@
+﻿  main.cpp
+  코드를 생성하고 있습니다.
+  121 of 812 functions (14.9%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    150 functions had inline decision re-evaluated but remain unchanged
+  코드를 생성했습니다.
+DirectXTex_R.lib(BC.obj) : warning LNK4099: 'DirectXTex.pdb' PDB를 'DirectXTex_R.lib(BC.obj)' 또는 'D:\HubSub\CBY_GameProject\output\Release\Test_1\DirectXTex.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_R.lib(BC4BC5.obj) : warning LNK4099: 'DirectXTex.pdb' PDB를 'DirectXTex_R.lib(BC4BC5.obj)' 또는 'D:\HubSub\CBY_GameProject\output\Release\Test_1\DirectXTex.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_R.lib(BC6HBC7.obj) : warning LNK4099: 'DirectXTex.pdb' PDB를 'DirectXTex_R.lib(BC6HBC7.obj)' 또는 'D:\HubSub\CBY_GameProject\output\Release\Test_1\DirectXTex.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_R.lib(DirectXTexCompress.obj) : warning LNK4099: 'DirectXTex.pdb' PDB를 'DirectXTex_R.lib(DirectXTexCompress.obj)' 또는 'D:\HubSub\CBY_GameProject\output\Release\Test_1\DirectXTex.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_R.lib(DirectXTexConvert.obj) : warning LNK4099: 'DirectXTex.pdb' PDB를 'DirectXTex_R.lib(DirectXTexConvert.obj)' 또는 'D:\HubSub\CBY_GameProject\output\Release\Test_1\DirectXTex.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_R.lib(DirectXTexD3D11.obj) : warning LNK4099: 'DirectXTex.pdb' PDB를 'DirectXTex_R.lib(DirectXTexD3D11.obj)' 또는 'D:\HubSub\CBY_GameProject\output\Release\Test_1\DirectXTex.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_R.lib(DirectXTexImage.obj) : warning LNK4099: 'DirectXTex.pdb' PDB를 'DirectXTex_R.lib(DirectXTexImage.obj)' 또는 'D:\HubSub\CBY_GameProject\output\Release\Test_1\DirectXTex.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_R.lib(DirectXTexMipMaps.obj) : warning LNK4099: 'DirectXTex.pdb' PDB를 'DirectXTex_R.lib(DirectXTexMipMaps.obj)' 또는 'D:\HubSub\CBY_GameProject\output\Release\Test_1\DirectXTex.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_R.lib(DirectXTexTGA.obj) : warning LNK4099: 'DirectXTex.pdb' PDB를 'DirectXTex_R.lib(DirectXTexTGA.obj)' 또는 'D:\HubSub\CBY_GameProject\output\Release\Test_1\DirectXTex.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTex_R.lib(DirectXTexUtil.obj) : warning LNK4099: 'DirectXTex.pdb' PDB를 'DirectXTex_R.lib(DirectXTexUtil.obj)' 또는 'D:\HubSub\CBY_GameProject\output\Release\Test_1\DirectXTex.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+  Test_1.vcxproj -> D:\HubSub\CBY_GameProject\CBY_GameProjects\Test_1\../../output/Release/Test_1/Test_1.exe

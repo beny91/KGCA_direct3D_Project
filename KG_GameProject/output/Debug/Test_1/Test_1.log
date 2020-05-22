@@ -1,0 +1,20 @@
+﻿  main.cpp
+KG_Engine_D.lib(KG_ArcBall.obj) : warning LNK4099: 'KG_Engine.pdb' PDB를 'KG_Engine_D.lib(KG_ArcBall.obj)' 또는 'D:\HubSub\KG_GameProject\output\debug\Test_1\KG_Engine.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+KG_Engine_D.lib(KG_BackViewCamera.obj) : warning LNK4099: 'KG_Engine.pdb' PDB를 'KG_Engine_D.lib(KG_BackViewCamera.obj)' 또는 'D:\HubSub\KG_GameProject\output\debug\Test_1\KG_Engine.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+KG_Engine_D.lib(KG_Camera.obj) : warning LNK4099: 'KG_Engine.pdb' PDB를 'KG_Engine_D.lib(KG_Camera.obj)' 또는 'D:\HubSub\KG_GameProject\output\debug\Test_1\KG_Engine.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+KG_Engine_D.lib(KG_Core.obj) : warning LNK4099: 'KG_Engine.pdb' PDB를 'KG_Engine_D.lib(KG_Core.obj)' 또는 'D:\HubSub\KG_GameProject\output\debug\Test_1\KG_Engine.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+KG_Engine_D.lib(KG_DebugCamera.obj) : warning LNK4099: 'KG_Engine.pdb' PDB를 'KG_Engine_D.lib(KG_DebugCamera.obj)' 또는 'D:\HubSub\KG_GameProject\output\debug\Test_1\KG_Engine.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+KG_Engine_D.lib(KG_Device.obj) : warning LNK4099: 'KG_Engine.pdb' PDB를 'KG_Engine_D.lib(KG_Device.obj)' 또는 'D:\HubSub\KG_GameProject\output\debug\Test_1\KG_Engine.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+KG_Engine_D.lib(KG_DxHelperEx.obj) : warning LNK4099: 'KG_Engine.pdb' PDB를 'KG_Engine_D.lib(KG_DxHelperEx.obj)' 또는 'D:\HubSub\KG_GameProject\output\debug\Test_1\KG_Engine.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+KG_Engine_D.lib(KG_DxState.obj) : warning LNK4099: 'KG_Engine.pdb' PDB를 'KG_Engine_D.lib(KG_DxState.obj)' 또는 'D:\HubSub\KG_GameProject\output\debug\Test_1\KG_Engine.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+KG_Engine_D.lib(KG_DXWrite.obj) : warning LNK4099: 'KG_Engine.pdb' PDB를 'KG_Engine_D.lib(KG_DXWrite.obj)' 또는 'D:\HubSub\KG_GameProject\output\debug\Test_1\KG_Engine.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+KG_Engine_D.lib(KG_Frusutm.obj) : warning LNK4099: 'KG_Engine.pdb' PDB를 'KG_Engine_D.lib(KG_Frusutm.obj)' 또는 'D:\HubSub\KG_GameProject\output\debug\Test_1\KG_Engine.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+KG_Engine_D.lib(KG_Input.obj) : warning LNK4099: 'KG_Engine.pdb' PDB를 'KG_Engine_D.lib(KG_Input.obj)' 또는 'D:\HubSub\KG_GameProject\output\debug\Test_1\KG_Engine.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+KG_Engine_D.lib(KG_Model.obj) : warning LNK4099: 'KG_Engine.pdb' PDB를 'KG_Engine_D.lib(KG_Model.obj)' 또는 'D:\HubSub\KG_GameProject\output\debug\Test_1\KG_Engine.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+KG_Engine_D.lib(KG_ModelViewCamera.obj) : warning LNK4099: 'KG_Engine.pdb' PDB를 'KG_Engine_D.lib(KG_ModelViewCamera.obj)' 또는 'D:\HubSub\KG_GameProject\output\debug\Test_1\KG_Engine.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+KG_Engine_D.lib(KG_Select.obj) : warning LNK4099: 'KG_Engine.pdb' PDB를 'KG_Engine_D.lib(KG_Select.obj)' 또는 'D:\HubSub\KG_GameProject\output\debug\Test_1\KG_Engine.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+KG_Engine_D.lib(KG_ShapeBox.obj) : warning LNK4099: 'KG_Engine.pdb' PDB를 'KG_Engine_D.lib(KG_ShapeBox.obj)' 또는 'D:\HubSub\KG_GameProject\output\debug\Test_1\KG_Engine.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+KG_Engine_D.lib(KG_ShapeLine.obj) : warning LNK4099: 'KG_Engine.pdb' PDB를 'KG_Engine_D.lib(KG_ShapeLine.obj)' 또는 'D:\HubSub\KG_GameProject\output\debug\Test_1\KG_Engine.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+KG_Engine_D.lib(KG_Time.obj) : warning LNK4099: 'KG_Engine.pdb' PDB를 'KG_Engine_D.lib(KG_Time.obj)' 또는 'D:\HubSub\KG_GameProject\output\debug\Test_1\KG_Engine.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+KG_Engine_D.lib(KG_Window.obj) : warning LNK4099: 'KG_Engine.pdb' PDB를 'KG_Engine_D.lib(KG_Window.obj)' 또는 'D:\HubSub\KG_GameProject\output\debug\Test_1\KG_Engine.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+  Test_1.vcxproj -> D:\HubSub\KG_GameProject\KG_GameProjects\Test_1\../../output/debug/Test_1/Test_1.exe

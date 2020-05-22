@@ -1,0 +1,9 @@
+﻿  KG37_GameMain.cpp
+  KG_TestMain.cpp
+d:\hubsub\kg_gameproject\kg_gameprojects\kg37_game\kg_testmain.cpp(170): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
+d:\hubsub\kg_gameproject\kg_gameprojects\kg37_game\kg_testmain.cpp(226): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\hubsub\kg_gameproject\kg_gameprojects\kg37_game\kg_testmain.cpp(313): warning C4474: 'swscanf' : 서식 문자열에 전달된 인수가 너무 많습니다.
+  d:\hubsub\kg_gameproject\kg_gameprojects\kg37_game\kg_testmain.cpp(313): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 2개 필요하지만 3개가 제공되었습니다.
+d:\hubsub\kg_gameproject\kg_gameprojects\kg37_game\kg_testmain.cpp(345): warning C4477: 'swscanf' : 서식 문자열 '%f'에 'float *' 형식의 인수가 필요하지만 variadic 인수 4의 형식이 'double'입니다.
+  코드를 생성하고 있습니다...
+  KG37_Game.vcxproj -> D:\HubSub\KG_GameProject\KG_GameProjects\KG37_Game\../../output/Debug/KG37_Game/KG37_Game.exe

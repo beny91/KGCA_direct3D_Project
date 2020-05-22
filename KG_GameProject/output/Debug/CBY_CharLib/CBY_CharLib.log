@@ -1,0 +1,40 @@
+﻿  KG_Core.cpp
+d:\hubsub\cby_gameproject\cby_gameprojects\cby_charlib\kg_std.h(3): warning C4005: '_CRT_SECURE_NO_WARNINGS': 매크로 재정의
+  d:\hubsub\cby_gameproject\cby_gameprojects\cby_charlib\kg_core.cpp: note: '_CRT_SECURE_NO_WARNINGS'의 이전 정의를 참조하십시오.
+  KG_Select.cpp
+d:\hubsub\cby_gameproject\cby_gameprojects\cby_charlib\kg_std.h(3): warning C4005: '_CRT_SECURE_NO_WARNINGS': 매크로 재정의
+  d:\hubsub\cby_gameproject\cby_gameprojects\cby_charlib\kg_select.cpp: note: '_CRT_SECURE_NO_WARNINGS'의 이전 정의를 참조하십시오.
+  코드를 생성하고 있습니다...
+  CBY_CharLib.vcxproj -> D:\HubSub\CBY_GameProject\CBY_GameProjects\CBY_CharLib\../../output/Debug/CBY_CharLib/CBY_CharLib.dll
+          1개 파일이 복사되었습니다.
+  KG_ArcBall.h
+  KG_BackViewCamera.h
+  KG_Camera.h
+  KG_Core.h
+  KG_DebugCamera.h
+  KG_Device.h
+  KG_DxHelperEx.h
+  KG_DxHeper.h
+  KG_DxRT.h
+  KG_DxState.h
+  KG_DXWrite.h
+  KG_Frusutm.h
+  KG_Input.h
+  KG_Math.h
+  KG_Minimap.h
+  KG_Model.h
+  KG_ModelViewCamera.h
+  KG_ObjStd.h
+  KG_Select.h
+  KG_ShapeBox.h
+  KG_ShapeLine.h
+  KG_ShapeMap.h
+  KG_ShapeObject.h
+  KG_Sound.h
+  KG_SoundMgr.h
+  KG_Sprite.h
+  KG_Std.h
+  KG_TextureMgr.h
+  KG_Time.h
+  KG_Window.h
+         30개 파일이 복사되었습니다.
