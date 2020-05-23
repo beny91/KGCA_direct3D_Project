@@ -13,6 +13,7 @@ namespace CDX
 		static ID3D11BlendState* g_pAlpahBlend;
 		static ID3D11BlendState* g_pAlpahTesting;
 		static ID3D11BlendState* g_pAlpahBlendDisable;
+		static ID3D11BlendState* g_pBlendState[4];
 
 		static ID3D11RasterizerState* g_pRSSold;
 		static ID3D11RasterizerState* g_pRSWireFrame;
@@ -20,9 +21,11 @@ namespace CDX
 
 		static ID3D11DepthStencilState* g_pDSS;
 		static ID3D11DepthStencilState* g_pDSSDisable;
+		static ID3D11DepthStencilState* g_pDSSMaskZero;
 
 	public:
 		static HRESULT SetState(ID3D11Device* pd3dDevice);
+		static HRESULT createBlendState(ID3D11Device* pd3dDevice);
 		static bool Release();
 
 		// tool & edit

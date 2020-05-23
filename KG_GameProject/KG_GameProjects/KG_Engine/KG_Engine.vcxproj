@@ -228,8 +228,16 @@ copy "*.h" "../../include/KG"</Command>
     <ClCompile Include="KG_Window.cpp" />
     <ClCompile Include="LightMgr.cpp" />
     <ClCompile Include="LightObj.cpp" />
+    <ClCompile Include="MyEffectParser.cpp" />
+    <ClCompile Include="Myparser.cpp" />
+    <ClCompile Include="MyParticle.cpp" />
     <ClCompile Include="NormalMap.cpp" />
     <ClCompile Include="QuadTree.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="SpriteTexture.cpp" />
+    <ClCompile Include="VFX_EffectObj.cpp" />
+    <ClCompile Include="VFX_Obj.cpp" />
+    <ClCompile Include="VFX_ObjMgr.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CBY_BoneBox.h" />
@@ -290,8 +298,16 @@ copy "*.h" "../../include/KG"</Command>
     <ClInclude Include="KG_Window.h" />
     <ClInclude Include="LightMgr.h" />
     <ClInclude Include="LightObj.h" />
+    <ClInclude Include="MyEffectParser.h" />
+    <ClInclude Include="Myparser.h" />
+    <ClInclude Include="MyParticle.h" />
     <ClInclude Include="NormalMap.h" />
     <ClInclude Include="QuadTree.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="SpriteTexture.h" />
+    <ClInclude Include="VFX_EffectObj.h" />
+    <ClInclude Include="VFX_Obj.h" />
+    <ClInclude Include="VFX_ObjMgr.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
