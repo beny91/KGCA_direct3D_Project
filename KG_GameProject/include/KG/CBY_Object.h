@@ -77,7 +77,6 @@ namespace CBY
 		virtual bool Frame();
 		virtual bool Release();
 		virtual bool Render();
-		virtual bool Update(D3DXMATRIX* parmat);
 
 	public:
 		virtual void SetState(int dw);							//캐릭터 상태 설정
@@ -88,25 +87,11 @@ namespace CBY
 
 	public:				//Box
 		virtual void SetCharBox();
-		virtual CBY_CharBox GetCharBox();
+		virtual KG_Box GetCharBox();
 		virtual void SetColBoxList(std::vector<CBY_CharBox>& boxlist);
 		virtual CBY_CharBox SetColBoxList(int ibox);
 		virtual int GetColBoxSize();
 		virtual void CreateColBox();
-
-	protected:
-		int m_iCharSocket;
-		int m_iObjSocket;
-		std::vector<int> m_SocketList;
-		int m_ObjIndex;
-		D3DXMATRIX m_matCalculation;
-		CBY_MeshSkin* m_RootMesh;
-
-	public:
-		void SetSocket(int i);		//캐릭터와 연결된 캐릭터의 소켓
-		int GetSocket();
-		void SetObjSocke(int i);	//오브젝트의 소켓
-		int GetObjSocke();	//오브젝트의 소켓
 
 	public:
 		CBY_Object();

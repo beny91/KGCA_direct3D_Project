@@ -4,6 +4,7 @@
 #include"KG_ShapeMap.h"
 #include"LightMgr.h"
 #include "KG_Input.h"
+#include "KG_Collision.h"
 
 
 bool KG_TestMain::Init()
@@ -14,7 +15,7 @@ bool KG_TestMain::Init()
 
 	////////////////Char////////////////////	
 	m_Character = std::make_shared<CBY::CBY_Character>();
-	m_Character->CharacterLoad(m_pd3dDevice, m_pContext, L"../../data/char/save/GirlInfoEx.txt");
+	m_Character->CharacterLoad(m_pd3dDevice, m_pContext, L"../../data/char/save/CharTest.txt");
 
 	m_Enemy = std::make_shared<CBY::CBY_Character>();
 	m_Enemy->CharacterLoad(m_pd3dDevice, m_pContext, L"../../data/char/save/GirlInfoEx.txt");
@@ -59,77 +60,121 @@ bool KG_TestMain::Frame()
 
 	//////////////char//////////////////////
 	if (m_Character == nullptr)return true;
-	bool bClick = false;
-	bool bRun=false;
-	float fSpeed = 10;
-	if (I_Input.GetKeyCheck(VK_SHIFT))
+	if (m_GameTime > 3)
 	{
-		m_Character->SetState(CBY::CHAR_RUN);
-		bClick = true;
-		bRun = true;
-		fSpeed += 10;
-	}
+		bool bClick = false;
+		bool bRun = false;
+		float fSpeed = 10;
+		float fM = 0;
+		D3DXVECTOR3 vN, vLook, vSide, vLookPush, vSidePush, vObjPush;
+		vLookPush = D3DXVECTOR3(0, 0, 0);
+		vSidePush = D3DXVECTOR3(0, 0, 0);
+		vLook = m_pMainCamera->m_LookDir;
+		vSide = m_pMainCamera->m_SideDir;
 
-	if (I_Input.GetKeyCheck('W'))
-	{
-		if (!bRun && !m_bFire)
+		if (KG_COLLOSION::ChkOBBToOBBAndDirection(m_Character->GetCharBox(), m_Enemy->GetCharBox(), vN, fM))
 		{
-			m_Character->SetState(CBY::CHAR_MOVE);
+			float fdot = D3DXVec3Dot(&m_pMainCamera->m_LookDir, &vN);
+
+			if (fdot < 0)
+			{
+				vLookPush = (2 * D3DXVec3Dot(&-m_pMainCamera->m_LookDir, &vN)) * vN + m_pMainCamera->m_LookDir; //벽밀림
+				vSidePush = (2 * D3DXVec3Dot(&-m_pMainCamera->m_SideDir, &vN)) * vN + m_pMainCamera->m_SideDir;
+				//vObjPush = (2 * D3DXVec3Dot(&-m_pMainCamera->m_ObjDir, &vN)) * vN + m_pMainCamera->m_SideDir;
+
+				vLook = m_pMainCamera->m_LookDir - vN * (D3DXVec3Dot(&m_pMainCamera->m_LookDir, &vN));
+				vSide = m_pMainCamera->m_SideDir - vN * (D3DXVec3Dot(&m_pMainCamera->m_SideDir, &vN));
+
+				m_vMove += vLookPush * fM *g_SecondTime;
+			}
+			else
+			{
+				vLookPush = (2 * D3DXVec3Dot(&-m_pMainCamera->m_LookDir, &vN)) * vN + m_pMainCamera->m_LookDir; //벽밀림
+				vSidePush = (2 * D3DXVec3Dot(&-m_pMainCamera->m_SideDir, &vN)) * vN + m_pMainCamera->m_SideDir;
+				//vObjPush = (2 * D3DXVec3Dot(&-m_pMainCamera->m_ObjDir, &vN)) * vN + m_pMainCamera->m_SideDir;
+
+				vLook = m_pMainCamera->m_LookDir - vN * (D3DXVec3Dot(&m_pMainCamera->m_LookDir, &vN));
+				vSide = m_pMainCamera->m_SideDir - vN * (D3DXVec3Dot(&m_pMainCamera->m_SideDir, &vN));
+
+				m_vMove -= vLookPush * fM *g_SecondTime;
+			}
+
 		}
-		m_vMove += m_pMainCamera->m_LookDir * fSpeed * g_SecondTime;
-		
-		bClick = true;
-	}
-	if (I_Input.GetKeyCheck('S'))
-	{
-		if (!bRun && !m_bFire)
+
+		if (I_Input.GetKeyCheck(VK_SHIFT))
 		{
-			m_Character->SetState(CBY::CHAR_MOVE);
+			m_Character->SetState(CBY::CHAR_RUN);
+			bClick = true;
+			bRun = true;
+			fSpeed += 10;
 		}
-		m_vMove -= m_pMainCamera->m_LookDir * fSpeed * g_SecondTime;
-		bClick = true;
-	}
-	if (I_Input.GetKeyCheck('A'))
-	{
-		if (!bRun && !m_bFire)
+
+		if (I_Input.GetKeyCheck('W'))
 		{
-			m_Character->SetState(CBY::CHAR_MOVE);
+			if (!bRun && !m_bFire)
+			{
+				m_Character->SetState(CBY::CHAR_MOVE);
+			}
+			m_vMove += vLook * fSpeed * g_SecondTime;
+
+			bClick = true;
 		}
-		m_vMove += m_pMainCamera->m_SideDir * fSpeed * g_SecondTime;
-		bClick = true;
-	}
-	if (I_Input.GetKeyCheck('D'))
-	{
-		if (!bRun && !m_bFire)
+		if (I_Input.GetKeyCheck('S'))
 		{
-			m_Character->SetState(CBY::CHAR_MOVE);
+			if (!bRun && !m_bFire)
+			{
+				m_Character->SetState(CBY::CHAR_MOVE);
+			}
+			m_vMove -= vLook * fSpeed * g_SecondTime;
+			bClick = true;
 		}
-		m_vMove -= m_pMainCamera->m_SideDir * fSpeed * g_SecondTime;
-	}
+		if (I_Input.GetKeyCheck('A'))
+		{
+			if (!bRun && !m_bFire)
+			{
+				m_Character->SetState(CBY::CHAR_MOVE);
+			}
+			m_vMove += vSide * fSpeed * g_SecondTime;
+			bClick = true;
+		}
+		if (I_Input.GetKeyCheck('D'))
+		{
+			if (!bRun && !m_bFire)
+			{
+				m_Character->SetState(CBY::CHAR_MOVE);
+			}
+			m_vMove -= vSide * fSpeed * g_SecondTime;
+		}
 
-	if (I_Input.GetKeyCheck(VK_SPACE))
+		if (I_Input.GetKeyCheck(VK_SPACE))
+		{
+			m_Character->SetState(CBY::CHAR_JUMP);
+			bClick = true;
+		}
+
+		if (!bClick && !m_bFire)
+		{
+			m_Character->SetState(CBY::CHAR_IDLE);
+		}
+
+		m_vMove.y = m_Map->GetHeight(m_vMove.x, m_vMove.z);
+
+		m_Character->Frame();
+		D3DXMATRIX zpos;
+		D3DXMatrixIdentity(&zpos);
+		zpos._42 = 20;
+		zpos._43 = -30;
+		D3DXMATRIX charmat = m_Character->m_pMatrixList[46] * zpos * m_Character->m_matWorld;
+		D3DXVECTOR3 bonepos = D3DXVECTOR3(charmat._41, charmat._42, charmat._43);
+		m_pMainCamera->m_Pos = bonepos;
+
+		m_Enemy->Frame();
+	}
+	else
 	{
-		m_Character->SetState(CBY::CHAR_JUMP);
-		bClick = true;
+		m_GameTime += g_SecondTime;
 	}
 
-	if (!bClick && !m_bFire)
-	{
-		m_Character->SetState(CBY::CHAR_IDLE);
-	}
-
-	m_vMove.y = m_Map->GetHeight(m_vMove.x, m_vMove.z);
-
-	m_Character->Frame();
-	D3DXMATRIX zpos;
-	D3DXMatrixIdentity(&zpos);
-	zpos._42 = 20;
-	zpos._43 = -30;
-	D3DXMATRIX charmat = m_Character->m_pMatrixList[46] * zpos * m_Character->m_matWorld;
-	D3DXVECTOR3 bonepos = D3DXVECTOR3(charmat._41, charmat._42, charmat._43);
-	m_pMainCamera->m_Pos = bonepos;
-
-	m_Enemy->Frame();
 	/////////////////////////////////////////////
 	return true;
 }
@@ -183,7 +228,7 @@ bool KG_TestMain::Render()
 	scale._42 = m_vMove.y;
 	scale._43 = m_vMove.z;
 	m_Character->SetMatrix(&(m_pMainCamera->m_World*scale), &m_pMainCamera->m_View, &m_pMainCamera->m_Proj);
-	//m_Character->Render();
+	m_Character->Render();
 	/////////////////////////////////////////////
 	return true;
 }
@@ -392,7 +437,9 @@ KG_TestMain::KG_TestMain()
 {
 	D3DXMatrixIdentity(&m_matCharWorld);
 	m_vMove = D3DXVECTOR3(0, 0, 0);
+	m_vMoveBegin = D3DXVECTOR3(0, 0, 0);
 	m_bFire = false;
+	m_GameTime = 0;
 }
 
 

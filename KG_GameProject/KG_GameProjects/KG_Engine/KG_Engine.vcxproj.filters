@@ -222,6 +222,9 @@
     <ClCompile Include="KG_Collision.cpp">
       <Filter>Utility</Filter>
     </ClCompile>
+    <ClCompile Include="CBY_Weapon.cpp">
+      <Filter>CBY_Object\Character\Character</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="KG_Core.h">
@@ -400,6 +403,9 @@
     </ClInclude>
     <ClInclude Include="KG_Collision.h">
       <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_Weapon.h">
+      <Filter>CBY_Object\Character\Character</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

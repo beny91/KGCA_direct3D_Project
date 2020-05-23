@@ -22,6 +22,9 @@ namespace CBY
 		HRESULT CreateIndexData();
 		void CreateBox(int index, D3DXVECTOR3 vPos, float fXsize, float fYsize, float fZsize);
 		void SetBox(float fXsize, float fYsize, float fZsize, int id);
+		void UpdateBoxAxis(D3DXMATRIX mat);
+
+	public:
 		void SetParentMatrix(D3DXMATRIX* mat);
 		void SetBindMatrix(D3DXMATRIX* mat);
 		D3DXMATRIX GetParentMatrix(int index);
@@ -30,6 +33,10 @@ namespace CBY
 		int GetBoneIndex();
 		D3DXVECTOR3 GetSize();
 		D3DXVECTOR3 GetPos();
+		inline KG_Box GetBox()
+		{
+			return m_Box;
+		};
 
 	public:
 		CBY_CharBox();

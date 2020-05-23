@@ -36,6 +36,7 @@ namespace CBY
 		cby_CharData objdata;
 		int Socket;
 		int ObjSocket;
+		int FireSocket;
 	};
 
 	class CBY_DataCtrl

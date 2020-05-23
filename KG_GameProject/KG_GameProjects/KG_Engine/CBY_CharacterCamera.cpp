@@ -76,10 +76,13 @@ namespace CBY
 
 		D3DXVECTOR3 lookdir = D3DXVECTOR3(0, 0, -1);
 		D3DXVECTOR3 sidedir = D3DXVECTOR3(1, 0, 0);
+		D3DXVECTOR3 objdir = D3DXVECTOR3(1, 0, -1);
 		D3DXVec3TransformCoord(&lookdir, &lookdir, &matLook);
 		D3DXVec3TransformCoord(&sidedir, &sidedir, &matLook);
+		D3DXVec3TransformCoord(&objdir, &sidedir, &matLook);
 		m_LookDir = lookdir;
 		m_SideDir = sidedir;
+		m_ObjDir = objdir;
 
 		D3DXVECTOR3 At;
 		m_At = m_Pos + lookdir;

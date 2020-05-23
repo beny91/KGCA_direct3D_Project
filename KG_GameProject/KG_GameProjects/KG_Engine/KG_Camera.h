@@ -22,6 +22,7 @@ public:
 	D3DXVECTOR3 m_BackPos;
 	D3DXVECTOR3 m_LookDir;
 	D3DXVECTOR3 m_SideDir;
+	D3DXVECTOR3 m_ObjDir;
 
 public:
 	float m_fNear;
