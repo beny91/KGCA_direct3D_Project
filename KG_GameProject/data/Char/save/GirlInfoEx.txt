@@ -26,4 +26,4 @@
 ../../data/Char/Girl/ggg.skn
 ../../data/Char/Girl/ggg.mtr -1
 ../../data/Char/Girl/ggg.mtr 0
-44 0
+44 0 0

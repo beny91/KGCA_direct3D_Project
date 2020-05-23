@@ -74,7 +74,9 @@ public:
 	std::shared_ptr<KG_Point> m_Point;
 	D3DXMATRIX m_matCharWorld;
 	D3DXVECTOR3 m_vMove;
+	D3DXVECTOR3 m_vMoveBegin;
 	bool m_bFire;
+	float m_GameTime;
 
 public:
 	LRESULT WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) override;

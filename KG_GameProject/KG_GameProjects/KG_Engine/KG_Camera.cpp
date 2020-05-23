@@ -180,6 +180,7 @@ KG_Camera::KG_Camera()
 	m_At = D3DXVECTOR3(0, 0, 0);
 	m_LookDir = D3DXVECTOR3(0, 0, 0);
 	m_SideDir = D3DXVECTOR3(0, 0, 0);
+	m_ObjDir = D3DXVECTOR3(0, 0, 0);
 }
 
 

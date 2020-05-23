@@ -102,6 +102,21 @@ namespace CBY
 		}
 	}
 
+	void CBY_CharBox::UpdateBoxAxis(D3DXMATRIX mat)
+	{
+		D3DXVECTOR3 vX = D3DXVECTOR3(1, 0, 0);
+		D3DXVECTOR3 vY = D3DXVECTOR3(0, 1, 0);
+		D3DXVECTOR3 vZ = D3DXVECTOR3(0, 0, 1);
+
+		D3DXVec3TransformCoord(&vX, &vX, &mat);
+		D3DXVec3TransformCoord(&vY, &vY, &mat);
+		D3DXVec3TransformCoord(&vZ, &vZ, &mat);
+
+		m_Box.vAxis[0] = vX;
+		m_Box.vAxis[1] = vY;
+		m_Box.vAxis[2] = vZ;
+	}
+
 	void CBY_CharBox::SetBox(float fXsize, float fYsize, float fZsize, int id)
 	{
 

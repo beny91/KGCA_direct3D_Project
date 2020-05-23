@@ -189,6 +189,7 @@ copy "*.h" "../../include/KG"</Command>
     <ClCompile Include="CBY_Parser.cpp" />
     <ClCompile Include="CBY_SkinObj.cpp" />
     <ClCompile Include="CBY_SkinParser.cpp" />
+    <ClCompile Include="CBY_Weapon.cpp" />
     <ClCompile Include="JH_BaseObj.cpp" />
     <ClCompile Include="JH_Map.cpp" />
     <ClCompile Include="JH_MapObj.cpp" />
@@ -256,6 +257,7 @@ copy "*.h" "../../include/KG"</Command>
     <ClInclude Include="CBY_Parser.h" />
     <ClInclude Include="CBY_SkinObj.h" />
     <ClInclude Include="CBY_SkinParser.h" />
+    <ClInclude Include="CBY_Weapon.h" />
     <ClInclude Include="JH_BaseObj.h" />
     <ClInclude Include="JH_Map.h" />
     <ClInclude Include="JH_MapObj.h" />

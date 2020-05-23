@@ -4,6 +4,23 @@
 
 namespace CBY
 {
+	bool CBY_Character::SkinLoad(T_STR pszLoad)
+	{
+		int index, list;
+		index = I_CHARACTER.SkinLoad(pszLoad, m_obj.m_pd3dDevice, m_obj.m_pContext);
+		m_SkinObjIndex.push_back(index);
+
+		list = m_ObjList.size();
+		m_ObjList.push_back(std::make_shared<CBY_SkinObj>());
+		*m_ObjList[list] = *I_CHARACTER.m_SkinLoadList[index];
+
+		m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax.z *= 1.5;
+		m_ObjList[0]->m_ObjList[0]->m_CharBox.vMin.z *= 1.5;
+
+		SetCharBox();
+		return true;
+	}
+
 	bool CBY_Character::CharacterLoad(ID3D11Device* pd3dDevice, ID3D11DeviceContext* Context,T_STR pszLoad, const TCHAR* ShaderFileName, const TCHAR* TexFileName, const CHAR* VSName, const CHAR* PSName)
 	{
 		m_CharData.Load(pszLoad.c_str());
@@ -87,7 +104,7 @@ namespace CBY
 				}
 			}
 
-			SetObjectSocket(m_CharData.m_data.ObjList[dw].Socket, m_CharData.m_data.ObjList[dw].ObjSocket, dw);
+			SetObjectSocket(m_CharData.m_data.ObjList[dw].Socket, m_CharData.m_data.ObjList[dw].ObjSocket, m_CharData. m_data.ObjList[dw].FireSocket,dw);
 			m_ObjectList[dw]->SetState(0);
 		}
 
@@ -97,7 +114,7 @@ namespace CBY
 
 	bool CBY_Character::ObjLoad(T_STR pszSkinLoad)
 	{
-		std::shared_ptr<CBY_Object> obj = std::make_shared<CBY_Object>();
+		std::shared_ptr<CBY_Weapon> obj = std::make_shared<CBY_Weapon>();
 		obj->Create(m_obj.m_pd3dDevice, m_obj.m_pContext, L"../../data/shader/SkinShader.txt", nullptr, "VSSKIN", "PS");
 		obj->SkinLoad(pszSkinLoad);
 		//obj->BoneLoad(pszMtrLoad);
@@ -154,13 +171,14 @@ namespace CBY
 				m_ObjectList[i]->Update(&m_pMatrixList[m_ObjectList[i]->GetSocket()]);
 			}
 
-			m_ObjectList[i]->SetMatrix(&(mat*m_matWorld), &m_matView, &m_matProj);
+			//m_ObjectList[i]->SetMatrix(&(mat*m_matWorld), &m_matView, &m_matProj);
+			m_ObjectList[i]->SetMatrix(&m_matWorld, &m_matView, &m_matProj);
 		}
 
 		return true;
 	}
 
-	void CBY_Character::SetObjectSocket(int iSocket, int iObjSocket, int iobj)
+	void CBY_Character::SetObjectSocket(int iSocket, int iObjSocket, int iFireSocket,int iobj)
 	{
 		if (m_ObjectList.size() < 0)
 		{
@@ -168,6 +186,7 @@ namespace CBY
 		}
 		m_ObjectList[iobj]->SetSocket(iSocket);
 		m_ObjectList[iobj]->SetObjSocke(iObjSocket);
+		m_ObjectList[iobj]->SetFireSocket(iFireSocket);
 	}
 
 	bool CBY_Character::Render()
@@ -210,6 +229,59 @@ namespace CBY
 		}
 
 		SetFrameTime(state, start, end);
+	}
+
+	void CBY_Character::SetCharBox()
+	{
+		D3DXVECTOR3 size = m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax - m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter;
+		m_CharBox.CreateBox(0,
+			m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter, size.x, size.y, size.z);
+	}
+
+	void CBY_Character::SetMatrix(D3DXMATRIX* world, D3DXMATRIX* view, D3DXMATRIX* proj)
+	{
+		KG_Model::SetMatrix(world, view, proj);
+
+		{	//캐릭터를 감싼 바운딩 박스의 움직임을 제어하는 곳
+			D3DXMATRIX matRot;
+			D3DXVECTOR3 vScale, vPos, vSize;
+			D3DXQUATERNION qRot;
+			D3DXMatrixDecompose(&vScale, &qRot, &vPos, world);
+			D3DXMatrixRotationQuaternion(&matRot, &qRot);
+
+			vSize = m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax - m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter;
+			vSize.x *= vScale.x;
+			vSize.y *= vScale.y;
+			vSize.z *= vScale.z;
+			vPos += m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter;
+
+
+			m_CharBox.CreateBox(0, vPos, vSize.x, vSize.y, vSize.z);		//박스 업데이트
+
+			m_CharBox.UpdateBoxAxis(matRot);
+		}
+
+		{
+			for (int iBox = 0; iBox < m_BoxList.size(); iBox++)
+			{
+				D3DXMATRIX matRot;
+				D3DXVECTOR3 vScale, vPos, vSize;
+				D3DXQUATERNION qRot;
+				D3DXMatrixDecompose(&vScale, &qRot, &vPos, world);
+				D3DXMatrixRotationQuaternion(&matRot, &qRot);
+
+				vSize = m_BoxList[iBox].GetSize();
+				vSize.x *= vScale.x;
+				vSize.y *= vScale.y;
+				vSize.z *= vScale.z;
+				vPos += m_BoxList[iBox].GetPos();
+
+				m_BoxList[iBox].CreateBox(m_BoxList[iBox].GetBoneIndex(),
+					vPos, vSize.x, vSize.y, vSize.z);
+
+				m_BoxList[iBox].UpdateBoxAxis(matRot);
+			}
+		}
 	}
 
 	CBY_Character::CBY_Character()

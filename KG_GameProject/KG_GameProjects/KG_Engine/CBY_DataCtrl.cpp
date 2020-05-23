@@ -93,7 +93,7 @@ namespace CBY
 				}
 			}
 
-			_ftprintf(fp, _T("%d %d\n"), m_data.ObjList[dw].Socket, m_data.ObjList[dw].ObjSocket);
+			_ftprintf(fp, _T("%d %d %d\n"), m_data.ObjList[dw].Socket, m_data.ObjList[dw].ObjSocket, m_data.ObjList[dw].FireSocket);
 		}
 
 		fclose(fp);
@@ -212,7 +212,7 @@ namespace CBY
 				}
 			}
 			_fgetts(pBuffer, 256, fp_src);
-			_stscanf_s(pBuffer, _T("%d%d"), &m_data.ObjList[dw].Socket, &m_data.ObjList[dw].ObjSocket);
+			_stscanf_s(pBuffer, _T("%d%d%d"), &m_data.ObjList[dw].Socket, &m_data.ObjList[dw].ObjSocket, &m_data.ObjList[dw].FireSocket);
 		}
 
 		fclose(fp_src);

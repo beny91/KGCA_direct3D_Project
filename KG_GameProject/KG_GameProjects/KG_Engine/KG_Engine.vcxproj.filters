@@ -52,9 +52,6 @@
     <Filter Include="JH_Map">
       <UniqueIdentifier>{6042859a-4705-46cc-9cf8-51232d0d9b8c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="KYS_Effect">
-      <UniqueIdentifier>{f413ca9b-f146-4ddb-9360-4c4997ef75ce}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="KG_Core.cpp">
@@ -225,29 +222,8 @@
     <ClCompile Include="KG_Collision.cpp">
       <Filter>Utility</Filter>
     </ClCompile>
-    <ClCompile Include="MyEffectParser.cpp">
-      <Filter>KYS_Effect</Filter>
-    </ClCompile>
-    <ClCompile Include="Myparser.cpp">
-      <Filter>KYS_Effect</Filter>
-    </ClCompile>
-    <ClCompile Include="MyParticle.cpp">
-      <Filter>KYS_Effect</Filter>
-    </ClCompile>
-    <ClCompile Include="VFX_EffectObj.cpp">
-      <Filter>KYS_Effect</Filter>
-    </ClCompile>
-    <ClCompile Include="VFX_Obj.cpp">
-      <Filter>KYS_Effect</Filter>
-    </ClCompile>
-    <ClCompile Include="VFX_ObjMgr.cpp">
-      <Filter>KYS_Effect</Filter>
-    </ClCompile>
-    <ClCompile Include="SpriteTexture.cpp">
-      <Filter>KYS_Effect</Filter>
-    </ClCompile>
-    <ClCompile Include="Sprite.cpp">
-      <Filter>KYS_Effect</Filter>
+    <ClCompile Include="CBY_Weapon.cpp">
+      <Filter>CBY_Object\Character\Character</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -428,29 +404,8 @@
     <ClInclude Include="KG_Collision.h">
       <Filter>Utility</Filter>
     </ClInclude>
-    <ClInclude Include="MyEffectParser.h">
-      <Filter>KYS_Effect</Filter>
-    </ClInclude>
-    <ClInclude Include="Myparser.h">
-      <Filter>KYS_Effect</Filter>
-    </ClInclude>
-    <ClInclude Include="MyParticle.h">
-      <Filter>KYS_Effect</Filter>
-    </ClInclude>
-    <ClInclude Include="VFX_EffectObj.h">
-      <Filter>KYS_Effect</Filter>
-    </ClInclude>
-    <ClInclude Include="VFX_Obj.h">
-      <Filter>KYS_Effect</Filter>
-    </ClInclude>
-    <ClInclude Include="VFX_ObjMgr.h">
-      <Filter>KYS_Effect</Filter>
-    </ClInclude>
-    <ClInclude Include="SpriteTexture.h">
-      <Filter>KYS_Effect</Filter>
-    </ClInclude>
-    <ClInclude Include="Sprite.h">
-      <Filter>KYS_Effect</Filter>
+    <ClInclude Include="CBY_Weapon.h">
+      <Filter>CBY_Object\Character\Character</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
