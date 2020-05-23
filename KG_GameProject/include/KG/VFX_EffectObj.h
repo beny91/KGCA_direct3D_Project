@@ -2,7 +2,14 @@
 #include "KG_ShapeObject.h"
 #include "SpriteTexture.h"
 #include "MyParticle.h"
-
+enum VFX_EFFECT
+{
+	VFX_EFFECT_NONE = 1000,
+	VFX_EFFECT_GUN_SHOT,
+	VFX_EFFECT_GUN_SHOT_EXPLOSION,
+	VFX_EFFECT_DAMAGED,
+	VFX_EFFECT_COUNT
+};
 namespace KYS
 {
 	struct VFX_EFFECT_INFO

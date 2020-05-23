@@ -131,7 +131,7 @@ bool KYS::VFX_ObjMgr::Release()
 
 void KYS::VFX_ObjMgr::add(std::shared_ptr<VFX_EffectObj> effectObj)
 {
-	int number = _vfxList.size();
+	int number = VFX_EFFECT_NONE + _vfxList.size() + 1;
 	_vfxList.insert(std::make_pair(number, effectObj));
 }
 

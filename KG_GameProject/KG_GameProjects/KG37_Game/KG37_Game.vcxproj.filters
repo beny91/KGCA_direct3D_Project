@@ -33,6 +33,9 @@
     <ClCompile Include="KG_Point.cpp">
       <Filter>UI</Filter>
     </ClCompile>
+    <ClCompile Include="KYS_TestMain.cpp">
+      <Filter>Main\Test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="KG37_GameMain.h">
@@ -49,6 +52,9 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="KYS_TestMain.h">
+      <Filter>Main\Test</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

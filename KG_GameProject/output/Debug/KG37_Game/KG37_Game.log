@@ -1,6 +1,14 @@
 ﻿  KG_TestMain.cpp
-d:\kgproject\kg_gameproject\kg_gameprojects\kg37_game\kg_testmain.cpp(220): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
-d:\kgproject\kg_gameproject\kg_gameprojects\kg37_game\kg_testmain.cpp(282): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-d:\kgproject\kg_gameproject\kg_gameprojects\kg37_game\kg_testmain.cpp(369): warning C4474: 'swscanf' : 서식 문자열에 전달된 인수가 너무 많습니다.
-  d:\kgproject\kg_gameproject\kg_gameprojects\kg37_game\kg_testmain.cpp(369): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 2개 필요하지만 3개가 제공되었습니다.
-d:\kgproject\kg_gameproject\kg_gameprojects\kg37_game\kg_testmain.cpp(401): warning C4477: 'swscanf' : 서식 문자열 '%f'에 'float *' 형식의 인수가 필요하지만 variadic 인수 4의 형식이 'double'입니다.
+c:\cpp\direct3dteam_project\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg37_game\kg_testmain.cpp(225): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
+c:\cpp\direct3dteam_project\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg37_game\kg_testmain.cpp(287): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\cpp\direct3dteam_project\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg37_game\kg_testmain.cpp(374): warning C4474: 'swscanf' : 서식 문자열에 전달된 인수가 너무 많습니다.
+  c:\cpp\direct3dteam_project\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg37_game\kg_testmain.cpp(374): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 2개 필요하지만 3개가 제공되었습니다.
+c:\cpp\direct3dteam_project\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg37_game\kg_testmain.cpp(406): warning C4477: 'swscanf' : 서식 문자열 '%f'에 'float *' 형식의 인수가 필요하지만 variadic 인수 4의 형식이 'double'입니다.
+  KYS_TestMain.cpp
+c:\cpp\direct3dteam_project\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg37_game\kys_testmain.cpp(249): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
+c:\cpp\direct3dteam_project\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg37_game\kys_testmain.cpp(314): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\cpp\direct3dteam_project\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg37_game\kys_testmain.cpp(401): warning C4474: 'swscanf' : 서식 문자열에 전달된 인수가 너무 많습니다.
+  c:\cpp\direct3dteam_project\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg37_game\kys_testmain.cpp(401): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 2개 필요하지만 3개가 제공되었습니다.
+c:\cpp\direct3dteam_project\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg37_game\kys_testmain.cpp(433): warning C4477: 'swscanf' : 서식 문자열 '%f'에 'float *' 형식의 인수가 필요하지만 variadic 인수 4의 형식이 'double'입니다.
+  코드를 생성하고 있습니다...
+  KG37_Game.vcxproj -> C:\cpp\direct3dTeam_project\KGCA_direct3D_Project\KG_GameProject\KG_GameProjects\KG37_Game\../../output/Debug/KG37_Game/KG37_Game.exe

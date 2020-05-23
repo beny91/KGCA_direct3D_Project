@@ -121,6 +121,6 @@ public:
 	virtual ~KG_TestMain();
 };
 
-KGCA37_RUN(KG_TestMain, KGCA_37_Game, KGCA_37_Game)
+//KGCA37_RUN(KG_TestMain, KGCA_37_Game, KGCA_37_Game)
 
 

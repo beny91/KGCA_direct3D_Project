@@ -5,6 +5,8 @@
 #include"LightMgr.h"
 #include "KG_Input.h"
 #include "KG_Collision.h"
+#include "MyEffectParser.h"
+#include "VFX_ObjMgr.h"
 
 
 bool KG_TestMain::Init()
@@ -37,6 +39,8 @@ bool KG_TestMain::Init()
 	//ComPuteShader
 	(CDXH::CreateComputeShader(L"../../data/shader/ComputeAlpha.HLSL", "CSMAIN", m_pd3dDevice, m_pCS.GetAddressOf()));
 	//////////////////////////////////////////
+
+	
 
 	return true;
 }
@@ -175,6 +179,7 @@ bool KG_TestMain::Frame()
 		m_GameTime += g_SecondTime;
 	}
 
+	
 	/////////////////////////////////////////////
 	return true;
 }

@@ -155,12 +155,14 @@
     <ClInclude Include="KG_GameStd.h" />
     <ClInclude Include="KG_Point.h" />
     <ClInclude Include="KG_TestMain.h" />
+    <ClInclude Include="KYS_TestMain.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="KG37_GameMain.cpp" />
     <ClCompile Include="KG_Point.cpp" />
     <ClCompile Include="KG_TestMain.cpp" />
+    <ClCompile Include="KYS_TestMain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
