@@ -9,6 +9,7 @@ namespace CDX
 
 	ID3D11BlendState* KG_DxState::g_pAlpahBlend = nullptr;
 	ID3D11BlendState* KG_DxState::g_pAlpahBlendDisable = nullptr;
+	ID3D11BlendState* KG_DxState::g_pBlendState[4] = { nullptr, };
 
 	ID3D11RasterizerState* KG_DxState::g_pRSSold = nullptr;
 	ID3D11RasterizerState* KG_DxState::g_pRSWireFrame = nullptr;
@@ -16,7 +17,7 @@ namespace CDX
 
 	ID3D11DepthStencilState* KG_DxState::g_pDSS = nullptr;
 	ID3D11DepthStencilState* KG_DxState::g_pDSSDisable = nullptr;
-
+	ID3D11DepthStencilState* KG_DxState::g_pDSSMaskZero = nullptr;
 
 	//Tool
 	Microsoft::WRL::ComPtr<ID3D11SamplerState> KG_DxState::g_pSSEdit = 0;
@@ -138,8 +139,60 @@ namespace CDX
 		dsd.DepthEnable = FALSE;
 		pd3dDevice->CreateDepthStencilState(&dsd, &g_pDSSDisable);
 
+		createBlendState(pd3dDevice);
+
 		return hr;
 
+	}
+	HRESULT KG_DxState::createBlendState(ID3D11Device* pd3dDevice)
+	{
+		HRESULT hr;
+		D3D11_BLEND_DESC bs;
+		ZeroMemory(&bs, sizeof(D3D11_BLEND_DESC));
+
+		bs.IndependentBlendEnable = TRUE;						//독립적으로 두겠다
+		bs.RenderTarget[0].BlendEnable = TRUE;					//알파 연산을 하겠다 안하겠다
+
+		bs.RenderTarget[0].SrcBlend = D3D11_BLEND_SRC_ALPHA;				//소스 알파
+		bs.RenderTarget[0].DestBlend = D3D11_BLEND_INV_SRC_ALPHA;		//데스크 알파
+		bs.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;					//알파 연산 방식 (+로 선언)
+
+		bs.RenderTarget[0].SrcBlendAlpha = D3D11_BLEND_ONE;				//소스 알파 값
+		bs.RenderTarget[0].DestBlendAlpha = D3D11_BLEND_ZERO;			//데스크 알파값
+		bs.RenderTarget[0].BlendOpAlpha = D3D11_BLEND_OP_ADD;			//알파값 연산
+		bs.RenderTarget[0].RenderTargetWriteMask = D3D11_COLOR_WRITE_ENABLE_ALL;
+		//SRCAlpha*1+DEST*0
+
+		hr = pd3dDevice->CreateBlendState(&bs, &g_pBlendState[0]);
+		if (FAILED(hr))
+		{
+			return hr;
+		}
+
+		//bs.RenderTarget[0].SrcBlend = D3D11_BLEND_ONE;				//소스 알파
+		//bs.RenderTarget[0].DestBlend = D3D11_BLEND_ONE;		//데스크 알파
+
+		bs.RenderTarget[0].SrcBlend = D3D11_BLEND_ONE;
+		bs.RenderTarget[0].DestBlend = D3D11_BLEND_SRC1_COLOR;
+		bs.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;
+
+		hr = pd3dDevice->CreateBlendState(&bs, &g_pBlendState[1]);
+		if (FAILED(hr))
+		{
+			return hr;
+		}
+
+		bs.RenderTarget[0].SrcBlend = D3D11_BLEND_ONE;
+		bs.RenderTarget[0].DestBlend = D3D11_BLEND_SRC1_COLOR;
+		bs.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;
+
+		hr = pd3dDevice->CreateBlendState(&bs, &g_pBlendState[2]);
+		if (FAILED(hr))
+		{
+			return hr;
+		}
+
+		return hr;
 	}
 
 	HRESULT KG_DxState::SetSamplerState(ID3D11Device* pd3dDevice, ID3D11DeviceContext* pContext, D3D11_SAMPLER_DESC* pDesc, UINT StartSlot, UINT NumSamplers)

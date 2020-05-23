@@ -1,3 +1,4 @@
+#pragma once
 #include "KG37_GameMain.h"
 
 bool KG37_GameMain::Init()
@@ -13,6 +14,9 @@ bool KG37_GameMain::Init()
 	m_CharCamera->SetViewProj();
 	m_CharCamera->SetCameraSpeed(30);
 	m_pMainCamera = m_CharCamera.get();
+
+	
+
 	return true;
 }
 
@@ -59,6 +63,9 @@ bool KG37_GameMain::Frame()
 	}
 
 	m_Character->Frame();
+
+	
+
 	D3DXMATRIX zpos;
 	D3DXMatrixIdentity(&zpos);
 	zpos._42 = 20;
@@ -78,6 +85,8 @@ bool KG37_GameMain::Render()
 
 	m_Character->SetMatrix(&(m_pMainCamera->m_World), &m_pMainCamera->m_View, &m_pMainCamera->m_Proj);
 	m_Character->Render();
+
+
 	return true;
 }
 

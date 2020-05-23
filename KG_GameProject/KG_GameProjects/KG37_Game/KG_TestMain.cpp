@@ -4,6 +4,8 @@
 #include"KG_ShapeMap.h"
 #include"LightMgr.h"
 #include "KG_Input.h"
+#include "MyEffectParser.h"
+#include "VFX_ObjMgr.h"
 
 
 bool KG_TestMain::Init()
@@ -36,6 +38,15 @@ bool KG_TestMain::Init()
 	//ComPuteShader
 	(CDXH::CreateComputeShader(L"../../data/shader/ComputeAlpha.HLSL", "CSMAIN", m_pd3dDevice, m_pCS.GetAddressOf()));
 	//////////////////////////////////////////
+
+	EFFECT_PARSER->createEffectDataFromFile(L"../../data/effectData/LoadEffectDataList.txt", m_pd3dDevice, m_pContext);
+	VFX_MGR->setDevice(m_pd3dDevice);
+	VFX_MGR->setContext(m_pContext);
+
+	D3DXVECTOR3 scale = D3DXVECTOR3(1.0f, 1.0f, 0.0f);
+	KYS::VFX_EffectObj* obj;
+	obj = VFX_MGR->find(0);
+	obj->setParticleScale(scale);
 
 	return true;
 }
@@ -113,6 +124,19 @@ bool KG_TestMain::Frame()
 		bClick = true;
 	}
 
+	VFX_MGR->Frame();
+	if (I_Input.GetKeyCheck('1'))					//카메라의 이동
+	{
+
+		KYS::VFX_EffectObj* obj;
+		obj = VFX_MGR->find(0);
+
+		D3DXVECTOR3 pos = D3DXVECTOR3(5.0f, 5.0f, 10.0f);
+		D3DXVECTOR3 dir = D3DXVECTOR3(5.0f, 0.0f, 0.0f);
+
+		obj->Execute(pos, dir);
+	}
+
 	if (!bClick && !m_bFire)
 	{
 		m_Character->SetState(CBY::CHAR_IDLE);
@@ -185,6 +209,8 @@ bool KG_TestMain::Render()
 	m_Character->SetMatrix(&(m_pMainCamera->m_World*scale), &m_pMainCamera->m_View, &m_pMainCamera->m_Proj);
 	//m_Character->Render();
 	/////////////////////////////////////////////
+
+	VFX_MGR->Render(m_pMainCamera);
 	return true;
 }
 

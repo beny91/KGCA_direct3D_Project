@@ -11,6 +11,7 @@
 #include <time.h>
 #include <list>
 #include <map>
+#include <sstream>
 #include <unordered_map>
 #include <vector>
 #include <assert.h>
@@ -113,7 +114,7 @@ public:
 //////////////////////////////////////////////
 //  ∏≈≈©∑Œ
 //////////////////////////////////////////////
-#define str(x) L#x
+//#define str(x) L#x
 #define xstr(x) str(x)
 #define randf(x) (x*rand()/(float)RAND_MAX)
 #define randf2(x,off) (off+x*rand()/(float)RAND_MAX)
