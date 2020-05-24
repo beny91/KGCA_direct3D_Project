@@ -1,6 +1,4 @@
-#pragma once
 #include "VFX_ObjMgr.h"
-#include "KG_Camera.h"
 
 KYS::VFX_ObjMgr::VFX_ObjMgr()
 {
@@ -17,12 +15,12 @@ bool KYS::VFX_ObjMgr::Init()
 
 bool KYS::VFX_ObjMgr::Frame()
 {
-	for (auto effectObj : _vfxList)
+	for (auto effectObj : _effectList)
 	{
-		if (!effectObj.second->getInfo()._active)
+		if (!effectObj->getInfo()._active)
 			continue;
 
-		effectObj.second->Frame();
+		effectObj->Frame();
 	}
 	return false;
 }
@@ -40,9 +38,9 @@ bool KYS::VFX_ObjMgr::Render(KG_Camera* camera)
 	ParticleInfo info;
 	std::shared_ptr<VFX_EffectObj> obj;
 
-	for (auto effectObj : _vfxList)
+	for (auto effectObj : _effectList)
 	{
-		obj = effectObj.second;
+		obj = effectObj;
 
 		if (!obj->getInfo()._active)
 			continue;
@@ -131,14 +129,56 @@ bool KYS::VFX_ObjMgr::Release()
 
 void KYS::VFX_ObjMgr::add(std::shared_ptr<VFX_EffectObj> effectObj)
 {
+	KYS::VFX_EFFECT_INFO info;
+
 	int number = VFX_EFFECT_NONE + _vfxList.size() + 1;
+	info = effectObj.get()->getInfo();
+	info._effectType = number;
+	effectObj.get()->setInfo(info);
+	effectObj.get()->setInitInfo(info);
+
 	_vfxList.insert(std::make_pair(number, effectObj));
 }
 
-KYS::VFX_EffectObj* KYS::VFX_ObjMgr::find(int index)
+std::shared_ptr<KYS::VFX_EffectObj> KYS::VFX_ObjMgr::find(int index)
 {
-	std::shared_ptr<VFX_EffectObj> obj;
-	obj = _vfxList.find(index)->second;
+	
+	std::shared_ptr<VFX_EffectObj> reObj;
 
-	return  obj.get();
+	reObj = getEffect(index);
+	
+	if (reObj == nullptr)
+	{
+		// 없으면 vfxlist 오브젝트 복사해서 vector에 추가
+		// 복사한 obj에는 타입 추가
+		std::shared_ptr<VFX_EffectObj> obj;
+		obj = _vfxList.find(index)->second;
+
+		reObj = std::make_shared< VFX_EffectObj>();
+		*reObj = *obj;
+
+		_effectList.push_back(reObj);
+		
+	}
+
+	return reObj;
+}
+
+std::shared_ptr<KYS::VFX_EffectObj> KYS::VFX_ObjMgr::getEffect(int type)
+{
+	std::shared_ptr<VFX_EffectObj> obj = nullptr;
+
+	for (auto& iter : _effectList)
+	{
+		if (!iter.unique())
+			continue;
+		if (iter->getInfo()._effectType == type && 
+			iter->getInfo()._active == false)
+		{
+			obj = iter;
+			break;
+		}		
+	}
+
+	return obj;
 }

@@ -64,6 +64,8 @@ struct MAPDATA
 };
 
 
+
+
 class KG_TestMain :public KG_Core
 {
 /////char//////////
@@ -77,6 +79,7 @@ public:
 	D3DXVECTOR3 m_vMoveBegin;
 	bool m_bFire;
 	float m_GameTime;
+
 
 public:
 	LRESULT WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) override;

@@ -65,6 +65,11 @@ struct MAPDATA
 
 };
 
+namespace KYS
+{
+	class VFX_EffectObj;
+}
+
 
 class KYS_TestMain :public KG_Core
 {
@@ -79,6 +84,10 @@ public:
 	D3DXVECTOR3 m_vMoveBegin;
 	bool m_bFire;
 	float m_GameTime;
+
+
+	std::shared_ptr<KYS::VFX_EffectObj> obj1;
+	std::shared_ptr<KYS::VFX_EffectObj> obj2;
 
 public:
 	LRESULT WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) override;

@@ -46,10 +46,12 @@ bool KYS_TestMain::Init()
 	VFX_MGR->setContext(m_pContext);
 
 	D3DXVECTOR3 scale = D3DXVECTOR3(5.0f, 5.0f, 0.0f);
-	KYS::VFX_EffectObj* obj;
+	std::shared_ptr<KYS::VFX_EffectObj>obj;
 	obj = VFX_MGR->find(VFX_EFFECT_GUN_SHOT);
 	obj->setParticleScale(scale);
 
+	obj1 = VFX_MGR->find(VFX_EFFECT_GUN_SHOT);
+	obj2 = VFX_MGR->find(VFX_EFFECT_GUN_SHOT);
 
 	return true;
 }
@@ -193,16 +195,26 @@ bool KYS_TestMain::Frame()
 	//effect
 	VFX_MGR->Frame();
 
-	if (I_Input.GetKeyCheck('1'))					//카메라의 이동
+	SHORT key = I_Input.KeyCheck('1');
+	if (key == KEY_PUSH)					//카메라의 이동
 	{
-
-		KYS::VFX_EffectObj* obj;
-		obj = VFX_MGR->find(VFX_EFFECT_GUN_SHOT);
+		obj1 = VFX_MGR->find(VFX_EFFECT_GUN_SHOT);
 
 		D3DXVECTOR3 pos = D3DXVECTOR3(5.0f, 5.0f, 10.0f);
 		D3DXVECTOR3 dir = D3DXVECTOR3(5.0f, 0.0f, 0.0f);
 
-		obj->Execute(pos, dir);
+		obj1->Execute(pos, dir);
+	}
+
+	key = I_Input.KeyCheck('2');
+	if (key == KEY_PUSH)					//카메라의 이동
+	{
+
+		obj2 = VFX_MGR->find(VFX_EFFECT_GUN_SHOT);
+		D3DXVECTOR3 pos = D3DXVECTOR3(5.0f, 7.0f, 10.0f);
+		D3DXVECTOR3 dir = D3DXVECTOR3(5.0f, 0.0f, 0.0f);
+
+		obj2->Execute(pos, dir);
 	}
 
 	return true;

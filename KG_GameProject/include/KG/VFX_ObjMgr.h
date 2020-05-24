@@ -2,10 +2,8 @@
 #include <map>
 #include <memory>
 #include "VFX_EffectObj.h"
+#include "KG_Camera.h"
 
-class KG_Camera;
-struct ID3D11Device;
-struct ID3D11DeviceContext;
 namespace KYS
 {
 	class VFX_ObjMgr
@@ -28,8 +26,9 @@ namespace KYS
 		bool Release();
 	
 	public:
-		void add(std::shared_ptr<VFX_EffectObj> effectObj);
-		VFX_EffectObj* find(int index);
+		void add(std::shared_ptr<VFX_EffectObj > effectObj);
+		std::shared_ptr<VFX_EffectObj> find(int index);
+		std::shared_ptr<VFX_EffectObj> getEffect(int type);
 	public:
 		void setVfxList(std::map<int, std::shared_ptr<VFX_EffectObj>> list) { _vfxList = list; }
 		std::map<int, std::shared_ptr<VFX_EffectObj>> getVfxList() { return _vfxList; }
@@ -39,6 +38,7 @@ namespace KYS
 
 	private:
 		std::map<int, std::shared_ptr<VFX_EffectObj>> _vfxList;
+		std::vector<std::shared_ptr<VFX_EffectObj>> _effectList;
 		ID3D11Device* _device;
 		ID3D11DeviceContext* _context;
 	};
