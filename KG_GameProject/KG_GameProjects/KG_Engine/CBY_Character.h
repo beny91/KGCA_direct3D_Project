@@ -27,6 +27,8 @@ namespace CBY
 			const TCHAR* ShaderFileName= L"../../data/shader/SkinShader.txt", const TCHAR* TexFileName= nullptr, const CHAR* VSName= "VSSKIN", const CHAR* PSName= "PS");
 		virtual void SetMatrix(D3DXMATRIX* world, D3DXMATRIX* view, D3DXMATRIX* proj)override;
 		
+	public:
+		D3DXVECTOR3 GetColPos();
 
 	public:
 		virtual void SetCharAction(int state, float start, float end);

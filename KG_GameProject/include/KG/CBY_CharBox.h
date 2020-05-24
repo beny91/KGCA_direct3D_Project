@@ -13,8 +13,10 @@ namespace CBY
 		D3DXMATRIX* m_pBindmat;
 		D3DXVECTOR3 m_vMax;
 		D3DXVECTOR3 m_vMin;
+		D3DXVECTOR3 m_vInitPos;
 		D3DXVECTOR3 m_vPos;
 		D3DXVECTOR3 m_vBoxSize;
+		D3DXVECTOR3 m_vInitBoxSize;
 		std::vector<PNCT_VERTEX> m_VertexList;
 
 	public:
@@ -33,6 +35,26 @@ namespace CBY
 		int GetBoneIndex();
 		D3DXVECTOR3 GetSize();
 		D3DXVECTOR3 GetPos();
+
+
+	public:
+		inline void SetInitPos(D3DXVECTOR3 pos)
+		{
+			m_vInitPos = pos;
+		};
+		inline D3DXVECTOR3 GetInitPos()
+		{
+			return m_vInitPos;
+		};
+		inline void SetInitBoxSize(D3DXVECTOR3 pos)
+		{
+			m_vInitBoxSize = pos;
+		};
+		inline D3DXVECTOR3 GetInitBoxSize()
+		{
+			return m_vInitBoxSize;
+		};
+
 		inline KG_Box GetBox()
 		{
 			return m_Box;

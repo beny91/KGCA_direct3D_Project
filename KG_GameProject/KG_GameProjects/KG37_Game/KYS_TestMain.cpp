@@ -199,10 +199,11 @@ bool KYS_TestMain::Frame()
 		KYS::VFX_EffectObj* obj;
 		obj = VFX_MGR->find(VFX_EFFECT_GUN_SHOT);
 
-		D3DXVECTOR3 pos = D3DXVECTOR3(5.0f, 5.0f, 10.0f);
+		//D3DXVECTOR3 pos = D3DXVECTOR3(5.0f, 5.0f, 10.0f);
+		D3DXVECTOR3 pos = m_Enemy->GetColPos();
 		D3DXVECTOR3 dir = D3DXVECTOR3(5.0f, 0.0f, 0.0f);
 
-		obj->Execute(pos, dir);
+		obj->Execute(pos);
 	}
 
 	return true;

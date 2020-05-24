@@ -126,7 +126,7 @@ namespace CBY
 				vSize.x *= vScale.x;
 				vSize.y *= vScale.y;
 				vSize.z *= vScale.z;
-				vPos += m_BoxList[iBox].GetPos();
+				vPos += m_BoxList[iBox].GetInitPos();
 
 				m_BoxList[iBox].CreateBox(m_BoxList[iBox].GetBoneIndex(),
 					vPos, vSize.x, vSize.y, vSize.z);
@@ -352,6 +352,8 @@ namespace CBY
 		for (int iBox = 0; iBox < m_BoxList.size(); iBox++)
 		{
 			D3DXVECTOR3 size = m_BoxList[iBox].GetSize();
+			m_BoxList[iBox].SetInitBoxSize(size);						//초기 박스 사이즈
+			m_BoxList[iBox].SetInitPos(m_BoxList[iBox].GetPos());		//초기 위치
 			m_BoxList[iBox].CreateBox(m_BoxList[iBox].GetBoneIndex(),
 				m_BoxList[iBox].GetPos(), size.x, size.y, size.z);
 		}

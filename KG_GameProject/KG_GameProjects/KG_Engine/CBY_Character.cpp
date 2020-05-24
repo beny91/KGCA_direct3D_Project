@@ -264,17 +264,18 @@ namespace CBY
 		{
 			for (int iBox = 0; iBox < m_BoxList.size(); iBox++)
 			{
-				D3DXMATRIX matRot;
+				D3DXMATRIX matworld, matRot;
+				matworld = m_pMatrixList[m_BoxList[iBox].GetBoneIndex()] * (*world);
 				D3DXVECTOR3 vScale, vPos, vSize;
 				D3DXQUATERNION qRot;
-				D3DXMatrixDecompose(&vScale, &qRot, &vPos, world);
+				D3DXMatrixDecompose(&vScale, &qRot, &vPos, &matworld);
 				D3DXMatrixRotationQuaternion(&matRot, &qRot);
 
-				vSize = m_BoxList[iBox].GetSize();
+				vSize = m_BoxList[iBox].GetInitBoxSize();
 				vSize.x *= vScale.x;
 				vSize.y *= vScale.y;
 				vSize.z *= vScale.z;
-				vPos += m_BoxList[iBox].GetPos();
+				//vPos += m_BoxList[iBox].GetInitPos();
 
 				m_BoxList[iBox].CreateBox(m_BoxList[iBox].GetBoneIndex(),
 					vPos, vSize.x, vSize.y, vSize.z);
@@ -282,6 +283,11 @@ namespace CBY
 				m_BoxList[iBox].UpdateBoxAxis(matRot);
 			}
 		}
+	}
+
+	D3DXVECTOR3 CBY_Character::GetColPos()
+	{
+		return m_BoxList[0].GetPos();
 	}
 
 	CBY_Character::CBY_Character()
