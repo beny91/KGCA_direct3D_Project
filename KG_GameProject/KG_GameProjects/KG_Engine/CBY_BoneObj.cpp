@@ -42,6 +42,14 @@ void CBY_BoneObj::Update(int iStart, int iEnd, float fTime, D3DXMATRIX* pMatrixL
 	CMatSetData matdata;
 	float Start = iStart * m_Scene.iTickPerFrame;// * m_Loader.m_Scene.iFrameSpeed;
 	float afTime = 0;
+	m_bAniEnd = false;
+	m_bAniStart = false;
+
+	if (m_fElapseTick == 0.0f)
+	{
+		m_bAniStart = true;
+	}
+
 	afTime = 1.0f*g_SecondTime * m_Scene.iTickPerFrame * m_Scene.iFrameSpeed;
 	if (afTime >= m_Scene.iTickPerFrame)
 	{
@@ -52,6 +60,7 @@ void CBY_BoneObj::Update(int iStart, int iEnd, float fTime, D3DXMATRIX* pMatrixL
 
 	if (Start >= iEnd * m_Scene.iTickPerFrame)
 	{
+		m_bAniEnd = true;
 		Start -= iStart;
 		m_fElapseTick = 0;
 	}
@@ -100,6 +109,13 @@ void CBY_BoneObj::Update(int iStart, int iEnd, float fTime, D3DXMATRIX* pMatrixL
 void CBY_BoneObj::MTRUpdate(int iStart, int iEnd, float fTime, D3DXMATRIX* pMatrixList)
 {
 	CMatSetData matdata;
+	m_bAniStart = false;
+	m_bAniEnd = false;
+
+	if (m_fElapseTick==0.0f)
+	{
+		m_bAniStart = true;
+	}
 
 	float afTime = 0;
 	afTime = 1.0f * g_SecondTime * m_Scene.iTickPerFrame * m_Scene.iFrameSpeed;
@@ -111,6 +127,7 @@ void CBY_BoneObj::MTRUpdate(int iStart, int iEnd, float fTime, D3DXMATRIX* pMatr
 	m_fElapseTick += afTime;
 	if (m_fElapseTick >= m_Scene.iLastFrame * m_Scene.iTickPerFrame)
 	{
+		m_bAniEnd = true;
 		m_fElapseTick = 0.0f;
 	}
 
@@ -396,6 +413,8 @@ void    CBY_BoneObj::Convert(std::vector<PNCTIW_VERTEX>& list)
 CBY_BoneObj::CBY_BoneObj()
 {
 	m_fElapseTick = 0.0f;
+	m_bAniStart = false;
+	m_bAniEnd = false;
 }
 
 

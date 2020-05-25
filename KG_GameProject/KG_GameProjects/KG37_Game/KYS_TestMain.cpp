@@ -7,6 +7,7 @@
 #include "KG_Collision.h"
 #include "MyEffectParser.h"
 #include "VFX_ObjMgr.h"
+#include "CBY_BulletMgr.h"
 
 
 bool KYS_TestMain::Init()
@@ -14,27 +15,19 @@ bool KYS_TestMain::Init()
 	CDX::ApplyBS(m_pContext, CDX::KG_DxState::g_pAlpahBlend);
 	CDX::ApplySS(m_pContext, CDX::KG_DxState::g_pSampler);
 	CDX::ApplyRS(m_pContext, CDX::KG_DxState::g_pRSSold);
-
-	////////////////Char////////////////////	
-	m_Character = std::make_shared<CBY::CBY_Character>();
-	m_Character->CharacterLoad(m_pd3dDevice, m_pContext, L"../../data/char/save/CharTest.txt");
-
-	m_Enemy = std::make_shared<CBY::CBY_Character>();
-	m_Enemy->CharacterLoad(m_pd3dDevice, m_pContext, L"../../data/char/save/GirlInfoEx.txt");
+	
+	///////////////Camera//////////////////////
 	m_CharCamera = std::make_shared<CBY::CBY_CharacterCamera>();
 	m_CharCamera->SetViewProj();
 	m_CharCamera->SetCameraSpeed(30);
 	m_pMainCamera = m_CharCamera.get();
 	//////////////////////////////////////////
 
-	//SetCursor(LoadCursor(g_hInstance, IDB_BITMAP1));
 
 	//////////////Map/////////////////////////
-	//LoadMapData(L"../../data/MapSave/SampleRust.Map");
 	LoadMapData(L"../../data/MapSave/aa.Map");
-	I_LIGHT_MGR.GetDevice(m_pd3dDevice);
-	I_LIGHT_MGR.GetContext(m_pContext);
-	I_LIGHT_MGR.Create(L"../../data/Shader/JHMapShader.txt", L"../../data/LightSrc/LightInfo.txt");
+	//LoadMapData(L"../../data/MapSave/SampleRust.Map");
+	//LoadMapData(L"../../data/MapSave/SampleRubber.Map");
 
 	//ComPuteShader
 	(CDXH::CreateComputeShader(L"../../data/shader/ComputeAlpha.HLSL", "CSMAIN", m_pd3dDevice, m_pCS.GetAddressOf()));
@@ -46,10 +39,26 @@ bool KYS_TestMain::Init()
 	VFX_MGR->setContext(m_pContext);
 
 	D3DXVECTOR3 scale = D3DXVECTOR3(5.0f, 5.0f, 0.0f);
-	KYS::VFX_EffectObj* obj;
+	std::shared_ptr<KYS::VFX_EffectObj>obj;
 	obj = VFX_MGR->find(VFX_EFFECT_GUN_SHOT);
 	obj->setParticleScale(scale);
 
+	obj1 = VFX_MGR->find(VFX_EFFECT_GUN_SHOT);
+	obj1->setParticleScale(scale);
+
+	////////////////Char////////////////////	
+	CBY::CBY_CHAR_BULLET.Init();
+	m_Character = std::make_shared<CBY::CBY_HeroGirl>();
+	m_Character->Create(m_pd3dDevice, m_pContext);
+	m_Character->SetFireTime(0.5f);
+
+	m_Enemy = std::make_shared<CBY::CBY_EnemyGirl>();
+	m_Enemy->Create(m_pd3dDevice, m_pContext);
+	m_Enemy->SetCamera(m_pMainCamera);
+
+	m_Character->SetEnemy(m_Enemy.get());
+	m_Character->SetCamera(m_pMainCamera);
+	//////////////////////////////////////////
 
 	return true;
 }
@@ -63,9 +72,9 @@ bool KYS_TestMain::Frame()
 	m_Select.SetMarix(nullptr, &m_pMainCamera->m_View, &m_pMainCamera->m_Proj);
 
 	D3DXVECTOR3 v0, v1, v2, vIntersection;
-	I_LIGHT_MGR.Frame();
-	I_LIGHT_MGR.m_cbLight.vEyeDir = { m_pMainCamera->m_Look,30 };
-	I_LIGHT_MGR.m_cbLight.vEyePos = { m_pMainCamera->m_Pos,30 };
+	JH::I_LIGHT_MGR.Frame();
+	JH::I_LIGHT_MGR.m_cbLight.vEyeDir = { m_pMainCamera->m_Look,30 };
+	JH::I_LIGHT_MGR.m_cbLight.vEyePos = { m_pMainCamera->m_Pos,30 };
 
 	m_QuadTree->Frame();
 	////////////////////////////////////////
@@ -75,111 +84,13 @@ bool KYS_TestMain::Frame()
 	if (m_Character == nullptr)return true;
 	if (m_GameTime > 3)
 	{
-		bool bClick = false;
-		bool bRun = false;
-		float fSpeed = 10;
-		float fM = 0;
-		D3DXVECTOR3 vN, vLook, vSide, vLookPush, vSidePush, vObjPush;
-		vLookPush = D3DXVECTOR3(0, 0, 0);
-		vSidePush = D3DXVECTOR3(0, 0, 0);
-		vLook = m_pMainCamera->m_LookDir;
-		vSide = m_pMainCamera->m_SideDir;
+		D3DXVECTOR3 pos = m_Character->GetHeroPos();
+		pos.y = m_Map->GetHeight(pos.x, pos.z);
+		m_Character->SetHeroPos(pos);
 
-		if (KG_COLLOSION::ChkOBBToOBBAndDirection(m_Character->GetCharBox(), m_Enemy->GetCharBox(), vN, fM))
-		{
-			float fdot = D3DXVec3Dot(&m_pMainCamera->m_LookDir, &vN);
-
-			if (fdot < 0)
-			{
-				vLookPush = (2 * D3DXVec3Dot(&-m_pMainCamera->m_LookDir, &vN)) * vN + m_pMainCamera->m_LookDir; //벽밀림
-				vSidePush = (2 * D3DXVec3Dot(&-m_pMainCamera->m_SideDir, &vN)) * vN + m_pMainCamera->m_SideDir;
-				//vObjPush = (2 * D3DXVec3Dot(&-m_pMainCamera->m_ObjDir, &vN)) * vN + m_pMainCamera->m_SideDir;
-
-				vLook = m_pMainCamera->m_LookDir - vN * (D3DXVec3Dot(&m_pMainCamera->m_LookDir, &vN));
-				vSide = m_pMainCamera->m_SideDir - vN * (D3DXVec3Dot(&m_pMainCamera->m_SideDir, &vN));
-
-				m_vMove += vLookPush * fM *g_SecondTime;
-			}
-			else
-			{
-				vLookPush = (2 * D3DXVec3Dot(&-m_pMainCamera->m_LookDir, &vN)) * vN + m_pMainCamera->m_LookDir; //벽밀림
-				vSidePush = (2 * D3DXVec3Dot(&-m_pMainCamera->m_SideDir, &vN)) * vN + m_pMainCamera->m_SideDir;
-				//vObjPush = (2 * D3DXVec3Dot(&-m_pMainCamera->m_ObjDir, &vN)) * vN + m_pMainCamera->m_SideDir;
-
-				vLook = m_pMainCamera->m_LookDir - vN * (D3DXVec3Dot(&m_pMainCamera->m_LookDir, &vN));
-				vSide = m_pMainCamera->m_SideDir - vN * (D3DXVec3Dot(&m_pMainCamera->m_SideDir, &vN));
-
-				m_vMove -= vLookPush * fM *g_SecondTime;
-			}
-
-		}
-
-		if (I_Input.GetKeyCheck(VK_SHIFT))
-		{
-			m_Character->SetState(CBY::CHAR_RUN);
-			bClick = true;
-			bRun = true;
-			fSpeed += 10;
-		}
-
-		if (I_Input.GetKeyCheck('W'))
-		{
-			if (!bRun && !m_bFire)
-			{
-				m_Character->SetState(CBY::CHAR_MOVE);
-			}
-			m_vMove += vLook * fSpeed * g_SecondTime;
-
-			bClick = true;
-		}
-		if (I_Input.GetKeyCheck('S'))
-		{
-			if (!bRun && !m_bFire)
-			{
-				m_Character->SetState(CBY::CHAR_MOVE);
-			}
-			m_vMove -= vLook * fSpeed * g_SecondTime;
-			bClick = true;
-		}
-		if (I_Input.GetKeyCheck('A'))
-		{
-			if (!bRun && !m_bFire)
-			{
-				m_Character->SetState(CBY::CHAR_MOVE);
-			}
-			m_vMove += vSide * fSpeed * g_SecondTime;
-			bClick = true;
-		}
-		if (I_Input.GetKeyCheck('D'))
-		{
-			if (!bRun && !m_bFire)
-			{
-				m_Character->SetState(CBY::CHAR_MOVE);
-			}
-			m_vMove -= vSide * fSpeed * g_SecondTime;
-		}
-
-		if (I_Input.GetKeyCheck(VK_SPACE))
-		{
-			m_Character->SetState(CBY::CHAR_JUMP);
-			bClick = true;
-		}
-
-		if (!bClick && !m_bFire)
-		{
-			m_Character->SetState(CBY::CHAR_IDLE);
-		}
-
-		m_vMove.y = m_Map->GetHeight(m_vMove.x, m_vMove.z);
-
-		m_Character->Frame();
-		D3DXMATRIX zpos;
-		D3DXMatrixIdentity(&zpos);
-		zpos._42 = 20;
-		zpos._43 = -30;
-		D3DXMATRIX charmat = m_Character->m_pMatrixList[46] * zpos * m_Character->m_matWorld;
-		D3DXVECTOR3 bonepos = D3DXVECTOR3(charmat._41, charmat._42, charmat._43);
-		m_pMainCamera->m_Pos = bonepos;
+		m_Character->Process();
+		
+		m_pMainCamera->m_Pos = m_Character->GetCamerPos();
 
 		m_Enemy->Frame();
 	}
@@ -193,18 +104,18 @@ bool KYS_TestMain::Frame()
 	//effect
 	VFX_MGR->Frame();
 
-	if (I_Input.GetKeyCheck('1'))					//카메라의 이동
-	{
+	D3DXMATRIX matViewInverse, matWorld;
+	matViewInverse = m_pMainCamera->m_View;
+	D3DXMatrixInverse(&matViewInverse, NULL, &matViewInverse);
 
-		KYS::VFX_EffectObj* obj;
-		obj = VFX_MGR->find(VFX_EFFECT_GUN_SHOT);
+	m_matBillBoard = matViewInverse;
 
-		//D3DXVECTOR3 pos = D3DXVECTOR3(5.0f, 5.0f, 10.0f);
-		D3DXVECTOR3 pos = m_Enemy->GetColPos();
-		D3DXVECTOR3 dir = D3DXVECTOR3(5.0f, 0.0f, 0.0f);
-
-		obj->Execute(pos);
-	}
+	/////////////ammo////
+	D3DXMATRIX scale;
+	D3DXMatrixScaling(&scale, 0.2, 0.2, 0.2);
+	//D3DXMatrixScaling(&scale, 1, 1, 1);
+	CBY::CBY_CHAR_BULLET.SetMatrix(&scale, &m_pMainCamera->m_View, &m_pMainCamera->m_Proj);
+	CBY::CBY_CHAR_BULLET.Frame();
 
 	return true;
 }
@@ -225,9 +136,9 @@ bool KYS_TestMain::Render()
 	{
 		m_Map->SetMatrix(nullptr, &m_pMainCamera->m_View, &m_pMainCamera->m_Proj);
 		ID3D11Buffer*               pBuffers[3];
-		pBuffers[0] = I_LIGHT_MGR.m_pLightConstantBuffer[0].Get();
-		LightConstantBuffer mcb = I_LIGHT_MGR.m_cbLight;
-		m_Map->UpdateConstantBuffer(I_LIGHT_MGR.m_pLightConstantBuffer[0].Get(), &I_LIGHT_MGR.m_cbLight);
+		pBuffers[0] = JH::I_LIGHT_MGR.m_pLightConstantBuffer[0].Get();
+		JH::LightConstantBuffer mcb = JH::I_LIGHT_MGR.m_cbLight;
+		m_Map->UpdateConstantBuffer(JH::I_LIGHT_MGR.m_pLightConstantBuffer[0].Get(), &JH::I_LIGHT_MGR.m_cbLight);
 		m_Map->m_obj.m_pContext->PSSetConstantBuffers(1, 1, pBuffers);
 		m_Map->m_obj.m_pContext->PSSetConstantBuffers(1, 1, pBuffers);
 
@@ -245,84 +156,40 @@ bool KYS_TestMain::Render()
 	////////////////////////////////////////////
 
 	///////////////////Char//////////////////////
-	m_pMainCamera->m_At;
 	D3DXMATRIX scale;
 	D3DXMatrixScaling(&scale, 0.025, 0.025, 0.025);
 	scale._41 = 30;
-	//scale._42 = m_vMove.y;
+	scale._42 = m_Map->GetHeight(30, 20);
 	scale._43 = 20;
 	m_Enemy->SetMatrix(&scale, &m_pMainCamera->m_View, &m_pMainCamera->m_Proj);
 	m_Enemy->Render();
-
+	
+	m_vMove = m_Character->GetHeroPos();
+	D3DXMatrixScaling(&scale, 0.025, 0.025, 0.025);
 	scale._41 = m_vMove.x;
 	scale._42 = m_vMove.y;
 	scale._43 = m_vMove.z;
+	//m_matBillBoard._41 = m_vMove.x;
+	//m_matBillBoard._42 = m_vMove.y;
+//	m_matBillBoard._43 = m_vMove.z;
+	//m_Character-._42>SetMatrix(&(m_pMainCamera->m_World*scale), &m_pMainCamera->m_View, &m_pMainCamera->m_Proj);
 	m_Character->SetMatrix(&(m_pMainCamera->m_World*scale), &m_pMainCamera->m_View, &m_pMainCamera->m_Proj);
 	m_Character->Render();
 	/////////////////////////////////////////////
 
 	//effect
 	VFX_MGR->Render(m_pMainCamera);
+
+	CBY::CBY_CHAR_BULLET.Render();
 	return true;
 }
 
 bool KYS_TestMain::Release()
 {
 	m_Character->Release();
+	m_Enemy->Release();
 	m_CharCamera->Release();
-	return true;
-}
-
-bool KYS_TestMain::CreateMap(int iWidth,
-	int iHeight,
-	int iCellCount,
-	int iCellSize,
-	const TCHAR* pTexturFileName,
-	const TCHAR* pNormalMapFileName)
-{
-
-
-	if (m_Map != nullptr)
-	{
-		m_Map->Release();
-		m_QuadTree->Release();
-
-	}
-
-
-	m_Map = make_shared<JH_Map>();
-	if (m_sMapData.m_fHegihtList.size() > 0)
-	{
-		std::copy(m_sMapData.m_fHegihtList.begin(),
-			m_sMapData.m_fHegihtList.end(),
-			back_inserter(m_Map->m_vHeightList));
-	}
-	if (false)
-	{
-		m_Map->CreateHeightMap(m_pd3dDevice, m_pContext, L"../../data/map/heightMap513.bmp");
-	}
-	else
-	{
-		m_Map->m_iCellCount = iCellCount;
-		m_Map->m_iRowNum = iCellCount * iWidth + 1;
-		m_Map->m_iColumNum = iCellCount * iHeight + 1;
-	}
-
-	//	CreateSplattingTexture();
-	//CreateCSTexture();
-
-
-	m_Map->SetMapDesc(pTexturFileName, L"../../data/Shader/JHMapShader.txt", m_Map->m_iRowNum, m_Map->m_iColumNum, iCellSize, 1.0f);
-
-
-	m_Map->m_pNormMapFileName = pNormalMapFileName;
-	m_Map->Load(m_pd3dDevice, m_pContext);
-
-	m_QuadTree = make_shared<HQuadTree>();
-	m_QuadTree->Build(m_Map.get(), m_pMainCamera);
-	m_QuadTree->m_pSelect = &m_Select;
-
-
+	CBY::CBY_CHAR_BULLET.Release();
 	return true;
 }
 
@@ -356,18 +223,29 @@ bool  KYS_TestMain::LoadMapData(const TCHAR* LoadFile)
 	}
 
 	//Map Basic Text Data
-
+	m_sMapData.Reset();
 
 	TCHAR   Temp[256];
 	_fgetts(m_pBuffer, 256, fp);
 	_stscanf(m_pBuffer, _T("%s %s\n"), m_pString,
 		Temp);
-
 	m_sMapData.m_BaseTextureFile = Temp;
+
 	_fgetts(m_pBuffer, 256, fp);
 	_stscanf(m_pBuffer, _T("%s %s\n"), m_pString, Temp);
-
 	m_sMapData.m_NormalMapFile = Temp;
+
+	_fgetts(m_pBuffer, 256, fp);
+	_stscanf(m_pBuffer, _T("%s %s\n "), m_pString, Temp);
+	if (Temp == m_sMapData.m_NormalMapFile)
+	{
+		//m_sMapData.m_HeightMapFile;
+	}
+	else
+	{
+		m_sMapData.m_HeightMapFile = Temp;
+	}
+
 	_fgetts(m_pBuffer, 256, fp);
 	_stscanf(m_pBuffer, _T("%s %s\n "), m_pString, Temp);
 
@@ -399,7 +277,7 @@ bool  KYS_TestMain::LoadMapData(const TCHAR* LoadFile)
 	_stscanf(m_pBuffer, _T("%s %d %d %d %d\n"), m_pString, &m_sMapData.iRow, &m_sMapData.iCol, &m_sMapData.iCellCount, &m_sMapData.iCellSize);
 	// Vertex Height Data
 	_fgetts(m_pBuffer, 256, fp);
-	_stscanf(m_pBuffer, _T("%s %d\n "), m_pString, &m_iTemp, m_pString);
+	_stscanf(m_pBuffer, _T("%s %d\n "), m_pString, &m_iTemp);
 
 	_fgetts(m_pBuffer, 256, fp);
 	_stscanf(m_pBuffer, _T(" %s\n"), m_pString);
@@ -408,11 +286,10 @@ bool  KYS_TestMain::LoadMapData(const TCHAR* LoadFile)
 	int layer = 0;
 	for (int iVertex = 0; iVertex < m_iTemp; iVertex++)
 	{
-		float fh;
-		_fgetts(m_pBuffer, 256, fp);
-		_stscanf(m_pBuffer, _T("%f "), &fh);
 
-		m_sMapData.m_fHegihtList[iVertex] = fh * 3;
+		_fgetts(m_pBuffer, 256, fp);
+		_stscanf(m_pBuffer, _T("%f "), &m_sMapData.m_fHegihtList[iVertex]);
+
 
 	}
 
@@ -423,16 +300,20 @@ bool  KYS_TestMain::LoadMapData(const TCHAR* LoadFile)
 
 	for (int iObj = 0; iObj < m_sMapData.m_sQTData.m_ObjList.size(); iObj++)
 	{
-		OBJECT OBJ =
+		JH::OBJECT &OBJ =
 			m_sMapData.m_sQTData.m_ObjList[iObj];
 		_fgetts(m_pBuffer, 256, fp);
 		_stscanf(m_pBuffer, _T("%d \n"), &OBJ.m_iQuadTreeIndex);
 
 		_fgetts(m_pBuffer, 256, fp);
+		_stscanf(m_pBuffer, _T("%s \n"), m_pString);
+		OBJ.m_FileName = m_pString;
+
+		_fgetts(m_pBuffer, 256, fp);
 		_stscanf(m_pBuffer, _T("\t%s\n"), m_pString);
 		_fgetts(m_pBuffer, 256, fp);
 		_stscanf(m_pBuffer, _T("\t%f %f %f %f\n"),
-			&OBJ.matWorld._11, &OBJ.matWorld._12, &OBJ.matWorld._13, OBJ.matWorld._14);
+			&OBJ.matWorld._11, &OBJ.matWorld._12, &OBJ.matWorld._13, &OBJ.matWorld._14);
 		_fgetts(m_pBuffer, 256, fp);
 		_stscanf(m_pBuffer, _T("\t%f %f %f %f\n"),
 			&OBJ.matWorld._21, &OBJ.matWorld._22, &OBJ.matWorld._23, &OBJ.matWorld._24);
@@ -445,7 +326,7 @@ bool  KYS_TestMain::LoadMapData(const TCHAR* LoadFile)
 	}
 
 	CreateMap(m_sMapData.iRow, m_sMapData.iCol, m_sMapData.iCellCount, m_sMapData.iCellSize,
-		m_sMapData.m_BaseTextureFile.c_str(), m_sMapData.m_NormalMapFile.c_str());
+		m_sMapData.m_BaseTextureFile.c_str(), m_sMapData.m_NormalMapFile.c_str(), m_sMapData.m_HeightMapFile.c_str());
 	for (int iTex = 0; iTex < m_sMapData.m_pSplattTextureFile.size(); iTex++)
 	{
 		m_Map->AddSplattTexture(m_sMapData.m_pSplattTextureFile[iTex].data(), iTex + 1);
@@ -457,10 +338,63 @@ bool  KYS_TestMain::LoadMapData(const TCHAR* LoadFile)
 
 	hr = D3DX11CreateShaderResourceViewFromFile(m_pd3dDevice,
 		(m_sMapData.m_pSplattAlphaTextureFile.data()), NULL, NULL, m_Map->m_pCopySrv.GetAddressOf(), NULL);
-	if (FAILED(hr))
+
+	//m_ObjectList.clear();
+
+	//for (int i = 0; i < m_sMapData.m_sQTData.m_ObjList.size(); i++)
+	//{
+	//	OBJECT& obj = m_sMapData.m_sQTData.m_ObjList[i];
+	//	AddObject(obj);
+	//}
+
+	return true;
+}
+bool KYS_TestMain::CreateMap(int iWidth,
+	int iHeight,
+	int iCellCount,
+	int iCellSize,
+	const TCHAR* pTexturFileName,
+	const TCHAR* pNormalMapFileName,
+	const TCHAR* pHeightMapFileName)
+{
+
+
+	if (m_Map != nullptr)
 	{
+		m_Map->Release();
+		m_QuadTree->Release();
 
 	}
+
+
+	m_Map = std::make_shared<JH::JH_Map>();
+	T_STR strnull;
+	if (pHeightMapFileName!= strnull)
+	{
+		m_Map->CreateHeightMap(m_pd3dDevice, m_pContext, pHeightMapFileName);
+	}
+	else
+	{
+		m_Map->m_iCellCount = iCellCount;
+		m_Map->m_iRowNum = iCellCount * iWidth + 1;
+		m_Map->m_iColumNum = iCellCount * iHeight + 1;
+	}
+	if (m_sMapData.m_fHegihtList.size() > 0)
+	{
+		std::copy(m_sMapData.m_fHegihtList.begin(),
+			m_sMapData.m_fHegihtList.end(),
+			back_inserter(m_Map->m_vHeightList));
+	}
+	m_Map->SetMapDesc(pTexturFileName, L"../../data/Shader/JHMapShader.txt", m_Map->m_iRowNum, m_Map->m_iColumNum, iCellSize, 1.0f);
+
+
+	m_Map->m_pNormMapFileName = pNormalMapFileName;
+	m_Map->m_HegithFileName = pHeightMapFileName;
+	m_Map->Load(m_pd3dDevice, m_pContext);
+
+	m_QuadTree = std::make_shared<JH::HQuadTree>();
+	m_QuadTree->Build(m_Map.get(), m_pMainCamera);
+	m_QuadTree->m_pSelect = &m_Select;
 
 
 	return true;
@@ -470,9 +404,10 @@ KYS_TestMain::KYS_TestMain()
 {
 	D3DXMatrixIdentity(&m_matCharWorld);
 	m_vMove = D3DXVECTOR3(0, 0, 0);
-	m_vMoveBegin = D3DXVECTOR3(0, 0, 0);
+	m_vMoveAfter = D3DXVECTOR3(0, 0, 0);
 	m_bFire = false;
 	m_GameTime = 0;
+	m_fFireTime = 0;
 }
 
 
@@ -486,7 +421,6 @@ LRESULT KYS_TestMain::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPa
 	{
 		if (message == WM_LBUTTONDOWN)
 		{
-			m_Character->SetState(CBY::CHAR_FIRE);
 			m_bFire = true;
 		}
 

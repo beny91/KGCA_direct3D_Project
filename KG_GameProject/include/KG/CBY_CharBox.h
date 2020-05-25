@@ -22,7 +22,7 @@ namespace CBY
 	public:
 		HRESULT UpdateBoxVB();
 		HRESULT CreateIndexData();
-		void CreateBox(int index, D3DXVECTOR3 vPos, float fXsize, float fYsize, float fZsize);
+		void CreateBox(int index, D3DXVECTOR3 vPos, float fXsize, float fYsize, float fZsize, D3DXMATRIX mRot);
 		void SetBox(float fXsize, float fYsize, float fZsize, int id);
 		void UpdateBoxAxis(D3DXMATRIX mat);
 

@@ -1,5 +1,6 @@
 Map ../../data/map/Snow_steel1/snow_steel_baseColor.png
 NorMalMap ../../data/map/Snow_steel1/snow_steel_normal.png
+	HeightMap
  Shader ../../data/Shader/JHMapShader.txt
 ALPHATEX adfadsf.DDS
 SPT_TEX_NUM 1

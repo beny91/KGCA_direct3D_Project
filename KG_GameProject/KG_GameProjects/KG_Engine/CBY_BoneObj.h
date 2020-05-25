@@ -9,6 +9,8 @@ namespace CBY
 	public:
 		CBY_BoneParser m_ObjLoader;
 		KG_Box m_CharBox;
+		bool m_bAniStart;
+		bool m_bAniEnd;
 
 	public:
 		bool BoneCreate();
@@ -18,6 +20,16 @@ namespace CBY
 		void MTRUpdate(int iStart, int iEnd, float fTime, D3DXMATRIX* pMatrixList);
 		void ObjUpdate(int iStart, int iEnd, float fTime, D3DXMATRIX* pMatrixList, D3DXMATRIX* parmat, int socket);
 		bool AniTrackSet(CMatSetData& matdata, CAnimationTrack start, int iobj, std::vector<CAnimationTrack>& AniTrack, int tracktype, float fETick);
+
+	public:
+		bool  GetAniStart()
+		{
+			return m_bAniStart;
+		}
+		bool GetAniEnd()
+		{
+			return m_bAniEnd;
+		}
 
 	public:
 		CBY_BoneObj();

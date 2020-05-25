@@ -2,6 +2,7 @@
 #include "KG_ShapeObject.h"
 #include "SpriteTexture.h"
 #include "MyParticle.h"
+
 enum VFX_EFFECT
 {
 	VFX_EFFECT_NONE = 1000,
@@ -10,6 +11,7 @@ enum VFX_EFFECT
 	VFX_EFFECT_DAMAGED,
 	VFX_EFFECT_COUNT
 };
+
 namespace KYS
 {
 	struct VFX_EFFECT_INFO
@@ -28,10 +30,11 @@ namespace KYS
 		bool		_activeLifeTime;
 		bool		_activeInterval;
 		bool		_billboard;
+		int			_effectType;
 		
 		VFX_EFFECT_INFO()
 		{
-			_blendType  = 0;
+			_effectType = _blendType  = 0;
 			_lifeTimeLimit = _lifeTime = _interval =  0.0f;
 			_direction = _position = _scale = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
 			_activeLifeTime = _activeInterval = _billboard = _active = false;

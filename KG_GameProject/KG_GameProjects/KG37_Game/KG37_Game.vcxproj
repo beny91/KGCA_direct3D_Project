@@ -151,17 +151,57 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CBY_Bullet.h" />
+    <ClInclude Include="CBY_BulletMgr.h" />
+    <ClInclude Include="CBY_BulletQueue.h" />
+    <ClInclude Include="CBY_CharacterSrc.h" />
+    <ClInclude Include="CBY_CharacterStateStd.h" />
+    <ClInclude Include="CBY_Enemy.h" />
+    <ClInclude Include="CBY_EnemyAi.h" />
+    <ClInclude Include="CBY_EnemyFSM.h" />
+    <ClInclude Include="CBY_EnemyGirl.h" />
+    <ClInclude Include="CBY_EnemyState.h" />
+    <ClInclude Include="CBY_Hero.h" />
+    <ClInclude Include="CBY_HeroDamage.h" />
+    <ClInclude Include="CBY_HeroDeath.h" />
+    <ClInclude Include="CBY_HeroFire.h" />
+    <ClInclude Include="CBY_HeroFSM.h" />
+    <ClInclude Include="CBY_HeroGirl.h" />
+    <ClInclude Include="CBY_HeroIdle.h" />
+    <ClInclude Include="CBY_HeroJump.h" />
+    <ClInclude Include="CBY_HeroMove.h" />
+    <ClInclude Include="CBY_HeroRun.h" />
+    <ClInclude Include="CBY_HeroState.h" />
+    <ClInclude Include="CBY_HeroStateStd.h" />
     <ClInclude Include="KG37_GameMain.h" />
     <ClInclude Include="KG_GameStd.h" />
     <ClInclude Include="KG_Point.h" />
-    <ClInclude Include="KG_TestMain.h" />
     <ClInclude Include="KYS_TestMain.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CBY_Bullet.cpp" />
+    <ClCompile Include="CBY_BulletMgr.cpp" />
+    <ClCompile Include="CBY_BulletQueue.cpp" />
+    <ClCompile Include="CBY_CharacterSrc.cpp" />
+    <ClCompile Include="CBY_Enemy.cpp" />
+    <ClCompile Include="CBY_EnemyAi.cpp" />
+    <ClCompile Include="CBY_EnemyFSM.cpp" />
+    <ClCompile Include="CBY_EnemyGirl.cpp" />
+    <ClCompile Include="CBY_EnemyState.cpp" />
+    <ClCompile Include="CBY_Hero.cpp" />
+    <ClCompile Include="CBY_HeroDamage.cpp" />
+    <ClCompile Include="CBY_HeroDeath.cpp" />
+    <ClCompile Include="CBY_HeroFire.cpp" />
+    <ClCompile Include="CBY_HeroFSM.cpp" />
+    <ClCompile Include="CBY_HeroGirl.cpp" />
+    <ClCompile Include="CBY_HeroIdle.cpp" />
+    <ClCompile Include="CBY_HeroJump.cpp" />
+    <ClCompile Include="CBY_HeroMove.cpp" />
+    <ClCompile Include="CBY_HeroRun.cpp" />
+    <ClCompile Include="CBY_HeroState.cpp" />
     <ClCompile Include="KG37_GameMain.cpp" />
     <ClCompile Include="KG_Point.cpp" />
-    <ClCompile Include="KG_TestMain.cpp" />
     <ClCompile Include="KYS_TestMain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

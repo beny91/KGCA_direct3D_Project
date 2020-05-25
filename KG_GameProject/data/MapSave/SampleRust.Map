@@ -1,9 +1,9 @@
-Map ../../data/map/Generic_Rust_A_BaseColor_A.tif
-NorMalMap ../../data/map/Generic_Rust_A_Normal.tif
+Map ../../data/map/RustBase/Generic_Rust_A_BaseColor_A.tif
+NorMalMap ../../data/map/RustBase/Generic_Rust_A_Normal.tif
  Shader ../../data/Shader/JHMapShader.txt
-ALPHATEX asdfas.DDS
+ALPHATEX .DDS.DDS.DDS
 SPT_TEX_NUM 0
-MapSizeData 512 512 1 1
+MapSizeData 513 513 1 1
 VertexNum 263169
  VertexHegiht
    15.0000 

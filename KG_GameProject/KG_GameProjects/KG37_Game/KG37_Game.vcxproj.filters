@@ -16,25 +16,124 @@
     <Filter Include="Main">
       <UniqueIdentifier>{05c9b3ea-524a-4a53-873f-bd16a32ab2a3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{72d881db-ed9d-4399-9fa8-57c216e90de4}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Main\Test">
       <UniqueIdentifier>{c918b87f-c771-4335-9939-c0360e76a7f7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="UI">
-      <UniqueIdentifier>{72d881db-ed9d-4399-9fa8-57c216e90de4}</UniqueIdentifier>
+    <Filter Include="Character">
+      <UniqueIdentifier>{e3f21bc9-7c59-41c3-903a-12103f64166e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Hero">
+      <UniqueIdentifier>{c0a47a1f-54a6-4191-8c99-421af5b41dab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Hero\Girl">
+      <UniqueIdentifier>{18e69403-5958-4dd9-9aed-f4f2ee0e170f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Bullet">
+      <UniqueIdentifier>{f78e8cfb-ae11-4bf7-abf7-b281b1be7559}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Enemy">
+      <UniqueIdentifier>{2b131e5a-255c-449f-9e6d-9d3fbb3cbcfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Enemy\Girl">
+      <UniqueIdentifier>{9729f0c7-ce81-4923-83ff-3a09952d0f89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Hero\FSM">
+      <UniqueIdentifier>{edccdfd5-63da-4ab5-8e96-2efdae04c945}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Hero\FSM\FSM">
+      <UniqueIdentifier>{a0335c21-0481-40cd-a579-e2d048bd9fab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Hero\FSM\STATE">
+      <UniqueIdentifier>{a3db509c-d9e1-4939-9a03-52138f452e89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Hero\FSM\STATE\cpp">
+      <UniqueIdentifier>{52512c85-c5b6-441f-a0fe-051db4350ad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Hero\FSM\STATE\h">
+      <UniqueIdentifier>{c502e77c-8da7-4fbd-bea2-0ce678abc164}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Enemy\FSM">
+      <UniqueIdentifier>{9af60bd1-0ede-4937-892e-4b36550a4438}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Src">
+      <UniqueIdentifier>{f2623bac-9f37-437b-ba6d-c78b5de39114}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Enemy\FSM\FSM">
+      <UniqueIdentifier>{a1947482-4d61-4a63-a148-427abd5cd4fe}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="KG37_GameMain.cpp">
       <Filter>Main</Filter>
     </ClCompile>
-    <ClCompile Include="KG_TestMain.cpp">
-      <Filter>Main\Test</Filter>
-    </ClCompile>
     <ClCompile Include="KG_Point.cpp">
       <Filter>UI</Filter>
     </ClCompile>
     <ClCompile Include="KYS_TestMain.cpp">
       <Filter>Main\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_Bullet.cpp">
+      <Filter>Character\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_BulletMgr.cpp">
+      <Filter>Character\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_BulletQueue.cpp">
+      <Filter>Character\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_Hero.cpp">
+      <Filter>Character\Hero</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_HeroGirl.cpp">
+      <Filter>Character\Hero\Girl</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_Enemy.cpp">
+      <Filter>Character\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_EnemyGirl.cpp">
+      <Filter>Character\Enemy\Girl</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_HeroFSM.cpp">
+      <Filter>Character\Hero\FSM\FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_HeroState.cpp">
+      <Filter>Character\Hero\FSM\FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_HeroDamage.cpp">
+      <Filter>Character\Hero\FSM\STATE\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_HeroDeath.cpp">
+      <Filter>Character\Hero\FSM\STATE\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_HeroFire.cpp">
+      <Filter>Character\Hero\FSM\STATE\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_HeroIdle.cpp">
+      <Filter>Character\Hero\FSM\STATE\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_HeroMove.cpp">
+      <Filter>Character\Hero\FSM\STATE\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_HeroRun.cpp">
+      <Filter>Character\Hero\FSM\STATE\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_HeroJump.cpp">
+      <Filter>Character\Hero\FSM\STATE\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_EnemyAi.cpp">
+      <Filter>Character\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_CharacterSrc.cpp">
+      <Filter>Character\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_EnemyFSM.cpp">
+      <Filter>Character\Enemy\FSM\FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_EnemyState.cpp">
+      <Filter>Character\Enemy\FSM\FSM</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -44,9 +143,6 @@
     <ClInclude Include="KG_GameStd.h">
       <Filter>Main</Filter>
     </ClInclude>
-    <ClInclude Include="KG_TestMain.h">
-      <Filter>Main\Test</Filter>
-    </ClInclude>
     <ClInclude Include="KG_Point.h">
       <Filter>UI</Filter>
     </ClInclude>
@@ -55,6 +151,72 @@
     </ClInclude>
     <ClInclude Include="KYS_TestMain.h">
       <Filter>Main\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_Bullet.h">
+      <Filter>Character\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_BulletMgr.h">
+      <Filter>Character\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_BulletQueue.h">
+      <Filter>Character\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_Hero.h">
+      <Filter>Character\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_HeroGirl.h">
+      <Filter>Character\Hero\Girl</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_Enemy.h">
+      <Filter>Character\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_EnemyGirl.h">
+      <Filter>Character\Enemy\Girl</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_HeroFSM.h">
+      <Filter>Character\Hero\FSM\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_HeroState.h">
+      <Filter>Character\Hero\FSM\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_HeroDamage.h">
+      <Filter>Character\Hero\FSM\STATE\h</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_HeroDeath.h">
+      <Filter>Character\Hero\FSM\STATE\h</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_HeroFire.h">
+      <Filter>Character\Hero\FSM\STATE\h</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_HeroIdle.h">
+      <Filter>Character\Hero\FSM\STATE\h</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_HeroMove.h">
+      <Filter>Character\Hero\FSM\STATE\h</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_HeroRun.h">
+      <Filter>Character\Hero\FSM\STATE\h</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_HeroStateStd.h">
+      <Filter>Character\Hero\FSM\STATE</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_HeroJump.h">
+      <Filter>Character\Hero\FSM\STATE\h</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_EnemyAi.h">
+      <Filter>Character\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_CharacterSrc.h">
+      <Filter>Character\Src</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_EnemyFSM.h">
+      <Filter>Character\Enemy\FSM\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_EnemyState.h">
+      <Filter>Character\Enemy\FSM\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_CharacterStateStd.h">
+      <Filter>Character</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
