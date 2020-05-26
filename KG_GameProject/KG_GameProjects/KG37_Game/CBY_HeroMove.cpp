@@ -7,7 +7,7 @@ namespace CBY
 	{
 		m_pHero->SetState(CHAR_MOVE);
 
-		SetColDirection();
+		//SetColDirection();
 	
 		bool bMove = false;
 
@@ -28,6 +28,10 @@ namespace CBY
 			m_pHero->SetAction(EVENT_RUN);
 			return;
 		}
+
+		m_vMove = m_pHero->GetHeroPos();
+		m_vLook = m_pHero->GetCamera()->m_LookDir;
+		m_vSide = m_pHero->GetCamera()->m_SideDir;
 
 		if (I_Input.GetKeyCheck('W'))
 		{

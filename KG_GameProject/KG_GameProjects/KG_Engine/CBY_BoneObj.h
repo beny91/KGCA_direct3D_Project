@@ -11,6 +11,7 @@ namespace CBY
 		KG_Box m_CharBox;
 		bool m_bAniStart;
 		bool m_bAniEnd;
+		bool m_bAniEndClip;
 
 	public:
 		bool BoneCreate();
@@ -22,11 +23,16 @@ namespace CBY
 		bool AniTrackSet(CMatSetData& matdata, CAnimationTrack start, int iobj, std::vector<CAnimationTrack>& AniTrack, int tracktype, float fETick);
 
 	public:
-		bool  GetAniStart()
+		inline void SetEndClip(bool bclip)
+		{
+			m_bAniEndClip = bclip;
+		}
+
+		inline bool  GetAniStart()
 		{
 			return m_bAniStart;
 		}
-		bool GetAniEnd()
+		inline bool GetAniEnd()
 		{
 			return m_bAniEnd;
 		}

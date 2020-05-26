@@ -131,6 +131,11 @@ void CBY_BoneObj::MTRUpdate(int iStart, int iEnd, float fTime, D3DXMATRIX* pMatr
 		m_fElapseTick = 0.0f;
 	}
 
+	if (m_bAniEndClip)
+	{
+		m_fElapseTick = m_Scene.iLastFrame * m_Scene.iTickPerFrame;
+	}
+
 	for (int iObj = 0; iObj < m_ObjectList.size(); iObj++)
 	{
 		CMatSetData matdata(m_ObjectList[iObj]->m_vAnimPos, m_ObjectList[iObj]->m_vAnimScale,
@@ -415,6 +420,7 @@ CBY_BoneObj::CBY_BoneObj()
 	m_fElapseTick = 0.0f;
 	m_bAniStart = false;
 	m_bAniEnd = false;
+	m_bAniEndClip = false;
 }
 
 

@@ -1,7 +1,6 @@
 #pragma once
 #include "CBY_Character.h"
 #include "CBY_Bullet.h"
-#include "CBY_HeroFSM.h"
 #include "KG_Collision.h"
 #include "KG_Camera.h"
 
@@ -34,6 +33,7 @@ namespace CBY
 		virtual void SetState(int i);
 		virtual void SetFireTime(float ftime);
 		virtual void SetHeroPos(D3DXVECTOR3 vpos);
+		inline virtual void SetEndClip(int iState, bool bclip) { m_Character->SetEndClip(iState, bclip); }
 		inline virtual void SetCamera(KG_Camera* pCamera)
 		{
 			m_pCamera = pCamera;
@@ -46,6 +46,9 @@ namespace CBY
 	public:
 		virtual D3DXVECTOR3 GetCamerPos();
 		virtual KG_Box GetCharBox();
+		virtual KG_Box GetColBox(int ibox);
+		virtual D3DXVECTOR3 GetColPos(int ibox);
+		virtual int GetColBoxSize();
 		virtual D3DXVECTOR3 GetFirePos(int i);
 		virtual bool GetStateAnimationStart(int i);
 		virtual bool GetStateAnimationEnd(int i);

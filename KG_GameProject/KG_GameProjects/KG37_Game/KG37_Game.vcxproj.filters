@@ -64,6 +64,18 @@
     <Filter Include="Character\Enemy\FSM\FSM">
       <UniqueIdentifier>{a1947482-4d61-4a63-a148-427abd5cd4fe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Character\Enemy\Spider">
+      <UniqueIdentifier>{76dd5f07-aad1-4d37-9e81-f5a14872bf20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Enemy\FSM\State">
+      <UniqueIdentifier>{cdf80667-15ea-40a9-a931-4fad551a2d92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Enemy\FSM\State\cpp">
+      <UniqueIdentifier>{c48c3d46-5fa5-416c-a6a6-cad489701742}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Enemy\FSM\State\h">
+      <UniqueIdentifier>{98fd742f-8fb1-4d3b-9605-b7941af8e8db}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="KG37_GameMain.cpp">
@@ -135,6 +147,30 @@
     <ClCompile Include="CBY_EnemyState.cpp">
       <Filter>Character\Enemy\FSM\FSM</Filter>
     </ClCompile>
+    <ClCompile Include="CBY_EnemySpider.cpp">
+      <Filter>Character\Enemy\Spider</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_EnemyAttack.cpp">
+      <Filter>Character\Enemy\FSM\State\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_EnemyDamage.cpp">
+      <Filter>Character\Enemy\FSM\State\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_EnemyDeath.cpp">
+      <Filter>Character\Enemy\FSM\State\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_EnemyIdle.cpp">
+      <Filter>Character\Enemy\FSM\State\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_EnemyJump.cpp">
+      <Filter>Character\Enemy\FSM\State\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_EnemyMove.cpp">
+      <Filter>Character\Enemy\FSM\State\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_EnemyRun.cpp">
+      <Filter>Character\Enemy\FSM\State\cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="KG37_GameMain.h">
@@ -197,9 +233,6 @@
     <ClInclude Include="CBY_HeroRun.h">
       <Filter>Character\Hero\FSM\STATE\h</Filter>
     </ClInclude>
-    <ClInclude Include="CBY_HeroStateStd.h">
-      <Filter>Character\Hero\FSM\STATE</Filter>
-    </ClInclude>
     <ClInclude Include="CBY_HeroJump.h">
       <Filter>Character\Hero\FSM\STATE\h</Filter>
     </ClInclude>
@@ -217,6 +250,36 @@
     </ClInclude>
     <ClInclude Include="CBY_CharacterStateStd.h">
       <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_EnemySpider.h">
+      <Filter>Character\Enemy\Spider</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_EnemyAttack.h">
+      <Filter>Character\Enemy\FSM\State\h</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_EnemyDamage.h">
+      <Filter>Character\Enemy\FSM\State\h</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_EnemyDeath.h">
+      <Filter>Character\Enemy\FSM\State\h</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_EnemyIdle.h">
+      <Filter>Character\Enemy\FSM\State\h</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_EnemyJump.h">
+      <Filter>Character\Enemy\FSM\State\h</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_EnemyMove.h">
+      <Filter>Character\Enemy\FSM\State\h</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_EnemyRun.h">
+      <Filter>Character\Enemy\FSM\State\h</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_EnemyStateStd.h">
+      <Filter>Character\Enemy\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="CBY_HeroStateStd.h">
+      <Filter>Character\Hero\FSM</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -5,6 +5,8 @@ namespace CBY
 	void CBY_HeroIdle::Process()
 	{
 		m_pHero->SetState(CBY::CHAR_IDLE);
+		//SetColDirection();
+		//m_pHero->SetHeroPos(m_vMove);
 
 		if (I_Input.GetKeyCheck(VK_SPACE))
 		{

@@ -1,4 +1,60 @@
-﻿  CBY_Object.cpp
+﻿  CBY_BoneObj.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(43): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(56): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(73): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(124): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(136): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(201): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(245): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(350): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(357): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(358): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(390): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(391): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CBY_CharMgr.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_charmgr.cpp(25): warning C4804: '>=': 연산에 'bool' 형식을 사용하는 것은 안전하지 않습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_charmgr.cpp(53): warning C4804: '>=': 연산에 'bool' 형식을 사용하는 것은 안전하지 않습니다.
+  CBY_Character.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(13): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(40): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(39): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(81): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(80): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(218): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(219): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(224): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(225): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CBY_DataCtrl.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(7): warning C4267: '=': 'size_t'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(10): warning C4477: 'fwprintf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(10): note: 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(10): warning C4477: 'fwprintf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 3의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(10): note: 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(10): warning C4477: 'fwprintf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 5의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(10): note: 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(10): warning C4477: 'fwprintf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 6의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(10): note: 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(56): warning C4477: 'fwprintf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(56): note: 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(56): warning C4477: 'fwprintf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 3의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(56): note: 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(56): warning C4477: 'fwprintf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 5의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(56): note: 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(56): warning C4477: 'fwprintf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 6의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(56): note: 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(124): warning C4477: 'swscanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(124): note: 이 인수는 버퍼 크기로 사용됩니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(134): warning C4477: 'swscanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(134): note: 이 인수는 버퍼 크기로 사용됩니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(152): warning C4477: 'swscanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(152): note: 이 인수는 버퍼 크기로 사용됩니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(184): warning C4477: 'swscanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(184): note: 이 인수는 버퍼 크기로 사용됩니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(193): warning C4477: 'swscanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(193): note: 이 인수는 버퍼 크기로 사용됩니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(211): warning C4477: 'swscanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(211): note: 이 인수는 버퍼 크기로 사용됩니다.
+  CBY_Object.cpp
 d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_object.cpp(12): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_object.cpp(260): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_object.cpp(269): warning C4267: 'return': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
@@ -9,16 +65,22 @@ d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_en
 d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_object.cpp(317): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_object.cpp(318): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_object.cpp(363): warning C4267: 'return': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  MyEffectParser.cpp
-d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\myeffectparser.cpp(33): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\myeffectparser.cpp(34): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\myeffectparser.cpp(115): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\myeffectparser.cpp(116): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  VFX_ObjMgr.cpp
-d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\vfx_objmgr.cpp(94): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\vfx_objmgr.cpp(95): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\vfx_objmgr.cpp(96): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\vfx_objmgr.cpp(134): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CBY_SkinObj.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(29): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(33): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(102): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(109): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(110): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(142): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(143): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(217): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(264): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CBY_Weapon.cpp
+  JH_MapMgr.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\jh_mapmgr.cpp(79): warning C4474: 'swscanf' : 서식 문자열에 전달된 인수가 너무 많습니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\jh_mapmgr.cpp(79): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 2개 필요하지만 3개가 제공되었습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\jh_mapmgr.cpp(110): warning C4477: 'swscanf' : 서식 문자열 '%f'에 'float *' 형식의 인수가 필요하지만 variadic 인수 4의 형식이 'double'입니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\jh_mapmgr.cpp(192): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(1397,5): warning MSB8012: TargetPath(D:\Yong_GitHub\C_Yong\KGCA_direct3D_Project\KG_GameProject\KG_GameProjects\KG_Engine\../../output/Release/KG_Engine/KG_Engine.lib)이(가) Library의 OutputFile 속성 값(D:\Yong_GitHub\C_Yong\KGCA_direct3D_Project\KG_GameProject\KG_GameProjects\KG_Engine\KG_Engine_R.lib)과 일치하지 않습니다. 이로 인해 프로젝트가 잘못 빌드될 수 있습니다. 이를 수정하려면 $(OutDir), $(TargetName) 및 $(TargetExt) 속성 값이 %(Lib.OutputFile)에 지정된 값과 일치해야 합니다.
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(1399,5): warning MSB8012: TargetName(KG_Engine)이(가) Library의 OutputFile 속성 값(KG_Engine_R)과 일치하지 않습니다. 이로 인해 프로젝트가 잘못 빌드될 수 있습니다. 이를 수정하려면 $(OutDir), $(TargetName) 및 $(TargetExt) 속성 값이 %(Lib.OutputFile)에 지정된 값과 일치해야 합니다.
 VFX_Obj.obj : warning LNK4006: "public: struct D3DXVECTOR3 __cdecl KYS::VFX_EffectObj::getParticleScale(void)" (?getParticleScale@VFX_EffectObj@KYS@@QEAA?AUD3DXVECTOR3@@XZ)이(가) VFX_Obj.obj에 이미 정의되어 있습니다. 초 정의가 무시됩니다.

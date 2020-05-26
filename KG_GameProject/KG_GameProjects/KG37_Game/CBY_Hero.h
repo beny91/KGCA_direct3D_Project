@@ -1,5 +1,6 @@
 #pragma once
 #include "CBY_CharacterSrc.h"
+#include "CBY_HeroFSM.h"
 
 namespace CBY
 {

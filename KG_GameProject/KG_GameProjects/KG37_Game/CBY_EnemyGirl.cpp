@@ -7,7 +7,7 @@ namespace CBY
 	{
 		m_Character = std::make_shared<CBY::CBY_Character>();
 		m_Character->CharacterLoad(pd3dDevice, Context, L"../../data/char/save/CharTest.txt");
-
+		SetEffectVal(2.0f);
 		//m_Bullet.Create(pd3dDevice, Context, L"../../data/shader/SkinShader.txt", nullptr, "VSSKIN", "PS");
 		//m_Bullet.SkinLoad(L"../../data/Char/Ammo/Ammo.skn");
 		//m_Bullet.BoneLoad(L"../../data/Char/Ammo/Ammo.mtr");

@@ -71,6 +71,10 @@ namespace CBY
 
 		m_Character->Release();
 		m_Bullet.Release();
+		for (int i = 0; i < CHAR_STATECOUNT; i++)
+		{
+			delete m_ActionList[i];
+		}
 		return true;
 	}
 

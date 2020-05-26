@@ -8,10 +8,14 @@
 #include "MyEffectParser.h"
 #include "VFX_ObjMgr.h"
 #include "CBY_BulletMgr.h"
+#include <stdlib.h>       //srand
+#include <time.h>     //time
 
 
 bool KYS_TestMain::Init()
 {
+	srand((unsigned)time(NULL));
+
 	CDX::ApplyBS(m_pContext, CDX::KG_DxState::g_pAlpahBlend);
 	CDX::ApplySS(m_pContext, CDX::KG_DxState::g_pSampler);
 	CDX::ApplyRS(m_pContext, CDX::KG_DxState::g_pRSSold);
@@ -52,11 +56,24 @@ bool KYS_TestMain::Init()
 	m_Character->Create(m_pd3dDevice, m_pContext);
 	m_Character->SetFireTime(0.5f);
 
-	m_Enemy = std::make_shared<CBY::CBY_EnemyGirl>();
+	m_EnemyList.resize(5);
+	for (int i = 0; i < m_EnemyList.size(); i++)
+	{
+		m_EnemyList[i] = std::make_shared<CBY::CBY_EnemySpider>();
+		m_EnemyList[i]->Create(m_pd3dDevice, m_pContext);
+		m_EnemyList[i]->SetCamera(m_pMainCamera);
+		m_EnemyList[i]->SetHeroPos(D3DXVECTOR3((10 + (i * 4)), 0, (20 + (i * 3))));
+
+		m_EnemyList[i]->SetHero(m_Character.get());
+	}
+	m_Character->SetEnemy(m_EnemyList[0].get());
+	/*m_Enemy = std::make_shared<CBY::CBY_EnemySpider>();
 	m_Enemy->Create(m_pd3dDevice, m_pContext);
 	m_Enemy->SetCamera(m_pMainCamera);
+	m_Enemy->SetHeroPos(D3DXVECTOR3((10 * 2), 0, (10* 3)));*/
 
-	m_Character->SetEnemy(m_Enemy.get());
+	//m_Enemy->SetHero(m_Character.get());
+//m_Character->SetEnemy(m_Enemy.get());
 	m_Character->SetCamera(m_pMainCamera);
 	//////////////////////////////////////////
 
@@ -88,11 +105,26 @@ bool KYS_TestMain::Frame()
 		pos.y = m_Map->GetHeight(pos.x, pos.z);
 		m_Character->SetHeroPos(pos);
 
+		for (int i = 0; i < m_EnemyList.size(); i++)
+		{
+			pos = m_EnemyList[i]->GetHeroPos();
+			pos.y = m_Map->GetHeight(pos.x, pos.z);
+			m_EnemyList[i]->SetHeroPos(pos);
+			m_EnemyList[i]->Process();
+		}
+		/*pos = m_Enemy->GetHeroPos();
+		pos.y = m_Map->GetHeight(pos.x, pos.z);
+		m_Enemy->SetHeroPos(pos);
+		m_Enemy->Process();*/
+
+		
+
 		m_Character->Process();
 		
 		m_pMainCamera->m_Pos = m_Character->GetCamerPos();
 
-		m_Enemy->Frame();
+		
+		//m_Enemy->Frame();
 	}
 	else
 	{
@@ -158,21 +190,14 @@ bool KYS_TestMain::Render()
 	///////////////////Char//////////////////////
 	D3DXMATRIX scale;
 	D3DXMatrixScaling(&scale, 0.025, 0.025, 0.025);
-	scale._41 = 30;
-	scale._42 = m_Map->GetHeight(30, 20);
-	scale._43 = 20;
-	m_Enemy->SetMatrix(&scale, &m_pMainCamera->m_View, &m_pMainCamera->m_Proj);
-	m_Enemy->Render();
+	for (int i = 0; i < m_EnemyList.size(); i++)
+	{
+		m_EnemyList[i]->SetMatrix(&scale, &m_pMainCamera->m_View, &m_pMainCamera->m_Proj);
+		m_EnemyList[i]->Render();
+	}
+	/*m_Enemy->SetMatrix(&scale, &m_pMainCamera->m_View, &m_pMainCamera->m_Proj);
+	m_Enemy->Render();*/
 	
-	m_vMove = m_Character->GetHeroPos();
-	D3DXMatrixScaling(&scale, 0.025, 0.025, 0.025);
-	scale._41 = m_vMove.x;
-	scale._42 = m_vMove.y;
-	scale._43 = m_vMove.z;
-	//m_matBillBoard._41 = m_vMove.x;
-	//m_matBillBoard._42 = m_vMove.y;
-//	m_matBillBoard._43 = m_vMove.z;
-	//m_Character-._42>SetMatrix(&(m_pMainCamera->m_World*scale), &m_pMainCamera->m_View, &m_pMainCamera->m_Proj);
 	m_Character->SetMatrix(&(m_pMainCamera->m_World*scale), &m_pMainCamera->m_View, &m_pMainCamera->m_Proj);
 	m_Character->Render();
 	/////////////////////////////////////////////
@@ -187,7 +212,10 @@ bool KYS_TestMain::Render()
 bool KYS_TestMain::Release()
 {
 	m_Character->Release();
-	m_Enemy->Release();
+	for (int i = 0; i < m_EnemyList.size(); i++)
+	{
+		m_EnemyList[i]->Release();
+	}
 	m_CharCamera->Release();
 	CBY::CBY_CHAR_BULLET.Release();
 	return true;

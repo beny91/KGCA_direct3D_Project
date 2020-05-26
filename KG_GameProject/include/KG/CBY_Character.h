@@ -46,6 +46,7 @@ namespace CBY
 
 	public:
 		virtual void SetCharAction(int state, float start, float end);
+		inline virtual void SetEndClip(int iState, bool bclip) { m_StateList[iState].m_Bone.SetEndClip(bclip); }
 
 	public:
 		CBY_Character();

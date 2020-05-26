@@ -6,7 +6,7 @@ namespace CBY
 	{
 		m_pHero->SetState(CHAR_JUMP);
 
-		SetColDirection();
+		//SetColDirection();
 		
 
 		if (m_pHero->GetStateAnimationEnd(CHAR_JUMP))

@@ -2,9 +2,15 @@
 
 #pragma once
 #include "KG_GameStd.h"
+//enemy///
 #include "CBY_EnemyGirl.h"
+#include "CBY_EnemySpider.h"
+////////////
+
+/////char////
 #include "CBY_HeroGirl.h"
 #include "CBY_CharacterCamera.h"
+////////////
 #include "KG_Point.h"
 
 #include"QuadTree.h"
@@ -30,7 +36,8 @@ class KYS_TestMain :public KG_Core
 	/////char//////////
 public:
 	std::shared_ptr<CBY::CBY_HeroGirl> m_Character;
-	std::shared_ptr<CBY::CBY_EnemyGirl> m_Enemy;
+	std::vector<std::shared_ptr<CBY::CBY_EnemySpider>> m_EnemyList;
+	std::shared_ptr<CBY::CBY_EnemySpider> m_Enemy;
 	std::shared_ptr<CBY::CBY_CharacterCamera> m_CharCamera;
 	std::shared_ptr<KG_Point> m_Point;
 	D3DXMATRIX m_matCharWorld;

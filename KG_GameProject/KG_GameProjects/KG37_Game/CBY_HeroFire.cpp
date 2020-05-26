@@ -8,7 +8,7 @@ namespace CBY
 	{
 		m_pHero->SetState(CHAR_FIRE);
 
-		SetColDirection();
+		//SetColDirection();
 		
 
 		bool bFire = false;
@@ -52,6 +52,9 @@ namespace CBY
 			m_fFireTime = 0.0f;
 			return;
 		}
+		m_vMove = m_pHero->GetHeroPos();
+		m_vLook = m_pHero->GetCamera()->m_LookDir;
+		m_vSide = m_pHero->GetCamera()->m_SideDir;
 
 		if (I_Input.GetKeyCheck('W'))
 		{

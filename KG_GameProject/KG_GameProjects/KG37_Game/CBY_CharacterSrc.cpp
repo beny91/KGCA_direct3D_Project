@@ -59,6 +59,9 @@ namespace CBY
 		if (m_Character == nullptr)
 			return;
 
+		world->_41 = m_vCharPos.x;
+		world->_42 = m_vCharPos.y;
+		world->_43 = m_vCharPos.z;
 		m_Character->SetMatrix(world, view, proj);
 	}
 	void CBY_CharacterSrc::SetFireTime(float ftime)
@@ -92,6 +95,21 @@ namespace CBY
 			return KG_Box();
 
 		return m_Character->GetCharBox();
+	}
+
+	KG_Box CBY_CharacterSrc::GetColBox(int ibox)
+	{
+		return m_Character->GetColBox(ibox);
+	}
+	
+	D3DXVECTOR3 CBY_CharacterSrc::GetColPos(int ibox)
+	{
+		return m_Character->GetColPos(ibox);
+	}
+
+	int CBY_CharacterSrc::GetColBoxSize()
+	{
+		return m_Character->GetColBoxSize();
 	}
 
 	D3DXVECTOR3 CBY_CharacterSrc::GetFirePos(int i)
