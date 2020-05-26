@@ -36,7 +36,7 @@ namespace CBY
 
 		SetMoveSpeed(5);
 		D3DXVECTOR3 scale = D3DXVECTOR3(5.0f, 5.0f, 0.0f);
-		obj2 = VFX_MGR->find(VFX_EFFECT_GUN_SHOT);
+		obj2 = VFX_MGR->find(VFX_EFFECT_GUN1_SHOT);
 		obj2->setParticleScale(scale);
 
 		CBY_EnemyFSM::Get().Init();

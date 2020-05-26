@@ -31,14 +31,14 @@ bool KYS_TestMain::Init()
 
 	//////////////Map/////////////////////////
 	//LoadMapData(L"../../data/MapSave/SampleRust.Map");
-	LoadMapData(L"../../data/MapSave/aa.Map");
-	I_LIGHT_MGR.GetDevice(m_pd3dDevice);
-	I_LIGHT_MGR.GetContext(m_pContext);
-	I_LIGHT_MGR.Create(L"../../data/Shader/JHMapShader.txt", L"../../data/LightSrc/LightInfo.txt");
+	//LoadMapData(L"../../data/MapSave/aa.Map");
+	//JH::I_LIGHT_MGR.GetDevice(m_pd3dDevice);
+	//JH::I_LIGHT_MGR.GetContext(m_pContext);
+	//JH::I_LIGHT_MGR.Create(L"../../data/Shader/JHMapShader.txt", L"../../data/LightSrc/LightInfo.txt");
 
-	//ComPuteShader
-	(CDXH::CreateComputeShader(L"../../data/shader/ComputeAlpha.HLSL", "CSMAIN", m_pd3dDevice, m_pCS.GetAddressOf()));
-	//////////////////////////////////////////
+	////ComPuteShader
+	//(CDXH::CreateComputeShader(L"../../data/shader/ComputeAlpha.HLSL", "CSMAIN", m_pd3dDevice, m_pCS.GetAddressOf()));
+	////////////////////////////////////////////
 
 	//effect
 	EFFECT_PARSER->createEffectDataFromFile(L"../../data/effectData/LoadEffectDataList.txt", m_pd3dDevice, m_pContext);
@@ -59,17 +59,17 @@ bool KYS_TestMain::Init()
 bool KYS_TestMain::Frame()
 {
 	//////////////////Map/////////////////
-	if (m_Map == nullptr)return true;
+	//if (m_Map == nullptr)return true;
 
 	//test/adsfadsf
 	m_Select.SetMarix(nullptr, &m_pMainCamera->m_View, &m_pMainCamera->m_Proj);
 
 	D3DXVECTOR3 v0, v1, v2, vIntersection;
-	I_LIGHT_MGR.Frame();
-	I_LIGHT_MGR.m_cbLight.vEyeDir = { m_pMainCamera->m_Look,30 };
-	I_LIGHT_MGR.m_cbLight.vEyePos = { m_pMainCamera->m_Pos,30 };
+	/*JH::I_LIGHT_MGR.Frame();
+	JH::I_LIGHT_MGR.m_cbLight.vEyeDir = { m_pMainCamera->m_Look,30 };
+	JH::I_LIGHT_MGR.m_cbLight.vEyePos = { m_pMainCamera->m_Pos,30 };
 
-	m_QuadTree->Frame();
+	m_QuadTree->Frame();*/
 	////////////////////////////////////////
 
 
@@ -172,7 +172,7 @@ bool KYS_TestMain::Frame()
 			m_Character->SetState(CBY::CHAR_IDLE);
 		}
 
-		m_vMove.y = m_Map->GetHeight(m_vMove.x, m_vMove.z);
+//		m_vMove.y = m_Map->GetHeight(m_vMove.x, m_vMove.z);
 
 		m_Character->Frame();
 		D3DXMATRIX zpos;
@@ -200,7 +200,7 @@ bool KYS_TestMain::Frame()
 	{
 		obj1 = VFX_MGR->find(VFX_EFFECT_GUN1_SHOT);
 
-		D3DXVECTOR3 pos = D3DXVECTOR3(5.0f, 5.0f, 10.0f);
+		D3DXVECTOR3 pos = D3DXVECTOR3(0.0f, 5.0f, 10.0f);
 		//D3DXVECTOR3 dir = D3DXVECTOR3(5.0f, 0.0f, 0.0f);
 
 		obj1->Execute(pos);
@@ -211,7 +211,7 @@ bool KYS_TestMain::Frame()
 	{
 
 		obj2 = VFX_MGR->find(VFX_EFFECT_GUN2_SHOT);
-		D3DXVECTOR3 pos = D3DXVECTOR3(5.0f, 7.0f, 10.0f);
+		D3DXVECTOR3 pos = D3DXVECTOR3(2.0f, 7.0f, 10.0f);
 		D3DXVECTOR3 dir = D3DXVECTOR3(5.0f, 0.0f, 0.0f);
 
 		obj2->Execute(pos);
@@ -222,7 +222,7 @@ bool KYS_TestMain::Frame()
 	{
 
 		obj2 = VFX_MGR->find(VFX_EFFECT_GUN3_SHOT);
-		D3DXVECTOR3 pos = D3DXVECTOR3(2.0f, 7.0f, 10.0f);
+		D3DXVECTOR3 pos = D3DXVECTOR3(4.0f, 7.0f, 10.0f);
 		D3DXVECTOR3 dir = D3DXVECTOR3(5.0f, 0.0f, 0.0f);
 
 		obj2->Execute(pos);
@@ -238,7 +238,7 @@ bool KYS_TestMain::Render()
 	CDX::ApplySS(m_pContext, CDX::KG_DxState::g_pSSClampLinear, 1);
 
 	/////////////////////Map////////////////////
-	ID3D11ShaderResourceView* ppSRVNULL[1] = { NULL };
+	/*ID3D11ShaderResourceView* ppSRVNULL[1] = { NULL };
 	ID3D11UnorderedAccessView* ppUAViewNULL[1] = { NULL };
 	ID3D11Buffer* ppCBNULL[1] = { NULL };
 
@@ -247,9 +247,9 @@ bool KYS_TestMain::Render()
 	{
 		m_Map->SetMatrix(nullptr, &m_pMainCamera->m_View, &m_pMainCamera->m_Proj);
 		ID3D11Buffer*               pBuffers[3];
-		pBuffers[0] = I_LIGHT_MGR.m_pLightConstantBuffer[0].Get();
-		LightConstantBuffer mcb = I_LIGHT_MGR.m_cbLight;
-		m_Map->UpdateConstantBuffer(I_LIGHT_MGR.m_pLightConstantBuffer[0].Get(), &I_LIGHT_MGR.m_cbLight);
+		pBuffers[0] = JH::I_LIGHT_MGR.m_pLightConstantBuffer[0].Get();
+		JH::LightConstantBuffer mcb = JH::I_LIGHT_MGR.m_cbLight;
+		m_Map->UpdateConstantBuffer(JH::I_LIGHT_MGR.m_pLightConstantBuffer[0].Get(), &JH::I_LIGHT_MGR.m_cbLight);
 		m_Map->m_obj.m_pContext->PSSetConstantBuffers(1, 1, pBuffers);
 		m_Map->m_obj.m_pContext->PSSetConstantBuffers(1, 1, pBuffers);
 
@@ -263,7 +263,7 @@ bool KYS_TestMain::Render()
 
 		m_QuadTree->Render();
 		m_pContext->PSSetShaderResources(2, 1, ppSRVNULL);
-	}
+	}*/
 	////////////////////////////////////////////
 
 	///////////////////Char//////////////////////
@@ -312,12 +312,12 @@ bool KYS_TestMain::CreateMap(int iWidth,
 	}
 
 
-	m_Map = make_shared<JH_Map>();
+	m_Map = std::make_shared<JH::JH_Map>();
 	if (m_sMapData.m_fHegihtList.size() > 0)
 	{
 		std::copy(m_sMapData.m_fHegihtList.begin(),
 			m_sMapData.m_fHegihtList.end(),
-			back_inserter(m_Map->m_vHeightList));
+			std::back_inserter(m_Map->m_vHeightList));
 	}
 	if (false)
 	{
@@ -340,7 +340,7 @@ bool KYS_TestMain::CreateMap(int iWidth,
 	m_Map->m_pNormMapFileName = pNormalMapFileName;
 	m_Map->Load(m_pd3dDevice, m_pContext);
 
-	m_QuadTree = make_shared<HQuadTree>();
+	m_QuadTree = std::make_shared<JH::HQuadTree>();
 	m_QuadTree->Build(m_Map.get(), m_pMainCamera);
 	m_QuadTree->m_pSelect = &m_Select;
 

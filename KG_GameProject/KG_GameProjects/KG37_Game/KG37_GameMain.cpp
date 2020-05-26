@@ -8,14 +8,12 @@ bool KG37_GameMain::Init()
 	CDX::ApplyRS(m_pContext, CDX::KG_DxState::g_pRSSold);
 
 	m_Character = std::make_shared<CBY::CBY_Character>();
-	m_Character->CharacterLoad(m_pd3dDevice, m_pContext, L"../../data/char/save/GirlInfo.txt");
+	m_Character->CharacterLoad(m_pd3dDevice, m_pContext, L"../../data/char/save/GirlInfoEx.txt");
 
 	m_CharCamera = std::make_shared<CBY::CBY_CharacterCamera>();
 	m_CharCamera->SetViewProj();
 	m_CharCamera->SetCameraSpeed(30);
 	m_pMainCamera = m_CharCamera.get();
-
-	
 
 	return true;
 }

@@ -30,7 +30,7 @@ struct OBJECT
 struct QuadTreeData
 {
 
-	vector<OBJECT> m_ObjList;
+	std::vector<OBJECT> m_ObjList;
 	QuadTreeData()
 	{
 
@@ -48,8 +48,8 @@ struct MAPDATA
 	T_STR m_ShaderFile;
 
 	T_STR				m_pSplattAlphaTextureFile;
-	vector<float>		m_fHegihtList;
-	vector<T_STR>		m_pSplattTextureFile;
+	std::vector<float>		m_fHegihtList;
+	std::vector<T_STR>		m_pSplattTextureFile;
 
 	QuadTreeData		m_sQTData;
 	void Reset()
@@ -101,14 +101,14 @@ public:
 
 	/////////Map////////
 public:
-	shared_ptr<KG_SkyBox>			m_SkyBox;
+	std::shared_ptr<JH::KG_SkyBox>			m_SkyBox;
 	ComPtr<ID3D11ComputeShader>			m_pCS;
 
 public:
 	MAPDATA m_sMapData;
 public:
-	shared_ptr<JH_Map>		m_Map;
-	shared_ptr<HQuadTree>	m_QuadTree;
+	std::shared_ptr<JH::JH_Map>		m_Map;
+	std::shared_ptr<JH::HQuadTree>	m_QuadTree;
 	TCHAR		m_tmpBuffer[MAX_PATH];
 public:
 	//Load

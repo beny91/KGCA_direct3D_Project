@@ -18,6 +18,7 @@ namespace CBY
 			if (hp <= 0)
 			{
 				m_pEnemy->SetAction(EVENT_DEATH);
+				return;
 			}
 			m_pEnemy->SetAction(EVENT_RUN);
 			return;
@@ -36,7 +37,7 @@ namespace CBY
 						CBY_CHAR_BULLET.BulletPop(i);
 						D3DXVECTOR3 zpos = D3DXVECTOR3(0, 0, 0);
 						zpos -= m_pEnemy->GetCamera()->m_LookDir * m_pEnemy->GetEffectVal();
-						m_pEnemy->obj2 = VFX_MGR->find(VFX_EFFECT_GUN_SHOT);
+						m_pEnemy->obj2 = VFX_MGR->find(VFX_EFFECT_GUN1_SHOT);
 						D3DXVECTOR3 pos = m_pEnemy->GetColPos(ibox);
 						pos += zpos;
 						m_pEnemy->obj2->Execute(pos);
