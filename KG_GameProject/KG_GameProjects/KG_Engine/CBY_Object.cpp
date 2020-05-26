@@ -13,6 +13,8 @@ namespace CBY
 		m_ObjList.push_back(std::make_shared<CBY_SkinObj>());
 		*m_ObjList[list] = *I_CHARACTER.m_SkinLoadList[index];
 
+
+		m_SkinOriginalBox = m_ObjList[0]->m_ObjList[0]->m_CharBox;
 		SetCharBox();
 		return true;
 	}
@@ -103,33 +105,44 @@ namespace CBY
 		KG_Model::SetMatrix(world, view, proj);
 
 		{	//캐릭터를 감싼 바운딩 박스의 움직임을 제어하는 곳
+			D3DXMATRIX matRot;
 			D3DXVECTOR3 vScale, vPos, vSize;
 			D3DXQUATERNION qRot;
 			D3DXMatrixDecompose(&vScale, &qRot, &vPos, world);
-			vSize = m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax - m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter;
+			D3DXMatrixRotationQuaternion(&matRot, &qRot);
+
+			vSize = m_SkinOriginalBox.vMax - m_SkinOriginalBox.vCenter;
 			vSize.x *= vScale.x;
 			vSize.y *= vScale.y;
 			vSize.z *= vScale.z;
-			vPos += m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter;
+			//vPos += m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter;
 
 
-			m_CharBox.CreateBox(0, vPos, vSize.x, vSize.y, vSize.z);		//박스 업데이트
+			m_CharBox.CreateBox(0, vPos, vSize.x, vSize.y, vSize.z, matRot);		//박스 업데이트
+
+			m_CharBox.UpdateBoxAxis(matRot);
 		}
 
 		{
 			for (int iBox = 0; iBox < m_BoxList.size(); iBox++)
 			{
+				D3DXMATRIX matworld, matRot;
+				matworld = m_pMatrixList[m_BoxList[iBox].GetBoneIndex()] * (*world);
 				D3DXVECTOR3 vScale, vPos, vSize;
 				D3DXQUATERNION qRot;
-				D3DXMatrixDecompose(&vScale, &qRot, &vPos, world);
-				vSize = m_BoxList[iBox].GetSize();
+				D3DXMatrixDecompose(&vScale, &qRot, &vPos, &matworld);
+				D3DXMatrixRotationQuaternion(&matRot, &qRot);
+
+				vSize = m_BoxList[iBox].GetInitBoxSize();
 				vSize.x *= vScale.x;
 				vSize.y *= vScale.y;
 				vSize.z *= vScale.z;
-				vPos += m_BoxList[iBox].GetPos();
+				//vPos += m_BoxList[iBox].GetInitPos();
 
 				m_BoxList[iBox].CreateBox(m_BoxList[iBox].GetBoneIndex(),
-					vPos, vSize.x, vSize.y, vSize.z);
+					vPos, vSize.x, vSize.y, vSize.z, matRot);
+
+				m_BoxList[iBox].UpdateBoxAxis(matRot);
 			}
 		}
 	}
@@ -149,8 +162,15 @@ namespace CBY
 		m_fElapseTick = 0;
 		if (m_dwAniType == CHAR_FRAMETYPE)
 		{
-			m_Bone->Update(m_StateList[m_dwState].m_iStartFrame, m_StateList[m_dwState].m_iEndFrame,
-				m_fElapseTick, m_pMatrixList);
+			if (m_StateList.size() > 0)
+			{
+				m_Bone->Update(m_StateList[m_dwState].m_iStartFrame, m_StateList[m_dwState].m_iEndFrame,
+					m_fElapseTick, m_pMatrixList);
+			}
+			else
+			{
+				m_Bone->Update(0, 0,m_fElapseTick, m_pMatrixList);
+			}
 		}
 
 		else if (m_dwAniType == CHAR_MTRTYPE)
@@ -176,12 +196,17 @@ namespace CBY
 	{
 		PreRender();
 		CharPostRender();
-
+		//m_CharBox.SetMatrix(nullptr, &m_matView, &m_matProj);
+		//m_CharBox.Render();
 		return true;
 	}
 
 	bool CBY_Object::Release()
 	{
+		/*for (int i = 0; i < m_ObjList.size(); i++)
+		{
+			m_ObjList[i]->Release();
+		}*/
 		return true;
 	}
 
@@ -243,7 +268,6 @@ namespace CBY
 		m_dwState = dw;
 
 		m_Bone = &m_StateList[m_dwState].m_Bone;
-		SetCharBox();
 	}
 
 	int CBY_Object::GetStateNum()
@@ -315,14 +339,13 @@ namespace CBY
 
 	void CBY_Object::SetCharBox()
 	{
-		D3DXVECTOR3 size = m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax- m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter;
+		D3DXMATRIX mat;
+		D3DXMatrixIdentity(&mat);
+		D3DXVECTOR3 size = m_SkinOriginalBox.vMax- m_SkinOriginalBox.vCenter;
+		//m_CharBox.Create(m_obj.m_pd3dDevice, m_obj.m_pContext,L"../../data/shader/DefaultShader.txt", nullptr, "VSmat", "PSVC");	//디버깅용 박스
 		m_CharBox.CreateBox(0,
-			m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter, size.x, size.y, size.z);
+			m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter, size.x, size.y, size.z, mat);
 
-		//m_Bone->m_CharBox.vCenter.y = (m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax.y + m_ObjList[0]->m_ObjList[0]->m_CharBox.vMin.y) / 2;
-		//D3DXVECTOR3 size = m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax - m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter;
-		//m_CharBox.Create(m_obj.m_pd3dDevice, m_obj.m_pContext);
-		//m_CharBox.CreateBox(0, m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter, size.x, size.y, size.z);
 	}
 
 	KG_Box CBY_Object::GetCharBox()
@@ -349,11 +372,16 @@ namespace CBY
 
 	void CBY_Object::CreateColBox()
 	{
+		D3DXMATRIX mat;
+		D3DXMatrixIdentity(&mat);
 		for (int iBox = 0; iBox < m_BoxList.size(); iBox++)
 		{
+			//m_BoxList[iBox].Create(m_obj.m_pd3dDevice, m_obj.m_pContext, L"../../data/shader/DefaultShader.txt", nullptr, "VSmat", "PSVC");	//디버깅용 박스
 			D3DXVECTOR3 size = m_BoxList[iBox].GetSize();
+			m_BoxList[iBox].SetInitBoxSize(size);						//초기 박스 사이즈
+			m_BoxList[iBox].SetInitPos(m_BoxList[iBox].GetPos());		//초기 위치
 			m_BoxList[iBox].CreateBox(m_BoxList[iBox].GetBoneIndex(),
-				m_BoxList[iBox].GetPos(), size.x, size.y, size.z);
+				m_BoxList[iBox].GetPos(), size.x, size.y, size.z, mat);
 		}
 	}
 

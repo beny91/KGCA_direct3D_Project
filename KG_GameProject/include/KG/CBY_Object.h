@@ -34,6 +34,7 @@ namespace CBY
 		DWORD m_dwState;
 		std::vector<Char_State_Info> m_StateList;
 		CBY_CharBox m_CharBox;
+		KG_Box m_SkinOriginalBox;
 		std::vector<CBY_CharBox> m_BoxList;
 
 	public:

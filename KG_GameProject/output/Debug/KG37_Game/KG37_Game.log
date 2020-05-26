@@ -1,1 +1,8 @@
+<<<<<<< HEAD
 ﻿  KG37_Game.vcxproj -> C:\cpp\direct3d team project\KGCA_direct3D_Project\KG_GameProject\KG_GameProjects\KG37_Game\../../output/Debug/KG37_Game/KG37_Game.exe
+=======
+﻿  CBY_HeroFire.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg37_game\cby_bulletmgr.h(34): warning C4267: 'return': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CBY_HeroJump.cpp
+  CBY_HeroMove.cpp
+>>>>>>> origin/Yong

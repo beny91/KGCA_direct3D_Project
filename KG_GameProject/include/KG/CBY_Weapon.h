@@ -9,6 +9,9 @@ namespace CBY
 		int m_iCharSocket;
 		int m_iObjSocket;
 		int m_iFireSocket;
+		D3DXVECTOR3 m_vFirePos;
+
+	protected:
 		std::vector<int> m_SocketList;
 		int m_ObjIndex;
 		D3DXMATRIX m_matCalculation;
@@ -16,6 +19,7 @@ namespace CBY
 
 	public:
 		virtual bool Update(D3DXMATRIX* parmat);
+		virtual void SetMatrix(D3DXMATRIX* world, D3DXMATRIX* view, D3DXMATRIX* proj)override;
 
 	public:
 		void SetSocket(int i);		//캐릭터와 연결된 캐릭터의 소켓
@@ -24,6 +28,7 @@ namespace CBY
 		int GetObjSocke();	//오브젝트의 소켓
 		void SetFireSocket(int i);
 		int GetFireSocket();
+		D3DXVECTOR3 GetFirePos();
 
 	public:
 		CBY_Weapon();

@@ -1,0 +1,12 @@
+1 1 8 0 2 0
+../../data/Char/Monster/Spider/Spider.skn
+../../data/Char/Monster/Spider/Spider.mtr -1
+../../data/Char/Monster/Spider/SpiderIdle.mtr 0
+../../data/Char/Monster/Spider/SpiderMove.mtr 1
+../../data/Char/Monster/Spider/SpiderJump.mtr 2
+../../data/Char/Monster/Spider/SpiderRun.mtr 3
+../../data/Char/Monster/Spider/SpiderAttack.mtr 4
+../../data/Char/Monster/Spider/SpiderDamage.mtr 5
+../../data/Char/Monster/Spider/SpiderDie.mtr 6
+2    -4.0483   113.9347    76.6637    50.0000    55.0000    50.0000
+6    -4.0481   112.8263   -42.4866    50.0000    55.0000    55.0000

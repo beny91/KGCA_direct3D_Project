@@ -1,2 +1,6 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.17763.0
+<<<<<<< HEAD
 Debug|x64|C:\cpp\direct3d team project\KGCA_direct3D_Project\KG_GameProject\KG_GameProjects\|
+=======
+Debug|x64|D:\Yong_GitHub\C_Yong\KGCA_direct3D_Project\KG_GameProject\KG_GameProjects\|
+>>>>>>> origin/Yong

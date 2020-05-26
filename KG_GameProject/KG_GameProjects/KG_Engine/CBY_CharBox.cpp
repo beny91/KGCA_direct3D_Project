@@ -68,12 +68,16 @@ namespace CBY
 	}
 
 
-	void CBY_CharBox::CreateBox(int index, D3DXVECTOR3 vPos, float fXsize, float fYsize, float fZsize)
+	void CBY_CharBox::CreateBox(int index, D3DXVECTOR3 vPos, float fXsize, float fYsize, float fZsize ,D3DXMATRIX mRot)
 	{
 		m_iBoneIndex = index;
 
+		//D3DXVec3TransformCoord(&vPos, &vPos, &mRot);
+		//D3DXVec3TransformNormal(&vPos, &vPos, &mRot);
 		m_vPos = vPos;
 		m_Box.vCenter = vPos;
+
+		D3DXVec3TransformNormal(&m_vBoxSize, &m_vBoxSize, &mRot);
 
 		m_vBoxSize.x = fXsize;
 		m_vBoxSize.y = fYsize;
@@ -82,8 +86,10 @@ namespace CBY
 		m_vMax = vPos + m_vBoxSize;
 		m_vMin = vPos - m_vBoxSize;
 
-		D3DXVECTOR3 aa;
-		aa = (m_vMax + m_vMin) / 2;
+		//D3DXVec3TransformCoord(&m_vMax, &m_vMax, &mRot);
+		//D3DXVec3TransformCoord(&m_vMin, &m_vMin, &mRot);
+		//D3DXVec3TransformNormal(&m_vMax, &m_vMax, &mRot);
+		//D3DXVec3TransformNormal(&m_vMin, &m_vMin, &mRot);
 
 		m_Box.vMax = m_vMax;
 		m_Box.vMin = m_vMin;

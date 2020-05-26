@@ -1,10 +1,734 @@
 ﻿  CBY_BoneBox.cpp
+<<<<<<< HEAD
   KG_ArcBall.cpp
 c:\cpp\direct3d team project\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_arcball.cpp(36): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\cpp\direct3d team project\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_arcball.cpp(42): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   KG_Select.cpp
+=======
+  CBY_BoneObj.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(43): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(56): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(73): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(124): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(196): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(240): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(345): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(352): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(353): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(385): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(386): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CBY_BoneParser.cpp
+  CBY_Character.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(13): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(40): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(39): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(81): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(80): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(218): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(219): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(224): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(225): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CBY_CharacterCamera.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_charactercamera.cpp(122): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_charactercamera.cpp(123): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_charactercamera.cpp(143): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+  CBY_CharBox.cpp
+  CBY_CharMgr.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_charmgr.cpp(25): warning C4804: '>=': 연산에 'bool' 형식을 사용하는 것은 안전하지 않습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_charmgr.cpp(53): warning C4804: '>=': 연산에 'bool' 형식을 사용하는 것은 안전하지 않습니다.
+  CBY_DataCtrl.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(7): warning C4267: '=': 'size_t'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(10): warning C4477: 'fwprintf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(10): note: 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(10): warning C4477: 'fwprintf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 3의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(10): note: 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(10): warning C4477: 'fwprintf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 5의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(10): note: 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(10): warning C4477: 'fwprintf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 6의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(10): note: 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(56): warning C4477: 'fwprintf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(56): note: 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(56): warning C4477: 'fwprintf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 3의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(56): note: 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(56): warning C4477: 'fwprintf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 5의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(56): note: 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(56): warning C4477: 'fwprintf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 6의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(56): note: 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(124): warning C4477: 'swscanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(124): note: 이 인수는 버퍼 크기로 사용됩니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(134): warning C4477: 'swscanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(134): note: 이 인수는 버퍼 크기로 사용됩니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(152): warning C4477: 'swscanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(152): note: 이 인수는 버퍼 크기로 사용됩니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(184): warning C4477: 'swscanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(184): note: 이 인수는 버퍼 크기로 사용됩니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(193): warning C4477: 'swscanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(193): note: 이 인수는 버퍼 크기로 사용됩니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(211): warning C4477: 'swscanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(211): note: 이 인수는 버퍼 크기로 사용됩니다.
+  CBY_Mesh.cpp
+  CBY_MeshSkin.cpp
+  CBY_Obj.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_obj.cpp(30): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_obj.cpp(34): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_obj.cpp(124): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_obj.cpp(131): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_obj.cpp(132): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_obj.cpp(164): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_obj.cpp(165): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_obj.cpp(231): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_obj.cpp(298): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_obj.cpp(370): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_obj.cpp(474): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CBY_Object.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_object.cpp(12): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_object.cpp(260): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_object.cpp(270): warning C4267: 'return': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_object.cpp(287): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_object.cpp(298): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_object.cpp(312): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_object.cpp(313): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_object.cpp(318): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_object.cpp(319): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_object.cpp(364): warning C4267: 'return': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CBY_ObjectMgr.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_objectmgr.cpp(24): warning C4804: '>=': 연산에 'bool' 형식을 사용하는 것은 안전하지 않습니다.
+  CBY_Parser.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_parser.cpp(162): warning C4474: 'swscanf' : 서식 문자열에 전달된 인수가 너무 많습니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_parser.cpp(162): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 7개 필요하지만 8개가 제공되었습니다.
+  CBY_SkinObj.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(29): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(33): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(102): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(109): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(110): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(142): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(143): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(217): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(264): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CBY_SkinParser.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinparser.cpp(153): warning C4474: 'swscanf' : 서식 문자열에 전달된 인수가 너무 많습니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinparser.cpp(153): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 7개 필요하지만 8개가 제공되었습니다.
+  CBY_Weapon.cpp
+  JH_BaseObj.cpp
+  JH_Map.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\jh_map.cpp(37): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\jh_map.cpp(83): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\jh_map.cpp(33): warning C4101: 'i5' :참조되지 않은 지역 변수입니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\jh_map.cpp(33): warning C4101: 'i3' :참조되지 않은 지역 변수입니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\jh_map.cpp(33): warning C4101: 'i4' :참조되지 않은 지역 변수입니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\jh_map.cpp(306): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\jh_map.cpp(309): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  JH_MapMgr.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\jh_mapmgr.cpp(79): warning C4474: 'swscanf' : 서식 문자열에 전달된 인수가 너무 많습니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\jh_mapmgr.cpp(79): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 2개 필요하지만 3개가 제공되었습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\jh_mapmgr.cpp(110): warning C4477: 'swscanf' : 서식 문자열 '%f'에 'float *' 형식의 인수가 필요하지만 variadic 인수 4의 형식이 'double'입니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\jh_mapmgr.cpp(192): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\jh_mapmgr.cpp(145): warning C4715: 'JH::JH_MapMgr::AddMap': 모든 제어 경로에서 값을 반환하지는 않습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\jh_map.cpp(323): warning C4715: 'JH::JH_Map::CreateHeightMap': 모든 제어 경로에서 값을 반환하지는 않습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_skinobj.cpp(23): warning C4715: 'CBY::CBY_SkinObj::SkinCreate': 모든 제어 경로에서 값을 반환하지는 않습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_obj.cpp(23): warning C4715: 'CBY::CBY_Obj::ObjCreate': 모든 제어 경로에서 값을 반환하지는 않습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_datactrl.cpp(256): warning C4172: 지역 변수 또는 임시: szFile의 주소를 반환하고 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_character.cpp(262): warning C4715: 'CBY::CBY_Character::GetFirePos': 모든 제어 경로에서 값을 반환하지는 않습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\cby_boneobj.cpp(22): warning C4715: 'CBY::CBY_BoneObj::BoneCreate': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  컴파일하고 있습니다...
+  JH_MapObj.cpp
+  KG_ArcBall.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_arcball.cpp(36): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_arcball.cpp(42): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  KG_BackViewCamera.cpp
+  KG_Camera.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_camera.cpp(47): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_camera.cpp(71): warning C4244: '인수': 'LONG'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_camera.cpp(70): warning C4244: '인수': 'LONG'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  KG_Collision.cpp
+  KG_Core.cpp
+  KG_DebugCamera.cpp
+  KG_Device.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_device.cpp(176): warning C4244: '=': 'LONG'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_device.cpp(177): warning C4244: '=': 'LONG'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  KG_DxHelperEx.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55460): note: 'DXGI_STATUS_OCCLUDED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55469): note: 'DXGI_STATUS_CLIPPED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55478): note: 'DXGI_STATUS_NO_REDIRECTION'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55487): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55496): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55505): note: 'DXGI_STATUS_MODE_CHANGED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55514): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55529): note: 'DXGI_ERROR_INVALID_CALL'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55538): note: 'DXGI_ERROR_NOT_FOUND'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55547): note: 'DXGI_ERROR_MORE_DATA'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55556): note: 'DXGI_ERROR_UNSUPPORTED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55565): note: 'DXGI_ERROR_DEVICE_REMOVED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55574): note: 'DXGI_ERROR_DEVICE_HUNG'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55584): note: 'DXGI_ERROR_DEVICE_RESET'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55593): note: 'DXGI_ERROR_WAS_STILL_DRAWING'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55603): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55612): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55622): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55631): note: 'DXGI_ERROR_NONEXCLUSIVE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55640): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55650): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55659): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55923): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55932): note: 'D3D11_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55942): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55951): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55899): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55908): note: 'D3D10_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+  KG_DxHeper.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55460): note: 'DXGI_STATUS_OCCLUDED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55469): note: 'DXGI_STATUS_CLIPPED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55478): note: 'DXGI_STATUS_NO_REDIRECTION'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55487): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55496): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55505): note: 'DXGI_STATUS_MODE_CHANGED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55514): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55529): note: 'DXGI_ERROR_INVALID_CALL'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55538): note: 'DXGI_ERROR_NOT_FOUND'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55547): note: 'DXGI_ERROR_MORE_DATA'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55556): note: 'DXGI_ERROR_UNSUPPORTED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55565): note: 'DXGI_ERROR_DEVICE_REMOVED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55574): note: 'DXGI_ERROR_DEVICE_HUNG'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55584): note: 'DXGI_ERROR_DEVICE_RESET'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55593): note: 'DXGI_ERROR_WAS_STILL_DRAWING'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55603): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55612): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55622): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55631): note: 'DXGI_ERROR_NONEXCLUSIVE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55640): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55650): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55659): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55923): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55932): note: 'D3D11_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55942): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55951): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55899): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55908): note: 'D3D10_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+  KG_DxRT.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55460): note: 'DXGI_STATUS_OCCLUDED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55469): note: 'DXGI_STATUS_CLIPPED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55478): note: 'DXGI_STATUS_NO_REDIRECTION'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55487): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55496): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55505): note: 'DXGI_STATUS_MODE_CHANGED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55514): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55529): note: 'DXGI_ERROR_INVALID_CALL'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55538): note: 'DXGI_ERROR_NOT_FOUND'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55547): note: 'DXGI_ERROR_MORE_DATA'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55556): note: 'DXGI_ERROR_UNSUPPORTED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55565): note: 'DXGI_ERROR_DEVICE_REMOVED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55574): note: 'DXGI_ERROR_DEVICE_HUNG'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55584): note: 'DXGI_ERROR_DEVICE_RESET'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55593): note: 'DXGI_ERROR_WAS_STILL_DRAWING'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55603): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55612): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55622): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55631): note: 'DXGI_ERROR_NONEXCLUSIVE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55640): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55650): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55659): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55923): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55932): note: 'D3D11_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55942): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55951): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55899): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55908): note: 'D3D10_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_dxrt.cpp(43): warning C4244: '인수': 'float'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_dxrt.cpp(55): warning C4244: '=': 'UINT'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_dxrt.cpp(56): warning C4244: '=': 'UINT'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  KG_DxState.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55460): note: 'DXGI_STATUS_OCCLUDED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55469): note: 'DXGI_STATUS_CLIPPED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55478): note: 'DXGI_STATUS_NO_REDIRECTION'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55487): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55496): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55505): note: 'DXGI_STATUS_MODE_CHANGED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55514): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55529): note: 'DXGI_ERROR_INVALID_CALL'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55538): note: 'DXGI_ERROR_NOT_FOUND'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55547): note: 'DXGI_ERROR_MORE_DATA'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55556): note: 'DXGI_ERROR_UNSUPPORTED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55565): note: 'DXGI_ERROR_DEVICE_REMOVED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55574): note: 'DXGI_ERROR_DEVICE_HUNG'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55584): note: 'DXGI_ERROR_DEVICE_RESET'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55593): note: 'DXGI_ERROR_WAS_STILL_DRAWING'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55603): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55612): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55622): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55631): note: 'DXGI_ERROR_NONEXCLUSIVE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55640): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55650): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55659): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55923): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55932): note: 'D3D11_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55942): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55951): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55899): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55908): note: 'D3D10_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+  KG_DXWrite.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55460): note: 'DXGI_STATUS_OCCLUDED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55469): note: 'DXGI_STATUS_CLIPPED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55478): note: 'DXGI_STATUS_NO_REDIRECTION'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55487): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55496): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55505): note: 'DXGI_STATUS_MODE_CHANGED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55514): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55529): note: 'DXGI_ERROR_INVALID_CALL'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55538): note: 'DXGI_ERROR_NOT_FOUND'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55547): note: 'DXGI_ERROR_MORE_DATA'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55556): note: 'DXGI_ERROR_UNSUPPORTED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55565): note: 'DXGI_ERROR_DEVICE_REMOVED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55574): note: 'DXGI_ERROR_DEVICE_HUNG'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55584): note: 'DXGI_ERROR_DEVICE_RESET'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55593): note: 'DXGI_ERROR_WAS_STILL_DRAWING'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55603): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55612): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55622): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55631): note: 'DXGI_ERROR_NONEXCLUSIVE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55640): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55650): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55659): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55923): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55932): note: 'D3D11_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55942): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55951): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55899): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55908): note: 'D3D10_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(59): warning C4005: 'D2DERR_WRONG_STATE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55988): note: 'D2DERR_WRONG_STATE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(64): warning C4005: 'D2DERR_NOT_INITIALIZED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55997): note: 'D2DERR_NOT_INITIALIZED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(69): warning C4005: 'D2DERR_UNSUPPORTED_OPERATION': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56006): note: 'D2DERR_UNSUPPORTED_OPERATION'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(74): warning C4005: 'D2DERR_SCANNER_FAILED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56015): note: 'D2DERR_SCANNER_FAILED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(79): warning C4005: 'D2DERR_SCREEN_ACCESS_DENIED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56024): note: 'D2DERR_SCREEN_ACCESS_DENIED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(84): warning C4005: 'D2DERR_DISPLAY_STATE_INVALID': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56033): note: 'D2DERR_DISPLAY_STATE_INVALID'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(89): warning C4005: 'D2DERR_ZERO_VECTOR': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56042): note: 'D2DERR_ZERO_VECTOR'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(97): warning C4005: 'D2DERR_INTERNAL_ERROR': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56051): note: 'D2DERR_INTERNAL_ERROR'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(103): warning C4005: 'D2DERR_DISPLAY_FORMAT_NOT_SUPPORTED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56060): note: 'D2DERR_DISPLAY_FORMAT_NOT_SUPPORTED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(108): warning C4005: 'D2DERR_INVALID_CALL': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56069): note: 'D2DERR_INVALID_CALL'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(113): warning C4005: 'D2DERR_NO_HARDWARE_DEVICE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56078): note: 'D2DERR_NO_HARDWARE_DEVICE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(119): warning C4005: 'D2DERR_RECREATE_TARGET': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56087): note: 'D2DERR_RECREATE_TARGET'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(124): warning C4005: 'D2DERR_TOO_MANY_SHADER_ELEMENTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56096): note: 'D2DERR_TOO_MANY_SHADER_ELEMENTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(129): warning C4005: 'D2DERR_SHADER_COMPILE_FAILED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56105): note: 'D2DERR_SHADER_COMPILE_FAILED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(134): warning C4005: 'D2DERR_MAX_TEXTURE_SIZE_EXCEEDED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56114): note: 'D2DERR_MAX_TEXTURE_SIZE_EXCEEDED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(139): warning C4005: 'D2DERR_UNSUPPORTED_VERSION': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56123): note: 'D2DERR_UNSUPPORTED_VERSION'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(144): warning C4005: 'D2DERR_BAD_NUMBER': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56132): note: 'D2DERR_BAD_NUMBER'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(149): warning C4005: 'D2DERR_WRONG_FACTORY': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56141): note: 'D2DERR_WRONG_FACTORY'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(154): warning C4005: 'D2DERR_LAYER_ALREADY_IN_USE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56150): note: 'D2DERR_LAYER_ALREADY_IN_USE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(159): warning C4005: 'D2DERR_POP_CALL_DID_NOT_MATCH_PUSH': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56159): note: 'D2DERR_POP_CALL_DID_NOT_MATCH_PUSH'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(164): warning C4005: 'D2DERR_WRONG_RESOURCE_DOMAIN': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56168): note: 'D2DERR_WRONG_RESOURCE_DOMAIN'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(169): warning C4005: 'D2DERR_PUSH_POP_UNBALANCED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56177): note: 'D2DERR_PUSH_POP_UNBALANCED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(174): warning C4005: 'D2DERR_RENDER_TARGET_HAS_LAYER_OR_CLIPRECT': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56186): note: 'D2DERR_RENDER_TARGET_HAS_LAYER_OR_CLIPRECT'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(179): warning C4005: 'D2DERR_INCOMPATIBLE_BRUSH_TYPES': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56195): note: 'D2DERR_INCOMPATIBLE_BRUSH_TYPES'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(184): warning C4005: 'D2DERR_WIN32_ERROR': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56204): note: 'D2DERR_WIN32_ERROR'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(189): warning C4005: 'D2DERR_TARGET_NOT_GDI_COMPATIBLE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56213): note: 'D2DERR_TARGET_NOT_GDI_COMPATIBLE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(194): warning C4005: 'D2DERR_TEXT_EFFECT_IS_WRONG_TYPE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56222): note: 'D2DERR_TEXT_EFFECT_IS_WRONG_TYPE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(201): warning C4005: 'D2DERR_TEXT_RENDERER_NOT_RELEASED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56231): note: 'D2DERR_TEXT_RENDERER_NOT_RELEASED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d2derr.h(206): warning C4005: 'D2DERR_EXCEEDS_MAX_BITMAP_SIZE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56240): note: 'D2DERR_EXCEEDS_MAX_BITMAP_SIZE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dwrite.h(4962): warning C4005: 'DWRITE_E_FILEFORMAT': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56407): note: 'DWRITE_E_FILEFORMAT'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dwrite.h(4967): warning C4005: 'DWRITE_E_UNEXPECTED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56416): note: 'DWRITE_E_UNEXPECTED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dwrite.h(4972): warning C4005: 'DWRITE_E_NOFONT': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56425): note: 'DWRITE_E_NOFONT'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dwrite.h(4978): warning C4005: 'DWRITE_E_FILENOTFOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56434): note: 'DWRITE_E_FILENOTFOUND'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dwrite.h(4983): warning C4005: 'DWRITE_E_FILEACCESS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56443): note: 'DWRITE_E_FILEACCESS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dwrite.h(4988): warning C4005: 'DWRITE_E_FONTCOLLECTIONOBSOLETE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56452): note: 'DWRITE_E_FONTCOLLECTIONOBSOLETE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dwrite.h(4993): warning C4005: 'DWRITE_E_ALREADYREGISTERED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(56461): note: 'DWRITE_E_ALREADYREGISTERED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_dxwrite.cpp(136): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  KG_Frusutm.cpp
+  KG_Input.cpp
+  KG_MapLod.cpp
+  KG_Math.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55460): note: 'DXGI_STATUS_OCCLUDED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55469): note: 'DXGI_STATUS_CLIPPED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55478): note: 'DXGI_STATUS_NO_REDIRECTION'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55487): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55496): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55505): note: 'DXGI_STATUS_MODE_CHANGED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55514): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55529): note: 'DXGI_ERROR_INVALID_CALL'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55538): note: 'DXGI_ERROR_NOT_FOUND'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55547): note: 'DXGI_ERROR_MORE_DATA'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55556): note: 'DXGI_ERROR_UNSUPPORTED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55565): note: 'DXGI_ERROR_DEVICE_REMOVED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55574): note: 'DXGI_ERROR_DEVICE_HUNG'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55584): note: 'DXGI_ERROR_DEVICE_RESET'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55593): note: 'DXGI_ERROR_WAS_STILL_DRAWING'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55603): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55612): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55622): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55631): note: 'DXGI_ERROR_NONEXCLUSIVE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55640): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55650): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55659): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55923): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55932): note: 'D3D11_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55942): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55951): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55899): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55908): note: 'D3D10_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+  KG_Minimap.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_minimap.cpp(18): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
+  KG_Model.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_model.cpp(14): warning C4477: 'swscanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_model.cpp(14): note: 이 인수는 버퍼 크기로 사용됩니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_model.cpp(14): warning C4473: 'swscanf_s': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_model.cpp(14): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 5개 필요하지만 3개가 제공되었습니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_model.cpp(14): note: 누락된 variadic 인수 4이(가) 서식 문자열 '%s'에 필요합니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_model.cpp(14): note: 이 인수는 변환 지정자에서 사용됩니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_model.cpp(23): warning C4477: 'swscanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_model.cpp(23): note: 이 인수는 버퍼 크기로 사용됩니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_model.cpp(30): warning C4477: 'swscanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_model.cpp(30): note: 이 인수는 버퍼 크기로 사용됩니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_model.cpp(39): warning C4244: '=': 'double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_model.cpp(40): warning C4244: '=': 'double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_model.cpp(199): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_model.cpp(219): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_model.cpp(223): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_model.cpp(240): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_model.cpp(244): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_model.cpp(311): warning C4101: 'szFileName' :참조되지 않은 지역 변수입니다.
+  KG_ModelViewCamera.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  KG_Node.cpp
+  KG_Select.cpp
+  KG_Shadow.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55460): note: 'DXGI_STATUS_OCCLUDED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55469): note: 'DXGI_STATUS_CLIPPED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55478): note: 'DXGI_STATUS_NO_REDIRECTION'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55487): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55496): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55505): note: 'DXGI_STATUS_MODE_CHANGED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55514): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55529): note: 'DXGI_ERROR_INVALID_CALL'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55538): note: 'DXGI_ERROR_NOT_FOUND'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55547): note: 'DXGI_ERROR_MORE_DATA'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55556): note: 'DXGI_ERROR_UNSUPPORTED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55565): note: 'DXGI_ERROR_DEVICE_REMOVED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55574): note: 'DXGI_ERROR_DEVICE_HUNG'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55584): note: 'DXGI_ERROR_DEVICE_RESET'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55593): note: 'DXGI_ERROR_WAS_STILL_DRAWING'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55603): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55612): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55622): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55631): note: 'DXGI_ERROR_NONEXCLUSIVE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55640): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55650): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55659): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55923): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55932): note: 'D3D11_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55942): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55951): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55899): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\dx\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55908): note: 'D3D10_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+  KG_ShapeBox.cpp
+  KG_ShapeLine.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_shapeline.cpp(39): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_shapeline.cpp(43): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  KG_ShapeMap.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_shapemap.cpp(51): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  KG_ShapeObject.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_shapeobject.cpp(45): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  KG_SkyBox.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_skybox.cpp(82): warning C4390: ';': 제어된 빈 문이 있습니다. 이 문이 필요합니까?
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_skybox.cpp(87): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  KG_Sound.cpp
+  KG_SoundMgr.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_soundmgr.cpp(31): warning C4804: '>=': 연산에 'bool' 형식을 사용하는 것은 안전하지 않습니다.
+  KG_Sprite.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_sprite.cpp(16): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_sprite.cpp(34): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_sprite.cpp(53): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_sprite.cpp(69): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_sprite.cpp(75): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_sprite.cpp(76): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_sprite.cpp(77): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_sprite.cpp(78): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_sprite.cpp(86): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_sprite.cpp(87): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_sprite.cpp(88): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_sprite.cpp(89): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\kg_sprite.cpp(160): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  KG_TextureMgr.cpp
+  KG_Time.cpp
+  KG_Window.cpp
+  LightMgr.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\lightmgr.cpp(25): warning C4477: 'swscanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\lightmgr.cpp(25): note: 이 인수는 버퍼 크기로 사용됩니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\lightmgr.cpp(32): warning C4477: 'swscanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\lightmgr.cpp(32): note: 이 인수는 버퍼 크기로 사용됩니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\lightmgr.cpp(40): warning C4477: 'swscanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+  d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\lightmgr.cpp(40): note: 이 인수는 버퍼 크기로 사용됩니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\lightmgr.cpp(63): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\lightmgr.cpp(64): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\lightmgr.cpp(71): warning C4244: '=': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\lightmgr.cpp(107): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  LightObj.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\lightobj.cpp(77): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  MyEffectParser.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\myeffectparser.cpp(33): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\myeffectparser.cpp(34): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\myeffectparser.cpp(115): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\myeffectparser.cpp(116): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Myparser.cpp
+  MyParticle.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\myparticle.cpp(29): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\myparticle.cpp(99): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  NormalMap.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  QuadTree.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\quadtree.cpp(20): warning C4267: '초기화 중': 'size_t'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\quadtree.cpp(21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\quadtree.cpp(38): warning C4390: ';': 제어된 빈 문이 있습니다. 이 문이 필요합니까?
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\quadtree.cpp(530): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\quadtree.cpp(549): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\quadtree.cpp(563): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\quadtree.cpp(577): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\quadtree.cpp(604): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\quadtree.cpp(607): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\quadtree.cpp(622): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Sprite.cpp
+  SpriteTexture.cpp
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\spritetexture.cpp(10): warning C4244: '인수': 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\spritetexture.cpp(51): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\spritetexture.cpp(53): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+>>>>>>> origin/Yong
   VFX_EffectObj.cpp
+  VFX_Obj.cpp
   VFX_ObjMgr.cpp
+<<<<<<< HEAD
 c:\cpp\direct3d team project\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\vfx_objmgr.cpp(94): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\cpp\direct3d team project\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\vfx_objmgr.cpp(95): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\cpp\direct3d team project\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\vfx_objmgr.cpp(96): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
@@ -13,6 +737,17 @@ c:\cpp\direct3d team project\kgca_direct3d_project\kg_gameproject\kg_gameproject
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(1397,5): warning MSB8012: TargetPath(C:\cpp\direct3d team project\KGCA_direct3D_Project\KG_GameProject\KG_GameProjects\KG_Engine\../../output/Debug/KG_Engine/KG_Engine.lib)이(가) Library의 OutputFile 속성 값(C:\cpp\direct3d team project\KGCA_direct3D_Project\KG_GameProject\KG_GameProjects\KG_Engine\KG_Engine_D.lib)과 일치하지 않습니다. 이로 인해 프로젝트가 잘못 빌드될 수 있습니다. 이를 수정하려면 $(OutDir), $(TargetName) 및 $(TargetExt) 속성 값이 %(Lib.OutputFile)에 지정된 값과 일치해야 합니다.
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(1399,5): warning MSB8012: TargetName(KG_Engine)이(가) Library의 OutputFile 속성 값(KG_Engine_D)과 일치하지 않습니다. 이로 인해 프로젝트가 잘못 빌드될 수 있습니다. 이를 수정하려면 $(OutDir), $(TargetName) 및 $(TargetExt) 속성 값이 %(Lib.OutputFile)에 지정된 값과 일치해야 합니다.
   KG_Engine.vcxproj -> C:\cpp\direct3d team project\KGCA_direct3D_Project\KG_GameProject\KG_GameProjects\KG_Engine\../../output/Debug/KG_Engine/KG_Engine.lib
+=======
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\vfx_objmgr.cpp(94): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\vfx_objmgr.cpp(95): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\vfx_objmgr.cpp(96): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\vfx_objmgr.cpp(134): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+d:\yong_github\c_yong\kgca_direct3d_project\kg_gameproject\kg_gameprojects\kg_engine\quadtree.cpp(585): warning C4715: 'JH::HQuadTree::Draw': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(1397,5): warning MSB8012: TargetPath(D:\Yong_GitHub\C_Yong\KGCA_direct3D_Project\KG_GameProject\KG_GameProjects\KG_Engine\../../output/Debug/KG_Engine/KG_Engine.lib)이(가) Library의 OutputFile 속성 값(D:\Yong_GitHub\C_Yong\KGCA_direct3D_Project\KG_GameProject\KG_GameProjects\KG_Engine\KG_Engine_D.lib)과 일치하지 않습니다. 이로 인해 프로젝트가 잘못 빌드될 수 있습니다. 이를 수정하려면 $(OutDir), $(TargetName) 및 $(TargetExt) 속성 값이 %(Lib.OutputFile)에 지정된 값과 일치해야 합니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(1399,5): warning MSB8012: TargetName(KG_Engine)이(가) Library의 OutputFile 속성 값(KG_Engine_D)과 일치하지 않습니다. 이로 인해 프로젝트가 잘못 빌드될 수 있습니다. 이를 수정하려면 $(OutDir), $(TargetName) 및 $(TargetExt) 속성 값이 %(Lib.OutputFile)에 지정된 값과 일치해야 합니다.
+  KG_Engine.vcxproj -> D:\Yong_GitHub\C_Yong\KGCA_direct3D_Project\KG_GameProject\KG_GameProjects\KG_Engine\../../output/Debug/KG_Engine/KG_Engine.lib
+>>>>>>> origin/Yong
   KG_Engine_D.lib
   KG_Engine_R.lib
           2개 파일이 복사되었습니다.
@@ -36,6 +771,7 @@ C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCT
   CBY_Weapon.h
   JH_BaseObj.h
   JH_Map.h
+  JH_MapMgr.h
   JH_MapObj.h
   KG_ArcBall.h
   KG_BackViewCamera.h
@@ -84,4 +820,4 @@ C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCT
   VFX_EffectObj.h
   VFX_Obj.h
   VFX_ObjMgr.h
-         68개 파일이 복사되었습니다.
+         69개 파일이 복사되었습니다.

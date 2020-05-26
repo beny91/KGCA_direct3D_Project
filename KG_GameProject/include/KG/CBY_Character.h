@@ -15,8 +15,8 @@ namespace CBY
 		bool Frame() override;
 		bool Render() override;
 		bool Release() override;
+		virtual bool NonCharacterRender();
 		virtual bool SkinLoad(T_STR pszLoad) override;
-		virtual void SetCharBox() override;
 
 	public: //object
 		virtual bool ObjLoad(T_STR pszSkinLoad);
@@ -27,9 +27,26 @@ namespace CBY
 			const TCHAR* ShaderFileName= L"../../data/shader/SkinShader.txt", const TCHAR* TexFileName= nullptr, const CHAR* VSName= "VSSKIN", const CHAR* PSName= "PS");
 		virtual void SetMatrix(D3DXMATRIX* world, D3DXMATRIX* view, D3DXMATRIX* proj)override;
 		
+	public:
+		D3DXVECTOR3 GetColPos(int i);
+		D3DXVECTOR3 GetFirePos(int iObj);
+		inline KG_Box GetColBox(int i)
+		{
+			return m_BoxList[i].GetBox();
+		}
+
+		inline bool GetStateAnimationStart(int i)
+		{
+			return m_StateList[i].m_Bone.GetAniStart();
+		}
+		inline bool GetStateAnimationEnd(int i)
+		{
+			return m_StateList[i].m_Bone.GetAniEnd();
+		}
 
 	public:
 		virtual void SetCharAction(int state, float start, float end);
+		inline virtual void SetEndClip(int iState, bool bclip) { m_StateList[iState].m_Bone.SetEndClip(bclip); }
 
 	public:
 		CBY_Character();

@@ -1,0 +1,16 @@
+#pragma once
+namespace CBY
+{
+	enum HEROEVENT
+	{
+		EVENT_CREATE = 0,
+		EVENT_MOVE,
+		EVENT_RUN,
+		EVENT_JUMP,
+		EVENT_DAMAGE,
+		EVENT_DEATH,
+		EVENT_ATTACK,
+		EVENT_IDLE
+	};
+
+}

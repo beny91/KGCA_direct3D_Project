@@ -30,6 +30,16 @@ namespace CBY
 		return true;
 	}
 
+	void CBY_Weapon::SetMatrix(D3DXMATRIX* world, D3DXMATRIX* view, D3DXMATRIX* proj)
+	{
+		CBY_Object::SetMatrix(world, view, proj);
+
+		D3DXMATRIX mat = m_pMatrixList[m_iFireSocket] * (*world);
+		m_vFirePos.x = mat._41;
+		m_vFirePos.y = mat._42;
+		m_vFirePos.z = mat._43;
+	}
+
 	void CBY_Weapon::SetSocket(int i)
 	{
 		m_iCharSocket = i;
@@ -58,6 +68,11 @@ namespace CBY
 	int CBY_Weapon::GetFireSocket()
 	{
 		return m_iFireSocket;
+	}
+
+	D3DXVECTOR3 CBY_Weapon::GetFirePos()
+	{
+		return m_vFirePos;
 	}
 
 	CBY_Weapon::CBY_Weapon()

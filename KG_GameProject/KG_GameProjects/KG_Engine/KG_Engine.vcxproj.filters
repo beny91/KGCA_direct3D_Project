@@ -192,36 +192,6 @@
     <ClCompile Include="CBY_Object.cpp">
       <Filter>CBY_Object\Obj</Filter>
     </ClCompile>
-    <ClCompile Include="JH_BaseObj.cpp">
-      <Filter>JH_Map</Filter>
-    </ClCompile>
-    <ClCompile Include="JH_Map.cpp">
-      <Filter>JH_Map</Filter>
-    </ClCompile>
-    <ClCompile Include="JH_MapObj.cpp">
-      <Filter>JH_Map</Filter>
-    </ClCompile>
-    <ClCompile Include="LightMgr.cpp">
-      <Filter>JH_Map</Filter>
-    </ClCompile>
-    <ClCompile Include="LightObj.cpp">
-      <Filter>JH_Map</Filter>
-    </ClCompile>
-    <ClCompile Include="NormalMap.cpp">
-      <Filter>JH_Map</Filter>
-    </ClCompile>
-    <ClCompile Include="QuadTree.cpp">
-      <Filter>JH_Map</Filter>
-    </ClCompile>
-    <ClCompile Include="KG_MapLod.cpp">
-      <Filter>JH_Map</Filter>
-    </ClCompile>
-    <ClCompile Include="KG_Node.cpp">
-      <Filter>JH_Map</Filter>
-    </ClCompile>
-    <ClCompile Include="KG_SkyBox.cpp">
-      <Filter>JH_Map</Filter>
-    </ClCompile>
     <ClCompile Include="KG_Collision.cpp">
       <Filter>Utility</Filter>
     </ClCompile>
@@ -251,6 +221,39 @@
     </ClCompile>
     <ClCompile Include="VFX_ObjMgr.cpp">
       <Filter>KYS_Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="JH_BaseObj.cpp">
+      <Filter>JH_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="JH_Map.cpp">
+      <Filter>JH_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="JH_MapMgr.cpp">
+      <Filter>JH_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="JH_MapObj.cpp">
+      <Filter>JH_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="KG_MapLod.cpp">
+      <Filter>JH_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="KG_Node.cpp">
+      <Filter>JH_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="KG_SkyBox.cpp">
+      <Filter>JH_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="LightMgr.cpp">
+      <Filter>JH_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="LightObj.cpp">
+      <Filter>JH_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="NormalMap.cpp">
+      <Filter>JH_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="QuadTree.cpp">
+      <Filter>JH_Map</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -398,36 +401,6 @@
     <ClInclude Include="CBY_Object.h">
       <Filter>CBY_Object\Obj</Filter>
     </ClInclude>
-    <ClInclude Include="JH_BaseObj.h">
-      <Filter>JH_Map</Filter>
-    </ClInclude>
-    <ClInclude Include="JH_Map.h">
-      <Filter>JH_Map</Filter>
-    </ClInclude>
-    <ClInclude Include="JH_MapObj.h">
-      <Filter>JH_Map</Filter>
-    </ClInclude>
-    <ClInclude Include="LightMgr.h">
-      <Filter>JH_Map</Filter>
-    </ClInclude>
-    <ClInclude Include="LightObj.h">
-      <Filter>JH_Map</Filter>
-    </ClInclude>
-    <ClInclude Include="NormalMap.h">
-      <Filter>JH_Map</Filter>
-    </ClInclude>
-    <ClInclude Include="QuadTree.h">
-      <Filter>JH_Map</Filter>
-    </ClInclude>
-    <ClInclude Include="KG_MapLod.h">
-      <Filter>JH_Map</Filter>
-    </ClInclude>
-    <ClInclude Include="KG_Node.h">
-      <Filter>JH_Map</Filter>
-    </ClInclude>
-    <ClInclude Include="KG_SkyBox.h">
-      <Filter>JH_Map</Filter>
-    </ClInclude>
     <ClInclude Include="KG_Collision.h">
       <Filter>Utility</Filter>
     </ClInclude>
@@ -457,6 +430,39 @@
     </ClInclude>
     <ClInclude Include="VFX_ObjMgr.h">
       <Filter>KYS_Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="JH_BaseObj.h">
+      <Filter>JH_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="JH_Map.h">
+      <Filter>JH_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="JH_MapMgr.h">
+      <Filter>JH_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="JH_MapObj.h">
+      <Filter>JH_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="KG_MapLod.h">
+      <Filter>JH_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="KG_Node.h">
+      <Filter>JH_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="KG_SkyBox.h">
+      <Filter>JH_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="LightMgr.h">
+      <Filter>JH_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="LightObj.h">
+      <Filter>JH_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalMap.h">
+      <Filter>JH_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="QuadTree.h">
+      <Filter>JH_Map</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

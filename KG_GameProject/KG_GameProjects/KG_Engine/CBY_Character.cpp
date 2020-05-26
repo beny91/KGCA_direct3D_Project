@@ -14,8 +14,9 @@ namespace CBY
 		m_ObjList.push_back(std::make_shared<CBY_SkinObj>());
 		*m_ObjList[list] = *I_CHARACTER.m_SkinLoadList[index];
 
-		m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax.z *= 1.5;
-		m_ObjList[0]->m_ObjList[0]->m_CharBox.vMin.z *= 1.5;
+		m_SkinOriginalBox = m_ObjList[0]->m_ObjList[0]->m_CharBox;
+		m_SkinOriginalBox.vMax.z *= 1.5;
+		m_SkinOriginalBox.vMin.z *= 1.5;
 
 		SetCharBox();
 		return true;
@@ -153,28 +154,6 @@ namespace CBY
 		memcpy(mapResource.pData, &m_cbBoneWorld, sizeof(CBConstBoneWorld));
 		m_obj.m_pContext->Unmap(m_pCBConstBoneWorld.Get(), 0);
 
-
-		for (int i = 0; i < m_ObjectList.size(); i++)
-		{
-			D3DXMATRIX mat;
-			D3DXMatrixScaling(&mat, 0.5, 0.5, 0.5);
-
-			if (m_ObjectList[i]->GetSocket() == -1)
-			{
-				m_ObjectList[i]->Frame();
-			}
-			else
-			{
-				mat._41 += m_pMatrixList[m_ObjectList[i]->GetSocket()]._41 / 2;
-				mat._42 += m_pMatrixList[m_ObjectList[i]->GetSocket()]._42 / 2;
-				mat._43 += m_pMatrixList[m_ObjectList[i]->GetSocket()]._43 / 2;
-				m_ObjectList[i]->Update(&m_pMatrixList[m_ObjectList[i]->GetSocket()]);
-			}
-
-			//m_ObjectList[i]->SetMatrix(&(mat*m_matWorld), &m_matView, &m_matProj);
-			m_ObjectList[i]->SetMatrix(&m_matWorld, &m_matView, &m_matProj);
-		}
-
 		return true;
 	}
 
@@ -197,6 +176,15 @@ namespace CBY
 		{
 			m_ObjectList[i]->Render();
 		}
+		//{
+		//	m_CharBox.SetMatrix(nullptr, &m_matView, &m_matProj);		//디버깅용
+		//	m_CharBox.Render();
+		//	for (int iBox = 0; iBox < m_BoxList.size(); iBox++)
+		//	{
+		//		m_BoxList[iBox].SetMatrix(nullptr, &m_matView, &m_matProj);
+		//		m_BoxList[iBox].Render();
+		//	}
+		//}
 		return true;
 	}
 
@@ -208,6 +196,16 @@ namespace CBY
 		for (int i = 0; i < m_ObjectList.size(); i++)
 		{
 			m_ObjectList[i]->Release();
+		}
+		return true;
+	}
+
+	bool CBY_Character::NonCharacterRender()
+	{
+		PreRender();
+		for (int i = 0; i < m_ObjectList.size(); i++)
+		{
+			m_ObjectList[i]->Render();
 		}
 		return true;
 	}
@@ -231,57 +229,42 @@ namespace CBY
 		SetFrameTime(state, start, end);
 	}
 
-	void CBY_Character::SetCharBox()
-	{
-		D3DXVECTOR3 size = m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax - m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter;
-		m_CharBox.CreateBox(0,
-			m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter, size.x, size.y, size.z);
-	}
-
 	void CBY_Character::SetMatrix(D3DXMATRIX* world, D3DXMATRIX* view, D3DXMATRIX* proj)
 	{
-		KG_Model::SetMatrix(world, view, proj);
+		CBY_Object::SetMatrix(world, view, proj);
 
-		{	//캐릭터를 감싼 바운딩 박스의 움직임을 제어하는 곳
-			D3DXMATRIX matRot;
-			D3DXVECTOR3 vScale, vPos, vSize;
-			D3DXQUATERNION qRot;
-			D3DXMatrixDecompose(&vScale, &qRot, &vPos, world);
-			D3DXMatrixRotationQuaternion(&matRot, &qRot);
-
-			vSize = m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax - m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter;
-			vSize.x *= vScale.x;
-			vSize.y *= vScale.y;
-			vSize.z *= vScale.z;
-			vPos += m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter;
-
-
-			m_CharBox.CreateBox(0, vPos, vSize.x, vSize.y, vSize.z);		//박스 업데이트
-
-			m_CharBox.UpdateBoxAxis(matRot);
-		}
-
+		for (int i = 0; i < m_ObjectList.size(); i++)
 		{
-			for (int iBox = 0; iBox < m_BoxList.size(); iBox++)
+			D3DXMATRIX mat;
+			D3DXMatrixScaling(&mat, 0.5, 0.5, 0.5);
+
+			if (m_ObjectList[i]->GetSocket() == -1)
 			{
-				D3DXMATRIX matRot;
-				D3DXVECTOR3 vScale, vPos, vSize;
-				D3DXQUATERNION qRot;
-				D3DXMatrixDecompose(&vScale, &qRot, &vPos, world);
-				D3DXMatrixRotationQuaternion(&matRot, &qRot);
-
-				vSize = m_BoxList[iBox].GetSize();
-				vSize.x *= vScale.x;
-				vSize.y *= vScale.y;
-				vSize.z *= vScale.z;
-				vPos += m_BoxList[iBox].GetPos();
-
-				m_BoxList[iBox].CreateBox(m_BoxList[iBox].GetBoneIndex(),
-					vPos, vSize.x, vSize.y, vSize.z);
-
-				m_BoxList[iBox].UpdateBoxAxis(matRot);
+				m_ObjectList[i]->Frame();
 			}
+			else
+			{
+				mat._41 += m_pMatrixList[m_ObjectList[i]->GetSocket()]._41 / 2;
+				mat._42 += m_pMatrixList[m_ObjectList[i]->GetSocket()]._42 / 2;
+				mat._43 += m_pMatrixList[m_ObjectList[i]->GetSocket()]._43 / 2;
+				m_ObjectList[i]->Update(&m_pMatrixList[m_ObjectList[i]->GetSocket()]);
+			}
+
+			//m_ObjectList[i]->SetMatrix(&(mat*m_matWorld), &m_matView, &m_matProj);
+			m_ObjectList[i]->SetMatrix(&m_matWorld, &m_matView, &m_matProj);
 		}
+
+	}
+
+	D3DXVECTOR3 CBY_Character::GetFirePos(int iObj)
+	{
+		if(m_ObjectList[iObj]!=nullptr)
+		return m_ObjectList[iObj]->GetFirePos();
+	}
+
+	D3DXVECTOR3 CBY_Character::GetColPos(int i)
+	{
+		return m_BoxList[i].GetPos();
 	}
 
 	CBY_Character::CBY_Character()

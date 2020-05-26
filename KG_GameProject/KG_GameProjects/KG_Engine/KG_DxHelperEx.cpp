@@ -18,7 +18,6 @@ void KG_DxHelperEx::PrePender()
 	//m_pContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);			//어떤식으로 그릴지 입력
 
 	m_pContext->PSSetShaderResources(0, 1, m_pSRV.GetAddressOf());
-
 }
 
 void KG_DxHelperEx::Pender()

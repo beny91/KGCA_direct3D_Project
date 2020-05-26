@@ -192,6 +192,7 @@ copy "*.h" "../../include/KG"</Command>
     <ClCompile Include="CBY_Weapon.cpp" />
     <ClCompile Include="JH_BaseObj.cpp" />
     <ClCompile Include="JH_Map.cpp" />
+    <ClCompile Include="JH_MapMgr.cpp" />
     <ClCompile Include="JH_MapObj.cpp" />
     <ClCompile Include="KG_ArcBall.cpp" />
     <ClCompile Include="KG_BackViewCamera.cpp" />
@@ -260,6 +261,7 @@ copy "*.h" "../../include/KG"</Command>
     <ClInclude Include="CBY_Weapon.h" />
     <ClInclude Include="JH_BaseObj.h" />
     <ClInclude Include="JH_Map.h" />
+    <ClInclude Include="JH_MapMgr.h" />
     <ClInclude Include="JH_MapObj.h" />
     <ClInclude Include="KG_ArcBall.h" />
     <ClInclude Include="KG_BackViewCamera.h" />

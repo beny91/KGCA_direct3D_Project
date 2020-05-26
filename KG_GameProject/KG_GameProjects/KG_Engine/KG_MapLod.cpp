@@ -1,12 +1,14 @@
 #include "KG_MapLod.h"
 
 
-
-KG_MapLod::KG_MapLod()
+namespace JH
 {
-}
+	KG_MapLod::KG_MapLod()
+	{
+	}
 
 
-KG_MapLod::~KG_MapLod()
-{
+	KG_MapLod::~KG_MapLod()
+	{
+	}
 }
