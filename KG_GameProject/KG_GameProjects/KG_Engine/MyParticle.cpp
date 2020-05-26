@@ -1,5 +1,5 @@
-
 #include "MyParticle.h"
+
 
 bool MyParticle::frame()
 {
@@ -124,6 +124,8 @@ void MyParticle::resetState()
 	scale = _info._scale;
 	_info = _initInfo;
 	_info._scale = scale;
+	_gravitySpeed = 0.0f;
+	_gravity = 0.0f;
 }
 
 

@@ -3,7 +3,24 @@ Texture2D		g_txDiffuseA : register(t0);
 Texture2D		g_txDiffuseB : register(t1);
 SamplerState	g_Sampler0	:	register(s0);
 
-
+//constant buff 0
+cbuffer cb_buffer:register(b0)
+{
+	//월드, 뷰, 투영 행렬
+	float4x4 g_matWorld : packoffset(c0);
+	float4x4 g_matView : packoffset(c4);
+	float4x4 g_matProj : packoffset(c8);
+	//time.x
+	float4  time : packoffset(c12);
+};
+cbuffer cb_effect:register(b1)
+{
+	//hlsl에서 bool은 int와 같은 4바이트
+	bool	g_activeFadeInOut;
+	bool	g_activeScaleRepeat;
+	float g_fadeInOutWeight;
+	float g_scaleRepeatWeight;
+};
 
 struct PS_IN
 {
@@ -35,6 +52,11 @@ PS_OUT1 PS(PS_IN inData)
 	PS_OUT1 vOut;
 	
 	float4 vFinalA = g_txDiffuseA.Sample(g_Sampler0, inData.t);
+	if (g_activeFadeInOut)
+	{
+		vFinalA = 2.0 * vFinalA * g_fadeInOutWeight;
+	}
+
 	float alpha = max(max(vFinalA.r, vFinalA.g), vFinalA.b);
 	vOut.mul = float4(1 - alpha, 1 - alpha, 1 - alpha, alpha);
 	vOut.add = vFinalA;//lerp(vFinalA, vFinalB, time.x);
@@ -77,16 +99,7 @@ struct VS_IN_LINE
 	float4 p : pos;
 	float4 c : color;
 };
-//constant buff 0
-cbuffer cb_buffer:register(b0)
-{
-	//월드, 뷰, 투영 행렬
-	float4x4 g_matWorld : packoffset(c0);
-	float4x4 g_matView : packoffset(c4);
-	float4x4 g_matProj : packoffset(c8);
-	//time.x
-	float4  time : packoffset(c12);
-};
+
 
 VS_OUT VS(VS_IN inData)
 {
@@ -96,7 +109,15 @@ VS_OUT VS(VS_IN inData)
 	
 	float4 vLocal = inData.p;
 	vLocal.w = 1.0f;
-	float4 vWorld = mul(vLocal, g_matWorld);
+
+	float4x4 matWorld = g_matWorld;
+	if (g_activeScaleRepeat)
+	{
+		matWorld._11 = matWorld._11 * g_scaleRepeatWeight;
+		matWorld._22 = matWorld._22 * g_scaleRepeatWeight;
+	}
+
+	float4 vWorld = mul(vLocal, matWorld);
 	float4 vView = mul(vWorld, g_matView);
 	float4 vProj = mul(vView, g_matProj);
 	vOut.p = vProj;
@@ -105,20 +126,5 @@ VS_OUT VS(VS_IN inData)
 	vOut.c = inData.c;
 	vOut.t = inData.t;
 	vOut.cb = time;
-	return vOut;
-}
-
-VS_OUT_LINE VSLine(VS_IN_LINE inData)
-{
-	VS_OUT_LINE vOut;
-	//월드, 뷰, 투영 행렬을 모두 연산한 버텍스를 
-	//float4 vLocal = float4(inData.p,1.0f);
-	float4 vLocal = inData.p;
-	vLocal.w = 1.0f;
-	float4 vWorld = mul(vLocal, g_matWorld);
-	float4 vView = mul(vWorld, g_matView);
-	float4 vProj = mul(vView, g_matProj);
-	vOut.p = vProj;
-	vOut.c = inData.c;
 	return vOut;
 }

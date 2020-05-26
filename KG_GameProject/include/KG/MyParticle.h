@@ -21,7 +21,7 @@ struct ParticleInfo
 	D3DXMATRIX _matWorld;
 	float _moveSpeed;
 
-	ParticleInfo()
+	inline ParticleInfo()
 	{
 		_pos = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
 		_initPos = _pos;
@@ -38,7 +38,7 @@ struct ParticleInfo
 	}
 };
 
-
+struct ParticleInfo;
 class MyParticle
 {
 private:

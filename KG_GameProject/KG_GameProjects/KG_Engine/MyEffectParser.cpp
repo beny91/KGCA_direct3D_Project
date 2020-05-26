@@ -1,4 +1,3 @@
-#pragma once
 #include "MyEffectParser.h"
 #include "KG_DxHeper.h"
 #include "VFX_ObjMgr.h"
@@ -36,11 +35,11 @@ void KYS::MyEffectParser::createEffectDataFromFile(const wchar_t * fileName, ID3
 
 		LoadFile(loadFIleName, &data);
 		createEffectObj(&data);
-	
+		
 	}
 	
 
-	//VFX_MGR->add();
+
 }
 
 void KYS::MyEffectParser::createEffectObj(std::stringstream * destData)
@@ -57,15 +56,15 @@ void KYS::MyEffectParser::createEffectObj(std::stringstream * destData)
 	D3DXMATRIX mat;
 	D3DXVECTOR3 rotate;
 	std::vector<MyParticle> particleList;
-	std::map<int, std::shared_ptr<VFX_EffectObj>> vfxList;
 
 	int size = 0;
+	int objcount = 0;
 	char token;
 
-	*destData >> size;
+	*destData >> objcount;
 	
 
-	for (int count = 0; count < size; count++)
+	for (int count = 0; count < objcount; count++)
 	{
 		vfxObj = std::make_shared<VFX_EffectObj>();
 		obj = vfxObj.get();
@@ -77,6 +76,10 @@ void KYS::MyEffectParser::createEffectObj(std::stringstream * destData)
 		*destData >> info._activeLifeTime >> token;
 		*destData >> info._lifeTimeLimit >> token;
 		*destData >> info._activeInterval >> token;
+		*destData >> info._activeFadeInOut >> token;
+		*destData >> info._activeScaleRepeat >> token;
+		*destData >> info._fadeInOutWeight >> token;
+		*destData >> info._scaleRepeatWeight >> token;
 		*destData >> info._interval;
 
 		obj->setInfo(info);
@@ -104,22 +107,31 @@ void KYS::MyEffectParser::createEffectObj(std::stringstream * destData)
 		*destData >> size;
 		spriteInfo._textureList.resize(size);
 		char name[256] = { 0 };
-		wchar_t trans[256] = { 0 };
+		wchar_t convertTextureName[256] = { 0 };
 		for (auto& iter : spriteInfo._textureList)
 		{
 			ZeroMemory(name, sizeof(name));
-			ZeroMemory(trans, sizeof(trans));
+			ZeroMemory(convertTextureName, sizeof(convertTextureName));
 
 			*destData >> name;
 
 			int len = MultiByteToWideChar(CP_ACP, 0, name, strlen(name), NULL, NULL);
-			MultiByteToWideChar(CP_ACP, 0, name, strlen(name), trans, len);
+			MultiByteToWideChar(CP_ACP, 0, name, strlen(name), convertTextureName, len);
 
-			iter = trans;
+			iter = convertTextureName;
 
-			int index = I_Texture.Add(_device, trans);
+			int index = I_Texture.Add(_device, convertTextureName);
 			spriteInfo._textureIndexList.push_back(index);
 		}
+
+		//shader
+		wchar_t convertShaderName[256] = { 0 };
+		ZeroMemory(name, sizeof(name));
+		ZeroMemory(convertShaderName, sizeof(convertShaderName));
+		*destData >> name;
+
+		int len = MultiByteToWideChar(CP_ACP, 0, name, strlen(name), NULL, NULL);
+		MultiByteToWideChar(CP_ACP, 0, name, strlen(name), convertShaderName, len);
 
 		if (!spriteInfo._animType)
 		{
@@ -157,6 +169,7 @@ void KYS::MyEffectParser::createEffectObj(std::stringstream * destData)
 			*destData >> info._lifeTime >> token;
 			*destData >> info._lifeTimeLimit >> token;
 			*destData >> info._gravity >> token;
+			*destData >> info._moveSpeed >> token;
 			*destData >> info._radius >> token;
 			*destData >> info._radiusSpeed >> token;
 			*destData >> info._activeLifeTime >> token;
@@ -205,7 +218,8 @@ void KYS::MyEffectParser::createEffectObj(std::stringstream * destData)
 		}
 		obj->setParticleList(particleList);
 
-		obj->Create(_device, _context, L"../../data/shader/effectShader.hlsl", trans, "VS", "PS");
+		obj->Create(_device, _context, convertShaderName, convertTextureName, "VS", "PS");
+		obj->createConstantBuffer();
 		VFX_MGR->add(vfxObj);
 	}
 	

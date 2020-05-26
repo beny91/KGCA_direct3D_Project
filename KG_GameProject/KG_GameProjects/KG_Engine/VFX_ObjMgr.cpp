@@ -48,6 +48,7 @@ bool KYS::VFX_ObjMgr::Render(KG_Camera* camera)
 		int blendType = obj->getInfo()._blendType;
 
 		CDX::ApplyDSS(_context, CDX::KG_DxState::g_pDSSMaskZero);
+		//CDX::ApplyDSS(_context, CDX::KG_DxState::g_pDSSDisable);
 		//CDX::ApplyRS(m_pContext, _raster);
 		//CDX::ApplyBS(m_pContext, CDX::KG_DxState::g_pBlendState[2]);
 		for (auto& iter : obj->getParticleList())

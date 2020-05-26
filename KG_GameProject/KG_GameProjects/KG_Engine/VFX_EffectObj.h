@@ -6,8 +6,10 @@
 enum VFX_EFFECT
 {
 	VFX_EFFECT_NONE = 1000,
-	VFX_EFFECT_GUN_SHOT,
-	VFX_EFFECT_GUN_SHOT_EXPLOSION,
+	VFX_EFFECT_GUN1_SHOT,
+	//VFX_EFFECT_GUN_IMPACT,
+	VFX_EFFECT_GUN2_SHOT,
+	VFX_EFFECT_GUN3_SHOT,
 	VFX_EFFECT_DAMAGED,
 	VFX_EFFECT_COUNT
 };
@@ -25,21 +27,40 @@ namespace KYS
 		float		_lifeTime;
 		float		_lifeTimeLimit;
 		float		_interval;
+		float _fadeInOutWeight;
+		float _scaleRepeatWeight;
 
 		bool		_active;
 		bool		_activeLifeTime;
 		bool		_activeInterval;
+		bool		_activeFadeInOut;
+		bool		_activeScaleRepeat;
 		bool		_billboard;
 		int			_effectType;
 		
 		VFX_EFFECT_INFO()
 		{
 			_effectType = _blendType  = 0;
-			_lifeTimeLimit = _lifeTime = _interval =  0.0f;
+			_scaleRepeatWeight = _fadeInOutWeight = _lifeTimeLimit = _lifeTime = _interval =  0.0f;
 			_direction = _position = _scale = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-			_activeLifeTime = _activeInterval = _billboard = _active = false;
+			_activeScaleRepeat = _activeFadeInOut = _activeLifeTime = _activeInterval = _billboard = _active = false;
 		}
 
+	};
+	struct ConstantBuffer_Effect
+	{
+		//hlsl에서 bool은 int와 같은 4바이트
+		int	_activeFadeInOut;
+		int	_activeScaleRepeat;
+
+		float _fadeInOutWeight;
+		float _scaleRepeatWeight;
+
+		ConstantBuffer_Effect()
+		{
+			_activeFadeInOut = _activeScaleRepeat = false;
+			_fadeInOutWeight = _scaleRepeatWeight = 0.0f;
+		}
 	};
 }
 
@@ -57,18 +78,28 @@ namespace KYS
 		virtual bool Render()override;
 		virtual bool Release()override;
 
+		virtual void SetMatrix(D3DXMATRIX* world, D3DXMATRIX* view, D3DXMATRIX* proj) override;
+
+		
 	public:
 		void Execute(D3DXVECTOR3 pos, D3DXVECTOR3 dir = D3DXVECTOR3(0.0f, 0.0f, 0.0f));
 		void shutdown();
 		void resetState();
+		void createConstantBuffer();
+		void updateConstantBuffer();
 
 	protected:
 		VFX_EFFECT_INFO _info;
 		VFX_EFFECT_INFO _initInfo;
 		SpriteTexture _sprite;
 		ID3D11ShaderResourceView* _animationSRV;
-		float _time;
 		D3DXVECTOR3 _rotate;
+		float _time;
+		float _accScale;
+		float _accFade;
+
+		Microsoft::WRL::ComPtr<ID3D11Buffer> _effectConstantBuffer;
+		ConstantBuffer_Effect _effectConstantData;
 
 	protected:
 		std::vector<MyParticle> _particleList;

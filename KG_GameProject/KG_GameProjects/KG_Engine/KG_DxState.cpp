@@ -138,6 +138,9 @@ namespace CDX
 		pd3dDevice->CreateDepthStencilState(&dsd, &g_pDSS);
 		dsd.DepthEnable = FALSE;
 		pd3dDevice->CreateDepthStencilState(&dsd, &g_pDSSDisable);
+		dsd.DepthWriteMask = D3D11_DEPTH_WRITE_MASK_ZERO;
+		dsd.DepthEnable = TRUE;
+		pd3dDevice->CreateDepthStencilState(&dsd, &g_pDSSMaskZero);
 
 		createBlendState(pd3dDevice);
 

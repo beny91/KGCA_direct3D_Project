@@ -3,6 +3,7 @@
 KYS::VFX_EffectObj::VFX_EffectObj()
 {
 	_animationSRV = nullptr;
+	 _accFade = _accScale = 0.0f;
 }
 
 KYS::VFX_EffectObj::~VFX_EffectObj()
@@ -58,6 +59,18 @@ bool KYS::VFX_EffectObj::Frame()
 		}
 	}
 
+	if (_info._activeScaleRepeat)
+	{
+		_accScale += _info._scaleRepeatWeight * g_SecondTime;
+		_effectConstantData._scaleRepeatWeight = (sinf(_accScale) + 1) / 2;
+	}
+
+	if (_info._activeFadeInOut)
+	{
+		_accFade += _info._fadeInOutWeight * g_SecondTime;
+		_effectConstantData._fadeInOutWeight = (sinf(_accScale) + 1) / 2;
+	}
+
 
 
 	if (!_info._activeInterval) return true;
@@ -79,6 +92,9 @@ bool KYS::VFX_EffectObj::Render()
 {
 	m_obj.PrePender();
 
+	m_obj.m_pContext->VSSetConstantBuffers(1, 1, _effectConstantBuffer.GetAddressOf());
+	m_obj.m_pContext->PSSetConstantBuffers(1, 1, _effectConstantBuffer.GetAddressOf());
+
 	if (_animationSRV != nullptr)
 		m_obj.m_pContext->PSSetShaderResources(0, 1, &_animationSRV);
 
@@ -91,6 +107,39 @@ bool KYS::VFX_EffectObj::Release()
 	return false;
 }
 
+void KYS::VFX_EffectObj::SetMatrix(D3DXMATRIX * world, D3DXMATRIX * view, D3DXMATRIX * proj)
+{
+	KG_Model::SetMatrix(world, view, proj);
+
+	updateConstantBuffer();
+}
+
+void KYS::VFX_EffectObj::createConstantBuffer()
+{
+	_effectConstantBuffer = CDXH::CreateConstantBuffer(
+		m_obj.m_pd3dDevice, nullptr, 1, sizeof(ConstantBuffer_Effect), true);
+
+	_effectConstantData._activeFadeInOut = _info._activeFadeInOut;
+	_effectConstantData._activeScaleRepeat = _info._activeScaleRepeat;
+}
+
+void KYS::VFX_EffectObj::updateConstantBuffer()
+{
+	if (_effectConstantBuffer != nullptr)
+	{
+		D3D11_MAPPED_SUBRESOURCE mss;
+		if (SUCCEEDED(m_obj.m_pContext->Map(_effectConstantBuffer.Get(), 0, D3D11_MAP_WRITE_DISCARD, 0, &mss)))
+		{
+			ConstantBuffer_Effect* pData = (ConstantBuffer_Effect*)mss.pData;
+			memcpy(pData, &_effectConstantData, sizeof(ConstantBuffer_Effect));
+			m_obj.m_pContext->Unmap(_effectConstantBuffer.Get(), 0);
+		}
+
+		/*m_obj.m_pContext->UpdateSubresource(_effectConstantBuffer.Get(),
+			0, NULL, &_effectConstantData, 0, 0);*/
+	}
+}
+
 void KYS::VFX_EffectObj::Execute(D3DXVECTOR3 pos, D3DXVECTOR3 dir)
 {
 
@@ -101,6 +150,7 @@ void KYS::VFX_EffectObj::Execute(D3DXVECTOR3 pos, D3DXVECTOR3 dir)
 	ParticleInfo info;
 	for (auto& obj : _particleList)
 	{
+		obj.resetState();
 		info = obj.getInfo();
 		info._direction += dir;
 

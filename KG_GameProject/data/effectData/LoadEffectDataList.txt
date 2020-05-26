@@ -1,1 +1,3 @@
-../../data/effectData/vfx_gun1_fire.txt
+../../data/effectData/vfx_gun1_shot.txt
+../../data/effectData/vfx_gun2_shot.txt
+../../data/effectData/vfx_gun3_shot.txt
