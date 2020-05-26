@@ -86,7 +86,7 @@ namespace CBY
 
 	void CBY_BulletMgr::BulletPop(int iweapon)
 	{
-		m_pBulletList[iweapon]->Release();
+		//m_pBulletList[iweapon]->Release();
 		Bulletiter iter = m_pBulletList.begin() + iweapon;
 		m_BulletQueue.Push(*iter);
 		m_pBulletList.erase(iter);

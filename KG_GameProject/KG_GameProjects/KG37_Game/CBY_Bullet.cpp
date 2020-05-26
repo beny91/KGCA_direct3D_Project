@@ -42,7 +42,7 @@ namespace CBY
 			D3DXMatrixDecompose(&vScale, &qRot, &vPos, &matworld);
 			D3DXMatrixRotationQuaternion(&matRot, &qRot);
 
-			vSize = m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax - m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter;
+			vSize = m_SkinOriginalBox.vMax - m_SkinOriginalBox.vCenter;
 			vSize.x *= vScale.x;
 			vSize.y *= vScale.y;
 			vSize.z *= vScale.z;

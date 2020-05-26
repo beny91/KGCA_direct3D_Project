@@ -15,6 +15,10 @@ namespace CBY
 			return;
 		}
 
+		m_vMove = m_pHero->GetHeroPos();
+		m_vLook = m_pHero->GetCamera()->m_LookDir;
+		m_vSide = m_pHero->GetCamera()->m_SideDir;
+
 		if (I_Input.GetKeyCheck('W'))
 		{
 			m_vMove += m_vLook * m_pHero->GetMoveSpeed() * g_SecondTime;

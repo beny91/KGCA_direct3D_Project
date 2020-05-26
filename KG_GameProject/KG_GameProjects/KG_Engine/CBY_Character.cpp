@@ -14,8 +14,9 @@ namespace CBY
 		m_ObjList.push_back(std::make_shared<CBY_SkinObj>());
 		*m_ObjList[list] = *I_CHARACTER.m_SkinLoadList[index];
 
-		m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax.z *= 1.5;
-		m_ObjList[0]->m_ObjList[0]->m_CharBox.vMin.z *= 1.5;
+		m_SkinOriginalBox = m_ObjList[0]->m_ObjList[0]->m_CharBox;
+		m_SkinOriginalBox.vMax.z *= 1.5;
+		m_SkinOriginalBox.vMin.z *= 1.5;
 
 		SetCharBox();
 		return true;

@@ -13,6 +13,8 @@ namespace CBY
 		m_ObjList.push_back(std::make_shared<CBY_SkinObj>());
 		*m_ObjList[list] = *I_CHARACTER.m_SkinLoadList[index];
 
+
+		m_SkinOriginalBox = m_ObjList[0]->m_ObjList[0]->m_CharBox;
 		SetCharBox();
 		return true;
 	}
@@ -109,7 +111,7 @@ namespace CBY
 			D3DXMatrixDecompose(&vScale, &qRot, &vPos, world);
 			D3DXMatrixRotationQuaternion(&matRot, &qRot);
 
-			vSize = m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax - m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter;
+			vSize = m_SkinOriginalBox.vMax - m_SkinOriginalBox.vCenter;
 			vSize.x *= vScale.x;
 			vSize.y *= vScale.y;
 			vSize.z *= vScale.z;
@@ -201,6 +203,10 @@ namespace CBY
 
 	bool CBY_Object::Release()
 	{
+		/*for (int i = 0; i < m_ObjList.size(); i++)
+		{
+			m_ObjList[i]->Release();
+		}*/
 		return true;
 	}
 
@@ -335,7 +341,7 @@ namespace CBY
 	{
 		D3DXMATRIX mat;
 		D3DXMatrixIdentity(&mat);
-		D3DXVECTOR3 size = m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax- m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter;
+		D3DXVECTOR3 size = m_SkinOriginalBox.vMax- m_SkinOriginalBox.vCenter;
 		//m_CharBox.Create(m_obj.m_pd3dDevice, m_obj.m_pContext,L"../../data/shader/DefaultShader.txt", nullptr, "VSmat", "PSVC");	//디버깅용 박스
 		m_CharBox.CreateBox(0,
 			m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter, size.x, size.y, size.z, mat);

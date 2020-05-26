@@ -70,10 +70,10 @@ bool KYS_TestMain::Init()
 	/*m_Enemy = std::make_shared<CBY::CBY_EnemySpider>();
 	m_Enemy->Create(m_pd3dDevice, m_pContext);
 	m_Enemy->SetCamera(m_pMainCamera);
-	m_Enemy->SetHeroPos(D3DXVECTOR3((10 * 2), 0, (10* 3)));*/
+	m_Enemy->SetHeroPos(D3DXVECTOR3((10 * 2), 0, (10* 3)));
 
-	//m_Enemy->SetHero(m_Character.get());
-//m_Character->SetEnemy(m_Enemy.get());
+	m_Enemy->SetHero(m_Character.get());*/
+	//m_Character->SetEnemy(m_Enemy.get());
 	m_Character->SetCamera(m_pMainCamera);
 	//////////////////////////////////////////
 
