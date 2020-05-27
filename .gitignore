@@ -1,8 +1,4 @@
 .vs/
-output/
-lib/*.lib
-*/*.lib
 KG_GameProject/output
 KG_GameProject/lib
-KG_GameProject/lib
-KG_GameProject/output
+
