@@ -1,3 +1,8 @@
 version https://git-lfs.github.com/spec/v1
-oid sha256:5b0046d80305e760d31bf58f4b396f55e69d1406ed9fa45c577a25422ce47017
-size 264
+<<<<<<< HEAD
+oid sha256:50fa070eb5bc17f63c8ffd79e0530249c6554039790d32c18f0f35b282f65dff
+size 52125742
+=======
+oid sha256:c05387748f19d7ca807fc24d5a3fdd863e25c29245e0cc596c39c2c11c7cf733
+size 54412810
+>>>>>>> origin/Yong
