@@ -255,6 +255,9 @@
     <ClCompile Include="QuadTree.cpp">
       <Filter>JH_Map</Filter>
     </ClCompile>
+    <ClCompile Include="VFX_Effects.cpp">
+      <Filter>KYS_Effect</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="KG_Core.h">
@@ -463,6 +466,9 @@
     </ClInclude>
     <ClInclude Include="QuadTree.h">
       <Filter>JH_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="VFX_Effects.h">
+      <Filter>KYS_Effect</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

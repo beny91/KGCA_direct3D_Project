@@ -1,5 +1,5 @@
-#include "MyParticle.h"
 
+#include "MyParticle.h"
 
 bool MyParticle::frame()
 {

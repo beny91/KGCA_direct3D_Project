@@ -6,6 +6,7 @@
 namespace KYS
 {
 	class VFX_EffectObj;
+	class VFX_Effects;
 }
 
 namespace CBY
@@ -21,7 +22,7 @@ namespace CBY
 	public:
 		std::shared_ptr<CBY::CBY_Character> m_Character;
 		CBY::CBY_Bullet m_Bullet;
-		std::shared_ptr<KYS::VFX_EffectObj> obj2;
+		std::shared_ptr<KYS::VFX_Effects> obj2;
 
 	public:
 		virtual bool Create(ID3D11Device* pd3dDevice, ID3D11DeviceContext* Context);

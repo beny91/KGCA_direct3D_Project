@@ -1,6 +1,5 @@
 #pragma once
-#include "KG_Std.h"
-
+#include <sstream>
 namespace KYS
 {
 	class Myparser

@@ -19,8 +19,8 @@ namespace CBY
 
 		m_Character->Init();
 		D3DXVECTOR3 scale = D3DXVECTOR3(5.0f, 5.0f, 0.0f);
-		obj2 = VFX_MGR->find(VFX_EFFECT_GUN1_SHOT);
-		obj2->setParticleScale(scale);
+		obj2 = VFX_MGR->find(VFX_EFFECT_TYPE::VFX_EFFECT_GUN1_SHOT);
+		obj2->SetScale(scale);
 		return true;
 	}
 
@@ -52,7 +52,7 @@ namespace CBY
 						D3DXVECTOR3 zpos = D3DXVECTOR3(0, 0, 0);
 						zpos -= m_pCamera->m_LookDir * 2;
 						//zpos += box.vAxis[2] * 2;
-						obj2 = VFX_MGR->find(VFX_EFFECT_GUN1_SHOT);
+						obj2 = VFX_MGR->find(VFX_EFFECT_TYPE::VFX_EFFECT_GUN1_SHOT);
 						D3DXVECTOR3 pos = m_Character->GetColPos(ibox);
 						pos += zpos;
 						//D3DXVECTOR3 dir = D3DXVECTOR3(5.0f, 0.0f, 0.0f);

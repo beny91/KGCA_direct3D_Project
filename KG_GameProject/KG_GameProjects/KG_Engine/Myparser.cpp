@@ -1,7 +1,7 @@
+
 #include "Myparser.h"
 #include <string>
 #include <fstream>
-
 std::ofstream& operator<<(std::ofstream& o, std::stringstream& src)
 {
 	o << src.str();
@@ -28,6 +28,7 @@ void KYS::Myparser::SaveFile(const wchar_t * fileName, std::stringstream * destD
 	
 	of << *destData;
 	
+
 	of.close();
 }
 

@@ -68,8 +68,8 @@ struct MAPDATA
 namespace KYS
 {
 	class VFX_EffectObj;
+	class VFX_Effects;
 }
-
 
 class KYS_TestMain :public KG_Core
 {
@@ -86,8 +86,8 @@ public:
 	float m_GameTime;
 
 
-	std::shared_ptr<KYS::VFX_EffectObj> obj1;
-	std::shared_ptr<KYS::VFX_EffectObj> obj2;
+	std::shared_ptr<KYS::VFX_Effects> obj1;
+	std::shared_ptr<KYS::VFX_Effects> obj2;
 
 public:
 	LRESULT WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) override;

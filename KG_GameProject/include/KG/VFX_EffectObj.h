@@ -3,16 +3,7 @@
 #include "SpriteTexture.h"
 #include "MyParticle.h"
 
-enum VFX_EFFECT
-{
-	VFX_EFFECT_NONE = 1000,
-	VFX_EFFECT_GUN1_SHOT,
-	//VFX_EFFECT_GUN_IMPACT,
-	VFX_EFFECT_GUN2_SHOT,
-	VFX_EFFECT_GUN3_SHOT,
-	VFX_EFFECT_DAMAGED,
-	VFX_EFFECT_COUNT
-};
+
 
 namespace KYS
 {
@@ -88,23 +79,6 @@ namespace KYS
 		void createConstantBuffer();
 		void updateConstantBuffer();
 
-	protected:
-		VFX_EFFECT_INFO _info;
-		VFX_EFFECT_INFO _initInfo;
-		SpriteTexture _sprite;
-		ID3D11ShaderResourceView* _animationSRV;
-		D3DXVECTOR3 _rotate;
-		float _time;
-		float _accScale;
-		float _accFade;
-
-		Microsoft::WRL::ComPtr<ID3D11Buffer> _effectConstantBuffer;
-		ConstantBuffer_Effect _effectConstantData;
-
-	protected:
-		std::vector<MyParticle> _particleList;
-
-
 	public:
 
 		void setInfo(VFX_EFFECT_INFO info) { _info = info; }
@@ -128,7 +102,23 @@ namespace KYS
 		void setParticleScale(D3DXVECTOR3 scale);
 		D3DXVECTOR3 getParticleScale();
 
-		
+
+	protected:
+		VFX_EFFECT_INFO _info;
+		VFX_EFFECT_INFO _initInfo;
+		SpriteTexture _sprite;
+		ID3D11ShaderResourceView* _animationSRV;
+		D3DXVECTOR3 _rotate;
+		float _time;
+		float _accScale;
+		float _accFade;
+
+		Microsoft::WRL::ComPtr<ID3D11Buffer> _effectConstantBuffer;
+		ConstantBuffer_Effect _effectConstantData;
+
+	protected:
+		std::vector<MyParticle> _particleList;
+	
 	};
 }
 

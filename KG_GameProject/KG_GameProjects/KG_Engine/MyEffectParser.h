@@ -19,13 +19,14 @@ namespace KYS
 		MyEffectParser();
 	public:
 		virtual~MyEffectParser();
+	
+	public:
+		 void LoadEffectDataFromFile(const wchar_t* fileName, ID3D11Device* device, ID3D11DeviceContext* context);
+		 void CreateEffectObj(std::stringstream* destData);
+
 	private:
 		ID3D11Device* _device;
 		ID3D11DeviceContext* _context;
-
-	public:
-		 void createEffectDataFromFile(const wchar_t* fileName, ID3D11Device* device, ID3D11DeviceContext* context);
-		 void createEffectObj(std::stringstream* destData);
 	};
 
 #define EFFECT_PARSER KYS::MyEffectParser::getParser()

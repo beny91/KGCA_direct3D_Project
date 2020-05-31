@@ -5,6 +5,7 @@
 namespace KYS
 {
 	class VFX_EffectObj;
+	class VFX_Effects;
 }
 
 namespace CBY
@@ -57,7 +58,7 @@ namespace CBY
 
 
 	public:
-		std::shared_ptr<KYS::VFX_EffectObj> obj2;
+		std::shared_ptr<KYS::VFX_Effects> obj2;
 
 	public:
 		virtual bool Init()override;

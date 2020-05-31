@@ -1,7 +1,7 @@
 #include "MyEffectParser.h"
 #include "KG_DxHeper.h"
 #include "VFX_ObjMgr.h"
-#include "VFX_EffectObj.h"
+#include "VFX_Effects.h"
 
 
 KYS::MyEffectParser::MyEffectParser()
@@ -12,7 +12,7 @@ KYS::MyEffectParser::~MyEffectParser()
 {
 }
 
-void KYS::MyEffectParser::createEffectDataFromFile(const wchar_t * fileName, ID3D11Device * device, ID3D11DeviceContext* context)
+void KYS::MyEffectParser::LoadEffectDataFromFile(const wchar_t * fileName, ID3D11Device * device, ID3D11DeviceContext* context)
 {
 
 	_device = device;
@@ -30,11 +30,12 @@ void KYS::MyEffectParser::createEffectDataFromFile(const wchar_t * fileName, ID3
 		dataList >> name;
 
 		int len = MultiByteToWideChar(CP_ACP, 0, name, strlen(name), NULL, NULL);
+		if (len <= 0) break;
 		MultiByteToWideChar(CP_ACP, 0, name, strlen(name), loadFIleName, len);
 
 
 		LoadFile(loadFIleName, &data);
-		createEffectObj(&data);
+		CreateEffectObj(&data);
 		
 	}
 	
@@ -42,11 +43,13 @@ void KYS::MyEffectParser::createEffectDataFromFile(const wchar_t * fileName, ID3
 
 }
 
-void KYS::MyEffectParser::createEffectObj(std::stringstream * destData)
+void KYS::MyEffectParser::CreateEffectObj(std::stringstream * destData)
 {
 	KYS::VFX_EFFECT_INFO info;
 	std::shared_ptr<VFX_EffectObj> vfxObj;
 	KYS::VFX_EffectObj* obj;
+	std::shared_ptr < KYS::VFX_Effects> effects;
+
 	Sprite_Info spriteInfo;
 	SpriteTexture sprite;
 	D3DXVECTOR3 pos;
@@ -63,7 +66,7 @@ void KYS::MyEffectParser::createEffectObj(std::stringstream * destData)
 
 	*destData >> objcount;
 	
-
+	effects = std::make_shared<KYS::VFX_Effects>();
 	for (int count = 0; count < objcount; count++)
 	{
 		vfxObj = std::make_shared<VFX_EffectObj>();
@@ -133,7 +136,7 @@ void KYS::MyEffectParser::createEffectObj(std::stringstream * destData)
 		int len = MultiByteToWideChar(CP_ACP, 0, name, strlen(name), NULL, NULL);
 		MultiByteToWideChar(CP_ACP, 0, name, strlen(name), convertShaderName, len);
 
-		if (!spriteInfo._animType)
+		/*if (!spriteInfo._animType)
 		{
 			*destData >> size;
 			spriteInfo._uvList.resize(size);
@@ -155,7 +158,7 @@ void KYS::MyEffectParser::createEffectObj(std::stringstream * destData)
 				iter = uv;
 			}
 
-		}
+		}*/
 		sprite.setSpriteInfo(spriteInfo);
 		obj->setSprite(sprite);
 
@@ -219,9 +222,11 @@ void KYS::MyEffectParser::createEffectObj(std::stringstream * destData)
 		obj->setParticleList(particleList);
 
 		obj->Create(_device, _context, convertShaderName, convertTextureName, "VS", "PS");
-		obj->createConstantBuffer();
-		VFX_MGR->add(vfxObj);
+		obj->Init();
+
+		effects->Add(vfxObj);
 	}
-	
+	VFX_MGR->add(effects);
 	return ;
 }
+

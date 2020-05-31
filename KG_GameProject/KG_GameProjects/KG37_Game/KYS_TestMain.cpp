@@ -41,7 +41,7 @@ bool KYS_TestMain::Init()
 	////////////////////////////////////////////
 
 	//effect
-	EFFECT_PARSER->createEffectDataFromFile(L"../../data/effectData/LoadEffectDataList.txt", m_pd3dDevice, m_pContext);
+	EFFECT_PARSER->LoadEffectDataFromFile(L"../../data/effectData/LoadEffectDataList.txt", m_pd3dDevice, m_pContext);
 	VFX_MGR->setDevice(m_pd3dDevice);
 	VFX_MGR->setContext(m_pContext);
 
@@ -198,20 +198,23 @@ bool KYS_TestMain::Frame()
 	SHORT key = I_Input.KeyCheck('1');
 	if (key == KEY_PUSH)					//카메라의 이동
 	{
-		obj1 = VFX_MGR->find(VFX_EFFECT_GUN1_SHOT);
+		obj1 = VFX_MGR->find(VFX_EFFECT_TYPE::VFX_EFFECT_GUN1_SHOT);
+		if (obj1 != nullptr)
+		{
+			D3DXVECTOR3 pos = D3DXVECTOR3(0.0f, 0.0f, 10.0f);
+			D3DXVECTOR3 scale = D3DXVECTOR3(2.0f, 2.0f, 0.0f);
 
-		D3DXVECTOR3 pos = D3DXVECTOR3(0.0f, 5.0f, 10.0f);
-		//D3DXVECTOR3 dir = D3DXVECTOR3(5.0f, 0.0f, 0.0f);
-
-		obj1->Execute(pos);
+			obj1->Execute(pos);
+			obj1->SetScale(scale);
+		}
 	}
 
 	key = I_Input.KeyCheck('2');
 	if (key == KEY_PUSH)					//카메라의 이동
 	{
 
-		obj2 = VFX_MGR->find(VFX_EFFECT_GUN2_SHOT);
-		D3DXVECTOR3 pos = D3DXVECTOR3(2.0f, 7.0f, 10.0f);
+		obj2 = VFX_MGR->find(VFX_EFFECT_TYPE::VFX_EFFECT_GUN2_SHOT);
+		D3DXVECTOR3 pos = D3DXVECTOR3(2.0f, 0.0f, 10.0f);
 		D3DXVECTOR3 dir = D3DXVECTOR3(5.0f, 0.0f, 0.0f);
 
 		obj2->Execute(pos);
@@ -221,12 +224,35 @@ bool KYS_TestMain::Frame()
 	if (key == KEY_PUSH)					//카메라의 이동
 	{
 
-		obj2 = VFX_MGR->find(VFX_EFFECT_GUN3_SHOT);
-		D3DXVECTOR3 pos = D3DXVECTOR3(4.0f, 7.0f, 10.0f);
+		obj2 = VFX_MGR->find(VFX_EFFECT_TYPE::VFX_EFFECT_GUN3_SHOT);
+		D3DXVECTOR3 pos = D3DXVECTOR3(4.0f, 0.0f, 10.0f);
 		D3DXVECTOR3 dir = D3DXVECTOR3(5.0f, 0.0f, 0.0f);
 
 		obj2->Execute(pos);
 	}
+
+	key = I_Input.KeyCheck('4');
+	if (key == KEY_PUSH)					//카메라의 이동
+	{
+
+		obj2 = VFX_MGR->find(VFX_EFFECT_TYPE::VFX_EFFECT_GUN_IMPACT);
+		D3DXVECTOR3 pos = D3DXVECTOR3(6.0f, 0.0f, 10.0f);
+		D3DXVECTOR3 dir = D3DXVECTOR3(5.0f, 0.0f, 0.0f);
+
+		obj2->Execute(pos);
+	}
+
+	key = I_Input.KeyCheck('5');
+	if (key == KEY_PUSH)					//카메라의 이동
+	{
+
+		obj2 = VFX_MGR->find(VFX_EFFECT_TYPE::VFX_EFFECT_GUN_IMPACT);
+		D3DXVECTOR3 pos = D3DXVECTOR3(8.0f, 0.0f, 10.0f);
+		D3DXVECTOR3 dir = D3DXVECTOR3(5.0f, 0.0f, 0.0f);
+
+		obj2->Execute(pos);
+	}
+
 
 	return true;
 }

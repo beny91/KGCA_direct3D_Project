@@ -12,6 +12,8 @@ KYS::VFX_EffectObj::~VFX_EffectObj()
 
 bool KYS::VFX_EffectObj::Init()
 {
+	createConstantBuffer();
+	_sprite.createTextureAnimInfo();
 	return false;
 }
 
@@ -68,7 +70,7 @@ bool KYS::VFX_EffectObj::Frame()
 	if (_info._activeFadeInOut)
 	{
 		_accFade += _info._fadeInOutWeight * g_SecondTime;
-		_effectConstantData._fadeInOutWeight = (sinf(_accScale) + 1) / 2;
+		_effectConstantData._fadeInOutWeight = (sinf(_accFade) + 1) / 2;
 	}
 
 
